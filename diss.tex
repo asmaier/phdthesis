@@ -1,4 +1,7 @@
-% Koma-Script options
+\RequirePackage{latexml}
+\iflatexml
+\documentclass[12pt,a4paper,twoside]{book}
+\else
 \documentclass[paper=a4,
 					fontsize=12pt,
 				headsepline,
@@ -6,6 +9,7 @@
 				numbers=noenddot,
 				bibliography=totoc,
 				enabledeprecatedfontcommands]{scrbook}
+\fi
 
 % from l2tabu.tex
 \usepackage[OT2,OT1]{fontenc}                    % needs package cyrillic and lh
@@ -145,8 +149,11 @@
 
 \pagestyle{plain}
 \input{zusammenfassung/zusammenfassung}
-\input{lebenslauf/lebenslauf}
 
+\iflatexml
+%% nothing
+\else
+\input{lebenslauf/lebenslauf}
 
 \chapter*{Erklärung}
 Ich erkläre, dass das Thema dieser Arbeit nicht identisch ist mit dem Thema
@@ -161,6 +168,7 @@ anderen Hilfsmittel als die angegebenen Quellen benutzt habe.
 \setlength{\parindent}{0pt}
 \selectlanguage{ngerman}
 Würzburg, \today
+\fi
 
 \end{document}
 
