@@ -1,0 +1,251 @@
+<!DOCTYPE html><html>
+<head>
+<title>Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:27:14 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="next" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a>
+</div></header>
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document" style="font-size:298%;">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">
+
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">Dissertation zur Erlangung des 
+<br class="ltx_break">naturwissenschaftlichen Doktorgrades 
+<br class="ltx_break">der Bayerischen Julius-Maximilians-Universität Würzburg
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">vorgelegt von 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Andreas Maier</span> 
+<br class="ltx_break">aus Coburg
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+<br class="ltx_break">
+</span></span>
+</div>
+
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch1.html#S1" title="1.1 Historical overview ‣ Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Historical overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch1.html#S2" title="1.2 Aim of this work ‣ Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Aim of this work</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Turbulence</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.html#S1" title="2.1 Phenomenology of Turbulence ‣ Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>Phenomenology of Turbulence</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch2.html#S2" title="2.2 The Kolmogorov theory ‣ Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>The Kolmogorov theory</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Filter formalism</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch3.html#S1" title="3.1 Reynolds filter ‣ Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Reynolds filter</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch3.html#S2" title="3.2 Germano formalism ‣ Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Germano formalism</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch3.html#S3" title="3.3 Favre-Germano formalism ‣ Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Favre-Germano formalism</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch3.html#S4" title="3.4 Explicit filtering ‣ Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Explicit filtering</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Favre-filtered equations of fluid dynamics</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch4.html#S1" title="4.1 Basic equations ‣ Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Basic equations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch4.html#S2" title="4.2 Resolved energy and turbulent energy equations ‣ Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Resolved energy and turbulent energy equations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch4.html#S3" title="4.3 Summary ‣ Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Summary</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>LES and SGS model</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch5.html#S1" title="5.1 The concept of LES ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>The concept of LES</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch5.html#S2" title="5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Schmidt model</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S2.SS1" title="5.2.1 Transport term D ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>Transport term <math class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S2.SS2" title="5.2.2 Pressure dilatation λ ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.2 </span>Pressure dilatation <math class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S2.SS3" title="5.2.3 Turbulent dissipation ϵ ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.3 </span>Turbulent dissipation
+<math class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S2.SS4" title="5.2.4 Turbulence production tensor ⁢ ^ τ ( v i , v j ) ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.4 </span>Turbulence production tensor
+<math class="ltx_Math" alttext="\hat{\tau}(v_{i},v_{j})" display="inline"><mrow><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S2.SS5" title="5.2.5 Summary of the Schmidt model ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.5 </span>Summary of the Schmidt model</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch5.html#S3" title="5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Impact of the Schmidt SGS on the fluid equations</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S3.SS1" title="5.3.1 General observations ‣ 5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3.1 </span>General observations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S3.SS2" title="5.3.2 Dimensional analysis ‣ 5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3.2 </span>Dimensional analysis</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch5.html#S4" title="5.4 Sarkar model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Sarkar model</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S4.SS1" title="5.4.1 Turbulent dissipation ϵ ‣ 5.4 Sarkar model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.1 </span>Turbulent dissipation <math class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch5.html#S4.SS2" title="5.4.2 Pressure dilatation λ ‣ 5.4 Sarkar model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.2 </span>Pressure dilatation <math class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>AMR and LES</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch6.html#S1" title="6.1 Adaptive mesh refinement ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.1 </span>Adaptive mesh refinement</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch6.html#S2" title="6.2 Attempts to combine LES and AMR ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Attempts to combine LES and AMR</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch6.html#S3" title="6.3 ϵ -based approach to combine AMR and LES ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3 </span><math class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>-based approach to combine AMR and
+LES</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Numerical testing</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch7.html#S1" title="7.1 The Enzo code ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1 </span>The Enzo code</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch7.html#S2" title="7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2 </span>Modifications to Enzo</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch7.html#S2.SS1" title="7.2.1 Turbulent energy as a color field ‣ 7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2.1 </span>Turbulent energy as a color field</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch7.html#S2.SS2" title="7.2.2 Coupling of turbulent energy and time step restriction ‣ 7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2.2 </span>Coupling of turbulent energy and time step restriction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch7.html#S2.SS3" title="7.2.3 Transfer of turbulent energy at grid refinement/derefinement ‣ 7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2.3 </span>Transfer of turbulent energy at grid refinement/derefinement</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch7.html#S2.SS4" title="7.2.4 Random forcing ‣ 7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2.4 </span>Random forcing</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch7.html#S2.SS5" title="7.2.5 Statistics tool ‣ 7.2 Modifications to Enzo ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2.5 </span>Statistics tool</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch7.html#S3" title="7.3 Energy conservation ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.3 </span>Energy conservation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch7.html#S4" title="7.4 Scaling of turbulent energy ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.4 </span>Scaling of turbulent energy</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="Ch7.html#S5" title="7.5 Comparison of static grid to AMR turbulence simulations ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.5 </span>Comparison of static grid to AMR turbulence simulations</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Cluster physics</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch8.html#S1" title="8.1 Cluster formation ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.1 </span>Cluster formation</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S1.SS1" title="8.1.1 Initial density fluctuations ‣ 8.1 Cluster formation ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.1.1 </span>Initial density fluctuations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S1.SS2" title="8.1.2 Hierarchical growth of density fluctuations ‣ 8.1 Cluster formation ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.1.2 </span>Hierarchical growth of density fluctuations</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch8.html#S2" title="8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2 </span>Intracluster medium</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S2.SS1" title="8.2.1 Mean free path of the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2.1 </span>Mean free path of the ICM</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S2.SS2" title="8.2.2 Magnetic fields ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2.2 </span>Magnetic fields</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S2.SS3" title="8.2.3 X-ray observations of the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2.3 </span>X-ray observations of the ICM</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch8.html#S2.SS4" title="8.2.4 Turbulence in the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8.2.4 </span>Turbulence in the ICM</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Simulations of galaxy clusters</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch9.html#S1" title="9.1 Details of the simulations ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.1 </span>Details of the simulations</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S1.SS1" title="9.1.1 Common features ‣ 9.1 Details of the simulations ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.1.1 </span>Common features</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S1.SS2" title="9.1.2 Numerical issues ‣ 9.1 Details of the simulations ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.1.2 </span>Numerical issues</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="Ch9.html#S2" title="9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2 </span>Results</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS1" title="9.2.1 Energy conservation ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.1 </span>Energy conservation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS2" title="9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.2 </span>Mass fractions of different gas phases</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS3" title="9.2.3 Development of turbulence in different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.3 </span>Development of turbulence in different gas phases</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS4" title="9.2.4 Scaling of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.4 </span>Scaling of turbulent energy</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS5" title="9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.5 </span>Radial profiles of the cluster</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS6" title="9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.6 </span>Spatial distribution of turbulent energy</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS7" title="9.2.7 Cluster core analysis ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.7 </span>Cluster core analysis</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="Ch9.html#S2.SS8" title="9.2.8 Influence of SGS parameters on cluster core ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9.2.8 </span>Influence of SGS parameters on cluster core</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Summary and Conclusions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">A </span>Dimensional analysis</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">B </span>Properties of second order tensors</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">C </span>Derivation of the stress tensor for a newtonian fluid</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix">
+<a href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D </span>Fourier transform and structure functions</span></a>
+<ul class="ltx_toclist ltx_toclist_appendix">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A4.html#S1" title="D.1 Fourier transform of a delta function ‣ Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D.1 </span>Fourier transform of a delta function</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A4.html#S2" title="D.2 Convolution theorem ‣ Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D.2 </span>Convolution theorem</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A4.html#S3" title="D.3 Autocorrelation and Wiener-Khinchin Theorem ‣ Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D.3 </span>Autocorrelation and Wiener-Khinchin Theorem</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A4.html#S4" title="D.4 Structure functions ‣ Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D.4 </span>Structure functions</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">E </span>The divergence equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">F </span>Vlasov-Poisson Equations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix">
+<a href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">G </span>Hydrostatic equilibrium</span></a>
+<ul class="ltx_toclist ltx_toclist_appendix">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A7.html#S1" title="G.1 Standard derivation ‣ Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">G.1 </span>Standard derivation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A7.html#S2" title="G.2 Derivation including turbulent pressure ‣ Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">G.2 </span>Derivation including turbulent pressure</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_appendix">
+<a href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">H </span>Fluid dynamics in comoving coordinates</span></a>
+<ul class="ltx_toclist ltx_toclist_appendix">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A8.html#S1" title="H.1 Introduction ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">H.1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A8.html#S2" title="H.2 Useful transformations ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">H.2 </span>Useful transformations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="A8.html#S3" title="H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">H.3 </span>Equations in comoving coordinates</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">I </span>Color fields</span></a></li>
+</ul>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:27:14 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

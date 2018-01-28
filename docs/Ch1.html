@@ -1,0 +1,253 @@
+<!DOCTYPE html><html>
+<head>
+<title>1 Introduction‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Turbulence</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">Chapter 1 </span>Introduction</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.1 </span>Historical overview</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Clusters of galaxies are the largest and most recent gravitationally-relaxed
+structures in the universe. They typically contain hundreds to thousands of
+galaxies with a total mass of about <math id="S1.p1.m1" class="ltx_Math" alttext="10^{14}-10^{15}" display="inline"><mrow><msup><mn>10</mn><mn>14</mn></msup><mo>-</mo><msup><mn>10</mn><mn>15</mn></msup></mrow></math> solar masses
+(<math id="S1.p1.m2" class="ltx_Math" alttext="\mathrm{M_{\odot}}" display="inline"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></math>), spread over a region whose size is roughly 10 million
+light-years (<math id="S1.p1.m3" class="ltx_Math" alttext="\mathrm{Mly}" display="inline"><mi class="ltx_unit">Mly</mi></math>). Galaxy clusters themselves form even greater
+structures called superclusters, which are gravitationally-attracted, but not
+relaxed, collections of ten to one hundred clusters and groups of galaxies. The
+Milky
+Way itself belongs to the “Local Group” , which is an aggregation of
+about 40 galaxies, with the Andromeda Galaxy and the Milky Way as the largest
+members of
+the group. The Local Group belongs to the “Virgo Supercluster”, with the
+Virgo cluster at the center. The Virgo cluster is the nearest cluster of
+galaxies to our own galaxy at a distance of 60 Mly; another famous cluster of
+galaxies is the Coma cluster, which is called a very regular cluster,
+because it is nearly spherically symmetric (see figure <a href="#F1" title="Figure 1.1 ‣ 1.1 Historical overview ‣ Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a>).</p>
+</div>
+<figure id="F1" class="ltx_figure"><img src="x1.png" id="F1.g1" class="ltx_graphics ltx_centering" width="470" height="408" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1.1: </span>A Sloan Digital Sky Survey/Spitzer Space Telescope image of the Coma
+Cluster in ultraviolet and visible light. From <cite class="ltx_cite ltx_citemacro_citet">Jenkins (<a href="bib.html#bib65" title="Dwarf Galaxies in the Coma Cluster" class="ltx_ref">2007</a>)</cite>.</figcaption>
+</figure>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The tendency of galaxies to form clusters in the sky has long been noticed (for
+example <cite class="ltx_cite ltx_citemacro_citet">Messier (<a href="bib.html#bib89" title="Connaissance des Temps" class="ltx_ref">1784</a>)</cite> had identified already 16 galaxies, which - as we
+now know - belong to the Virgo cluster, and he noted that they form a
+group), but
+the first to study them in detail was <cite class="ltx_cite ltx_citemacro_citet">Wolf (<a href="bib.html#bib159" title="Über einen Nebelfleck-Haufen im Perseus" class="ltx_ref">1906</a>)</cite>. A great step forward in
+the systematic study of the properties of clusters was the work of
+<cite class="ltx_cite ltx_citemacro_citet">Abell (<a href="bib.html#bib3" title="The Distribution of Rich Clusters of Galaxies." class="ltx_ref">1958</a>)</cite>, who compiled the first extensive, statistically complete
+catalog of so-called rich clusters of galaxies<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The richness of a galaxy
+is a measure that is basically proportional to the number of bright galaxies in
+a cluster. It was first strictly defined by Abell for his catalog.</span></span></span>. This
+catalog and its successors (e.g. <cite class="ltx_cite ltx_citemacro_citet">Abell<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib4" title="A catalog of rich clusters of galaxies" class="ltx_ref">1989</a>)</cite>) are the foundation for much
+of our modern understanding of clusters.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The cited catalogs of clusters are based on optical identification techniques.
+However in the early 1970s extended x-ray emission from clusters of galaxies
+was observed by <cite class="ltx_cite ltx_citemacro_citet">Gursky<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib62" title="A Strong X-Ray Source in the Coma Cluster Observed by UHURU" class="ltx_ref">1971</a>); Kellogg<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib69" title="The Extended X-Ray Source at M87" class="ltx_ref">1972</a>)</cite>, which had been already
+correctly attributed to thermal
+bremsstrahlung several years earlier by <cite class="ltx_cite ltx_citemacro_citet">Felten<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib48" title="X-Rays from the Coma Cluster of Galaxies" class="ltx_ref">1966</a>)</cite>. This interpretation
+requires
+the space between galaxies in clusters to be filled with a very hot
+(<math id="S1.p3.m1" class="ltx_Math" alttext="\approx 10^{8}\,\mathrm{K}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>8</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math>) low density (<math id="S1.p3.m2" class="ltx_Math" alttext="\approx 10^{3}\,\mathrm{atoms/m^{3}}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>3</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit">atoms</mi></mrow><mo>/</mo><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mn>3</mn></msup></mrow></mrow></math>) gas.
+Remarkably, the total mass in this intracluster medium (ICM) is comparable to
+the total mass of all galaxies in the cluster. Nevertheless this discovery did
+not solve the so called missing mass problem in clusters, which was first
+formulated by <cite class="ltx_cite ltx_citemacro_citet">Zwicky (<a href="bib.html#bib165" title="Die Rotverschiebung von extragalaktischen Nebeln" class="ltx_ref">1933</a>, <a href="bib.html#bib164" title="On the Masses of Nebulae and of Clusters of Nebulae" class="ltx_ref">1937</a>)</cite>. <cite class="ltx_cite ltx_citemacro_citet">Zwicky (<a href="bib.html#bib165" title="Die Rotverschiebung von extragalaktischen Nebeln" class="ltx_ref">1933</a>)</cite> was the first
+to measure the velocity dispersion of galaxies in the Coma cluster, finding
+<math id="S1.p3.m3" class="ltx_Math" alttext="\sigma_{galaxy}=700\,\mathrm{km\ s^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">σ</mi><mrow><mi class="ltx_unit">g</mi><mo>⁢</mo><mi class="ltx_unit">a</mi><mo>⁢</mo><mi class="ltx_unit">l</mi><mo>⁢</mo><mi class="ltx_unit">a</mi><mo>⁢</mo><mi class="ltx_unit">x</mi><mo>⁢</mo><mi class="ltx_unit">y</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>700</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">km</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, and he correctly concluded from this
+fact and his estimate of the Coma’s cluster overall radius, that the cluster
+mass, which he computed using the virial theorem, must be far greater than the
+observed luminous mass - the first evidence for dark matter in the universe. In
+his remarkable paper of 1937, Zwicky also proposed gravitational lensing as an
+alternative technique for measuring the masses of background galaxies. This
+technique finally became practicable after six more decades <cite class="ltx_cite ltx_citemacro_citep">(Tyson<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib150" title="Detection of systematic gravitational lens galaxy image alignments - Mapping dark matter in galaxy clusters" class="ltx_ref">1990</a>)</cite>,
+and is now a standard technique for measuring cluster mass
+<cite class="ltx_cite ltx_citemacro_citep">(Bartelmann, <a href="bib.html#bib8" title="Strong and Weak Lensing by Galaxy Clusters" class="ltx_ref">2003</a>)</cite>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Measuring the masses of clusters is not only important for the search of dark
+matter. Some of the most powerful constraints on current cosmological models
+come from observations of how the cluster mass function <math id="S1.p4.m1" class="ltx_Math" alttext="n(M)" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>, which gives the
+number density of clusters with a mass greater than <math id="S1.p4.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> in comoving volume
+element, evolves with time <cite class="ltx_cite ltx_citemacro_citep">(Voit, <a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>)</cite>. The reason why the evolution of the
+cluster mass function is so highly sensitive to cosmology is simply because the
+matter density of the universe controls the rate at which structure grows.
+The cluster mass function can be measured using optical surveys.
+However it is easier to use X-ray surveys, because in the X-ray band, instead of
+a collection of galaxies, each cluster appears only as a single source (see
+figure <a href="#F2" title="Figure 1.2 ‣ 1.1 Historical overview ‣ Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>),</p>
+</div>
+<figure id="F2" class="ltx_figure"><img src="x2.png" id="F2.g1" class="ltx_graphics ltx_centering" width="418" height="404" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1.2: </span>Chandra X-ray image of the central region of the Coma Cluster. From
+<cite class="ltx_cite ltx_citemacro_citet">Vikhlinin (<a href="bib.html#bib153" title="Coma Cluster: Gas Clouds Strike A Delicate Balance" class="ltx_ref">2002</a>)</cite>.</figcaption>
+</figure>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">which makes it observationally easier to define consistently
+cluster properties like the radius. Independently from Supernova IA and cosmic
+microwave background (CMB) measurements, these and other cluster-related
+surveys can now restrict several important parameters of the cosmological
+concordance model (see figure <a href="#F3" title="Figure 1.3 ‣ 1.1 Historical overview ‣ Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.3</span></a>).</p>
+</div>
+<figure id="F3" class="ltx_figure"><img src="x3.png" id="F3.g1" class="ltx_graphics ltx_centering" width="303" height="413" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1.3: </span>Plot of 68% and 90% confidence regions for <math id="F3.m3" class="ltx_Math" alttext="\Omega_{M}" display="inline"><msub><mi mathvariant="normal">Ω</mi><mi>M</mi></msub></math>
+and <math id="F3.m4" class="ltx_Math" alttext="\Omega_{\Lambda}" display="inline"><msub><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">Λ</mi></msub></math> for Supernova IA, CMB and cluster data. From
+<cite class="ltx_cite ltx_citemacro_citet">Knop<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib72" title="New Constraints on ΩM, ΩΛ and w from an Independent Set of 11 High-Redshift Supernovae Observed with the Hubble Space Telescope" class="ltx_ref">2003</a>)</cite>.
+</figcaption>
+</figure>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Most of these cluster surveys make use of several
+relations like the mass-temperature or luminosity-temperature relation, which
+are only based on observational findings. If gravity alone would determine
+the thermodynamical properties of the clusters, we would expect clusters to be
+self-similar, meaning clusters of different size would be scaled versions of
+each other, leading to a specific simple form of these relations
+<cite class="ltx_cite ltx_citemacro_citep">(Kaiser, <a href="bib.html#bib66" title="Evolution and clustering of rich clusters" class="ltx_ref">1986</a>)</cite>.
+However astronomers have known for more than a decade that the intracluster
+medium cannot be self-similar, because the luminosity-temperature
+relation of clusters does not agree with self-similar scaling <cite class="ltx_cite ltx_citemacro_citep">(Voit, <a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>)</cite>.
+So only by breaking the self-similar scaling of clusters can the
+observed relations be explained. But it is theoretically
+still uncertain, which mechanism(s) is (are) responsible for that similarity
+breaking. Many mechanisms have been proposed including preheating, radiative
+cooling, feedback from supernovae, feedback from active galactic nuclei
+<cite class="ltx_cite ltx_citemacro_citep">(Voit, <a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>)</cite>, shocks, magnetic fields, cosmic rays and turbulence
+<cite class="ltx_cite ltx_citemacro_citep">(Dolag<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib37" title="Non-Thermal Processes in Cosmological Simulations" class="ltx_ref">2008</a>)</cite>. It therefore remains a challenge for the theory of cluster
+physics to find the responsible mechanisms and explain the relations mentioned
+above.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.2 </span>Aim of this work</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">One of the proposed mechanisms that break gravitationally self-similar scaling
+properties of clusters is turbulence. Turbulence is also believed to
+play an important role in explaining the magnetic field strengths of galaxy
+clusters and the higher than expected temperature of cluster cores (the
+“cooling flow problem”). However numerical simulations of the
+influence of turbulence in an astrophysical context in general and especially
+for clusters have been restricted to measuring passively statistical
+quantities
+like velocity dispersion from simulation data (e.g. <cite class="ltx_cite ltx_citemacro_citet">Dolag<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib39" title="Turbulent gas motions in galaxy cluster simulations: the role of smoothed particle hydrodynamics viscosity" class="ltx_ref">2005</a>)</cite>).
+The active role of small scale velocity fluctuations on the large scale flow
+could not be treated at all. There are two main reasons for this:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Basically turbulence is a physical phenomenon that is far from
+being understood. The sole currently existing theory is only
+applicable to isotropic, incompressible turbulence. No accepted theoretical
+framework for
+describing turbulent flows in astrophysical environment including compressible,
+selfgravitating, high Mach number flows exists.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Models describing the effective influence of turbulence in fluid dynamic
+simulations are restricted to a specific length scale. They are not suitable to
+treat the vast range of different length scales (from cosmological scales
+<math id="I1.i2.p1.m1" class="ltx_Math" alttext="\approx 10^{24}\,\mathrm{m}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>24</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">m</mi></mrow></mrow></math>
+down to the thickness of a shock front (<math id="I1.i2.p1.m2" class="ltx_Math" alttext="\approx 10^{11}\,\mathrm{m}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>11</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">m</mi></mrow></mrow></math>,
+<cite class="ltx_cite ltx_citemacro_citet">Medvedev<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib87" title="Cluster Magnetic Fields from Large-Scale Structure and Galaxy Cluster Shocks" class="ltx_ref">2006</a>)</cite>) we need to address
+when simulating astrophysical environments.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Therefore it is aim of this work to develop, implement, and apply a new
+numerical scheme for modeling turbulent, multiphase astrophysical flows such as
+galaxy cluster cores and star forming regions. The method combines the
+capabilities of adaptive mesh refinement (AMR) and large-eddy simulations (LES)
+to capture localized features and to represent unresolved turbulence,
+respectively; it will be referred to as Fluid mEchanics with
+Adaptively Refined Large-Eddy SimulationS or FEARLESS.
+</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">To start explaining the idea behind this ansatz, we first give a brief overview
+of the theory of turbulence in chapter <a href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>. In chapter <a href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>
+we introduce a filter formalism, which is necessary for modeling compressible
+turbulence according to the ideas of LES. In chapter <a href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> we use this
+formalism to derive the filtered equations of fluid dynamics, which are the
+basis for the introduction of our turbulence or subgrid scale (SGS) model
+(adapted from work by <cite class="ltx_cite ltx_citemacro_citet">Schmidt<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib134" title="A localised subgrid scale model for fluid dynamical simulations in astrophysics. I. Theory and numerical tests" class="ltx_ref">2006b</a>)</cite>) in chapter <a href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>.
+In this chapter we also analyse in some detail the
+influence of the turbulence model on the equation of fluid dynamics. In chapter
+<a href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> we explain the specific problem of combining LES and AMR in
+some detail and propose a new method to circumvent this problem. In chapter
+<a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a> we comment on several modifications and numerical issues that
+had to be taken into account when implementing our method into the cosmological
+fluid code Enzo. We also present the results of several driven turbulence test
+simulations, showing the consistency of our treatment of turbulence. Chapter
+<a href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a> summarizes some important facts about cluster physics and we
+also give a brief introduction to turbulence in cluster simulations.
+In chapter <a href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a> we describe several issues with our turbulence model
+when treating turbulence in cluster simulations on cosmological scales. We
+explain our setup and then describe the main results of a first study of
+turbulence in galaxy cluster simulations using our FEARLESS approach. Finally in
+chapter <a href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a> we
+summarize our findings and draw conclusions about the influence of turbulence
+in the context of cluster simulations.
+</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Turbulence</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

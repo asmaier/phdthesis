@@ -1,0 +1,493 @@
+<!DOCTYPE html><html>
+<head>
+<title>8 Cluster physics‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Numerical testing</span></a><a href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Simulations of galaxy clusters</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">Chapter 8 </span>Cluster physics</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">In the following we want to review some basic theoretical and observational
+facts of cluster physics. The presentation in this section has been inspired by
+<cite class="ltx_cite ltx_citemacro_citet">Pfrommer (<a href="bib.html#bib112" title="On the role of cosmic rays in clusters of galaxies" class="ltx_ref">2005</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Sarazin (<a href="bib.html#bib129" title="X-ray emission from clusters of galaxies" class="ltx_ref">1988</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Voit (<a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Plionis<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib113" title="A Pan-Chromatic View of Clusters of Galaxies and the Large-Scale Structure" class="ltx_ref">2008</a>)</cite>.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.1 </span>Cluster formation</h2>
+
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.1.1 </span>Initial density fluctuations</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">On very large scales the universe appears homogeneous and isotropic. However
+the existence of stars, galaxies, and galaxy clusters demonstrates that the
+universe is not perfectly homogeneous. The early universe must have been
+slightly clumpy. These perturbations away from the mean density <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="\langle\rho\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow></math> can
+be characterized as a overdensity field</p>
+<table id="Ax2.S3.EGx103" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle\delta(\boldsymbol{x})=\frac{\rho(\boldsymbol{x})-\langle\rho%
+\rangle}{\langle\rho\rangle}" display="inline"><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">with Fourier transform</p>
+<table id="Ax2.S3.EGx104" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle\delta(\boldsymbol{k})==\frac{1}{(2\pi)^{3/2}}\iiint^{\infty}_{-%
+\infty}\delta(\boldsymbol{x})e^{-i\boldsymbol{k}\boldsymbol{x}}dV." display="inline"><mrow><mi>δ</mi><mrow><mo stretchy="false">(</mo><mi>𝒌</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∭</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mi>δ</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>𝒌</mi><mo>⁢</mo><mi>𝒙</mi></mrow></mrow></msup><mi>d</mi><mi>V</mi><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In case that <math id="S1.SS1.p1.m2" class="ltx_Math" alttext="\delta(\boldsymbol{x})" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow></math> is isotropic, it can be specified by an
+isotropic power spectrum</p>
+<table id="Ax2.S3.EGx105" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E3.m1" class="ltx_Math" alttext="\displaystyle P(k)=\delta^{*}(k)\delta(k)=\left\lvert\delta(k)\right\rvert^{2}." display="inline"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>δ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo fence="true">|</mo><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true">|</mo></mrow><mn>2</mn></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If we assume, that the power spectrum has a power-law form <math id="S1.SS1.p1.m3" class="ltx_Math" alttext="P(k)\sim k^{n}" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∼</mo><msup><mi>k</mi><mi>n</mi></msup></mrow></math>, one
+can show <cite class="ltx_cite ltx_citemacro_citep">(Peebles and Yu, <a href="bib.html#bib108" title="Primeval Adiabatic Perturbation in an Expanding Universe" class="ltx_ref">1970</a>)</cite>, that the gravitational potential fluctuations
+<math id="S1.SS1.p1.m4" class="ltx_Math" alttext="\delta\Phi" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi mathvariant="normal">Φ</mi></mrow></math> scale as</p>
+<table id="Ax2.S3.EGx106" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E4.m1" class="ltx_Math" alttext="\displaystyle\delta\Phi\sim k^{(n-1)/2}." display="inline"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi mathvariant="normal">Φ</mi></mrow><mo>∼</mo><msup><mi>k</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore the magnitude of these fluctuations diverges on either the
+small scale or the high scale end, except in the case of <math id="S1.SS1.p1.m5" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>. This special
+property makes <math id="S1.SS1.p1.m6" class="ltx_Math" alttext="P(k)\sim k" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∼</mo><mi>k</mi></mrow></math> the most natural power-law spectrum and it also
+appears to be a good approximation to the true power spectrum of density
+fluctuations in the early universe.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.1.2 </span>Hierarchical growth of density fluctuations</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Once the universe has been seeded with density perturbations, they begin to
+grow, because the gravity of the overdense regions attracts matter
+away from neighboring underdense regions. The gravitational pull of the density
+perturbations on the smallest scales causes them to collapse first,
+because, as shown in the last section, the density perturbations have larger
+amplitude on smaller mass scales. That’s why the standard model of cosmology
+envisions structure formation as a hierarchical process in which gravity is
+drawing matter together to form increasingly larger structures.
+Clusters of galaxies are believed to be the largest structures formed by this
+process nowadays. Since it is assumed in the standard model that most
+of the matter in the universe is cold, collisionless dark matter<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">39</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">39</sup>The
+evolution of cold, collisionless dark matter can be described by the
+Vlasov-Poisson system of equations, see appendix <a href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">F</span></a>.</span></span></span>, the evolution
+of clusters is basically governed by the collisionless build-up of dark
+matter from small to successively larger haloes. In the
+course of this
+evolution, small structures merge to form larger structures. A full
+understanding of this hierarchical merging process requires
+numerical simulations, although its basic concepts can be obtained by means of
+the analytical spherical collapse model <cite class="ltx_cite ltx_citemacro_citep">(Gunn and Gott, <a href="bib.html#bib61" title="On the Infall of Matter Into Clusters of Galaxies and Some Effects on Their Evolution" class="ltx_ref">1972</a>; Bertschinger, <a href="bib.html#bib12" title="Self-similar secondary infall and accretion in an Einstein-de Sitter universe" class="ltx_ref">1985</a>)</cite>.</p>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">However, the accretion process in real clusters is not symmetric. Gravitational
+forces between merging matter clumps produce a time-varying collective
+potential which randomizes the velocities of the infalling particles yielding
+a Maxwellian velocity distribution. This process is known as violent relaxation
+<cite class="ltx_cite ltx_citemacro_citep">(Lynden-Bell, <a href="bib.html#bib81" title="Statistical mechanics of violent relaxation in stellar systems" class="ltx_ref">1967</a>)</cite> and leads to a state of virial equilibrium.
+The final outcome of such a virialized, collisionless system would be a
+self-gravitating isothermal sphere, in which the velocity dispersion <math id="S1.SS2.p2.m1" class="ltx_Math" alttext="\sigma_{v}" display="inline"><msub><mi>σ</mi><mi>v</mi></msub></math>
+is constant and isotropic at every point and the density profile is</p>
+<table id="Ax2.S3.EGx107" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E5.m1" class="ltx_Math" alttext="\displaystyle\rho(r)=\frac{\sigma_{v}^{2}}{2\pi Gr^{2}}." display="inline"><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><msubsup><mi>σ</mi><mi>v</mi><mn>2</mn></msubsup><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">But this model leads to the unfortunate result of infinite mass and energy
+for a galaxy cluster, and so it can never exist in nature.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">Numerical N-body simulations instead find that the profile of dark matter haloes
+is described by a universal law <cite class="ltx_cite ltx_citemacro_citep">(Navarro<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib96" title="A Universal Density Profile from Hierarchical Clustering" class="ltx_ref">1997</a>)</cite>
+</p>
+<table id="Ax2.S3.EGx108" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E6.m1" class="ltx_Math" alttext="\displaystyle\rho_{dm}(r)=\frac{\rho_{dm,0}}{r(r+r_{0})^{2}}," display="inline"><mrow><mrow><mrow><msub><mi>ρ</mi><mrow><mi>d</mi><mo>⁢</mo><mi>m</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>ρ</mi><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>m</mi></mrow><mo>,</mo><mn>0</mn></mrow></msub><mrow><mi>r</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>+</mo><msub><mi>r</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.SS2.p3.m1" class="ltx_Math" alttext="\rho_{0}" display="inline"><msub><mi>ρ</mi><mn>0</mn></msub></math> is the central density and <math id="S1.SS2.p3.m2" class="ltx_Math" alttext="r_{0}" display="inline"><msub><mi>r</mi><mn>0</mn></msub></math> a characteristic scale
+radius.
+But even with this more sophisticated density profile mass diverges
+logarithmically with radius. Thus, the cluster’s mass and
+relations linking that mass to observables depend crucially on the definition of
+the outer boundary of the cluster. It turns out, that their is no unique
+definition for the boundary of a cluster, however a common definition, also used
+in the analysis tools for this work, is the scale radius <math id="S1.SS2.p3.m3" class="ltx_Math" alttext="r_{200}" display="inline"><msub><mi>r</mi><mn>200</mn></msub></math> within which
+the mean matter density is 200 times the critical density
+<math id="S1.SS2.p3.m4" class="ltx_Math" alttext="\rho_{cr}=\frac{3H(z)^{2}}{8\pi G}" display="inline"><mrow><msub><mi>ρ</mi><mrow><mi>c</mi><mo>⁢</mo><mi>r</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⁢</mo><mi>H</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi></mrow></mfrac></mrow></math> of the universe <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">40</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">40</sup>Although not
+precisely equivalent, we will call <math id="S1.SS2.p3.m5" class="ltx_Math" alttext="r_{200}" display="inline"><msub><mi>r</mi><mn>200</mn></msub></math> the virial radius and
+the mass inside this radius the virial mass in our work.</span></span></span>.</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.2 </span>Intracluster medium</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">It is widely assumed that the total matter density profile of the galaxy
+clusters follows the NFW dark matter profile (equation (<a href="#E6" title="(8.6) ‣ 8.1.2 Hierarchical growth of density fluctuations ‣ 8.1 Cluster formation ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.6</span></a>)),
+because the dark matter accounts for the biggest part of the total mass.
+The profile of the baryonic density will also follow the NFW profile on
+the larger scales, because the baryons follow the gravitational potential of
+the dark matter. Only in the core, significant deviations from the NFW profile
+can be expected for the baryonic density, since the baryons are not
+collisionless and pressure effects should lead to a different profile.
+This can be tested by measurements of the extended x-ray emissions of the
+intracluster medium and by numerical fluid dynamical simulations, if the mean
+free path of the very hot, but dilute ICM is small enough.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.2.1 </span>Mean free path of the ICM</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">To determine if the fluid assumption holds for the ICM, it is
+important to estimate the mean free path. The mean free path of electrons and
+protons in a plasma is determined by coulomb collisions. The electrons in a
+Maxwellian plasma undergo Coulomb collisions in a time which is a factor of
+<math id="S2.SS1.p1.m1" class="ltx_Math" alttext="\sim\sqrt{m_{e}/m_{p}}" display="inline"><mrow><mi></mi><mo>∼</mo><msqrt><mrow><msub><mi>m</mi><mi>e</mi></msub><mo>/</mo><msub><mi>m</mi><mi>p</mi></msub></mrow></msqrt></mrow></math> shorter than the protons. On the other hand, the electrons
+move faster by the inverse of this factor. Thus, the mean free paths of
+electrons and protons are essentially equal, with <cite class="ltx_cite ltx_citemacro_citep">(Plionis<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib113" title="A Pan-Chromatic View of Clusters of Galaxies and the Large-Scale Structure" class="ltx_ref">2008</a>)</cite></p>
+<table id="Ax2.S3.EGx109" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E7.m1" class="ltx_Math" alttext="\displaystyle\lambda_{e}=\lambda_{p}\approx 23{\left(\frac{T}{10^{8}\,\mathrm{%
+K}}\right)}^{2}{\left(\frac{n_{e}}{10^{-3}\,\mathrm{cm^{-3}}}\right)}^{-1}%
+\mathrm{kpc}." display="inline"><mrow><mrow><msub><mi class="ltx_unit">λ</mi><mi class="ltx_unit">e</mi></msub><mo>=</mo><msub><mi class="ltx_unit">λ</mi><mi class="ltx_unit">p</mi></msub><mo>≈</mo><mrow><mn>23</mn><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi class="ltx_unit">T</mi><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>8</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi class="ltx_unit">n</mi><mi class="ltx_unit">e</mi></msub><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mrow><mo>-</mo><mn>3</mn></mrow></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit">cm</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi class="ltx_unit">kpc</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">So for typical values of temperature and density of the ICM, we have mean free
+paths of the order of <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="10\,\mathrm{kpc}" display="inline"><mrow><mpadded width="+1.7pt"><mn>10</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">kpc</mi></mrow></math>, which is roughly the scale of a galaxy.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">However the ICM contains a significant magnetic field <cite class="ltx_cite ltx_citemacro_citep">(Plionis<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib113" title="A Pan-Chromatic View of Clusters of Galaxies and the Large-Scale Structure" class="ltx_ref">2008</a>)</cite>, with
+typical values of <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="B=1\,\mathrm{\mu G}" display="inline"><mrow><mi class="ltx_unit">B</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">μ</mi><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">G</mi></mrow></mrow></math>, which might be not dynamically relevant
+on large scales, but it alters the microscopic motions of the electrons and
+protons. In a magnetic field, charged particles follow helical orbits, gyrating
+about magnetic field lines. For example the gyroradius of a typical electron is</p>
+<table id="Ax2.S3.EGx110" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E8.m1" class="ltx_Math" alttext="\displaystyle r_{g}\approx 9.72\cdot 10^{-11}{\left(\frac{T}{10^{8}\,\mathrm{K%
+}}\right)}^{1/2}{\left(\frac{B}{1\,\mathrm{\mu G}}\right)}\mathrm{kpc}." display="inline"><mrow><mrow><msub><mi class="ltx_unit">r</mi><mi class="ltx_unit">g</mi></msub><mo>≈</mo><mrow><mrow><mn>9.72</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>11</mn></mrow></msup></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi class="ltx_unit">T</mi><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>8</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi class="ltx_unit">B</mi><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">μ</mi><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">G</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mi class="ltx_unit">kpc</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">These very small gyroradii probably ensure that the ICM acts as a fluid even
+when the Coulomb mean free paths are long.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.2.2 </span>Magnetic fields</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">The general consensus is that no mechanism can produce significant magnetic
+fields in the ICM prior to the formation of galaxies and large scale structures
+<cite class="ltx_cite ltx_citemacro_citep">(Kulsrud and Zweibel, <a href="bib.html#bib75" title="On the origin of cosmic magnetic fields" class="ltx_ref">2008</a>)</cite>. So where do the significant magnetic fields in the ICM
+mentioned in chapter <a href="#S2.SS1" title="8.2.1 Mean free path of the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.2.1</span></a> come from? It is assumed, that weak seed fields
+were created early in the universe by the so-called Biermann battery mechanism
+<cite class="ltx_cite ltx_citemacro_citep">(Biermann and Schlüter, <a href="bib.html#bib13" title="Cosmic Radiation and Cosmic Magnetic Fields. II. Origin of Cosmic Magnetic Fields" class="ltx_ref">1951</a>)</cite>, which predicts fields of a strength <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="\approx 10^{-20}\,\mathrm{G}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mrow><mo>-</mo><mn>20</mn></mrow></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">G</mi></mrow></mrow></math>. Several theories (e.g. <cite class="ltx_cite ltx_citemacro_citet">Kulsrud and Anderson (<a href="bib.html#bib74" title="The spectrum of random magnetic fields in the mean field dynamo theory of the Galactic magnetic field" class="ltx_ref">1992</a>)</cite>)
+expect that these seed fields were amplified by Kolmogorov turbulence by a
+factor of <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="10^{14}-10^{15}" display="inline"><mrow><msup><mn>10</mn><mn>14</mn></msup><mo>-</mo><msup><mn>10</mn><mn>15</mn></msup></mrow></math>, which yields a magnetic field strength of
+<math id="S2.SS2.p1.m3" class="ltx_Math" alttext="\approx 1\,\mathrm{\mu G}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">μ</mi><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">G</mi></mrow></mrow></math> nowadays, a value which is observationally found in
+cores of galaxy clusters <cite class="ltx_cite ltx_citemacro_citep">(Carilli and Taylor, <a href="bib.html#bib29" title="Cluster Magnetic Fields" class="ltx_ref">2002</a>)</cite>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">But what is the driving mechanism that generates the turbulence amplifying
+the magnetic field in cluster cores? One process is merger events.
+<cite class="ltx_cite ltx_citemacro_citet">Roettiger<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib125" title="Magnetic Field Evolution in Merging Clusters of Galaxies" class="ltx_ref">1999</a>)</cite>
+found that the field energy after a merger is found to increase by nearly a
+factor of three (and locally up to a factor of 20) with respect to a non-merging
+cluster. Since it is quite likely that a galaxy cluster experiences more than
+one of these events, the amplification will be even larger. Nevertheless the
+most significant process one can think of is the Kelvin-Helmholtz (KH)
+instability driven by shear flows, which are common during the formation of
+cosmic structures. When applied to a cluster core environment, the core
+dimensions basically define
+the injection scale and the KH timescale turns out to be <math id="S2.SS2.p2.m1" class="ltx_Math" alttext="10^{7}\,\mathrm{years}" display="inline"><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>7</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit">years</mi></mrow></math>,
+which makes this instability an interesting process to amplify weak magnetic
+fields <cite class="ltx_cite ltx_citemacro_citep">(Dolag<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib37" title="Non-Thermal Processes in Cosmological Simulations" class="ltx_ref">2008</a>)</cite>.</p>
+</div>
+<div id="S2.SS2.p3" class="ltx_para">
+<p class="ltx_p">However although numerical simulations could show that the amplification of
+magnetic fields by shear flows is significant
+<cite class="ltx_cite ltx_citemacro_citep">(Dolag<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib38" title="Constrained simulations of the magnetic field in the local Universe and the propagation of ultrahigh energy cosmic rays" class="ltx_ref">2005</a>; Brüggen<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib26" title="Simulations of Magnetic Fields in Filaments" class="ltx_ref">2005</a>)</cite>, they still have problems explaining the large
+amplification factors of the initial magnetic fields. <cite class="ltx_cite ltx_citemacro_citet">Dolag<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib38" title="Constrained simulations of the magnetic field in the local Universe and the propagation of ultrahigh energy cosmic rays" class="ltx_ref">2005</a>)</cite>, who
+used a Magnetic Smoothed Particle Hydrodynamic code, had to assume a initial
+seed field of <math id="S2.SS2.p3.m1" class="ltx_Math" alttext="10^{-11}\,\mathrm{G}" display="inline"><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mrow><mo>-</mo><mn>11</mn></mrow></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">G</mi></mrow></math> at a redshift <math id="S2.SS2.p3.m2" class="ltx_Math" alttext="z=20" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>20</mn></mrow></math> to achieve realistic
+magnetic field strengths at <math id="S2.SS2.p3.m3" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. But these problems might be due to the
+numerical method used. Only recently it has been shown by <cite class="ltx_cite ltx_citemacro_citet">Agertz<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib5" title="Fundamental differences between SPH and grid methods" class="ltx_ref">2007</a>)</cite>,
+that Smoothed Particle Hydrodynamic (SPH) codes have severe problems describing
+Kelvin-Helmholtz instabilities. Although a solution to these problems has
+already been proposed by <cite class="ltx_cite ltx_citemacro_citet">Price (<a href="bib.html#bib118" title="Modelling discontinuities and Kelvin-Helmholtz instabilities in SPH" class="ltx_ref">2007</a>)</cite>, we have to assume, that up
+to now basically all SPH simulations of turbulence driven by flow instabilities
+are questionable. Hence a better treatment of turbulence is necessary to
+be able to study the evolution of magnetic fields in galaxy clusters.</p>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.2.3 </span>X-ray observations of the ICM</h3>
+
+<div id="S2.SS3.p1" class="ltx_para">
+<p class="ltx_p">X-ray observations are the most accurate source of information about galaxy
+clusters today. Observables in the X-ray band include the overall X-ray
+luminosity of a cluster, emitted by the hot plasma trapped
+in the cluster’s gravitational potential and the cluster’s temperature inferred
+from the X-ray spectrum of that plasma. From these data, one can reconstruct
+density, temperature and entropy profiles. Of course, projection effects,
+cluster substructure, and deviations from spherical symmetry complicate the
+generation of these profiles. However only recently <cite class="ltx_cite ltx_citemacro_citet">Nagai<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib94" title="Testing X-Ray Measurements of Galaxy Clusters with Cosmological Simulations" class="ltx_ref">2007</a>)</cite>
+could demonstrate using data from cosmological simulations, that the methods
+used by <cite class="ltx_cite ltx_citemacro_citet">Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite> for analyzing X-ray data of the the
+X-ray satellite CHANDRA can reliably recover the distribution of density and
+temperature of the hot ICM. So given these three-dimensional models for the gas
+density and temperature profiles, the total gravitational mass within the radius
+<math id="S2.SS3.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> can be estimated from the hydrostatic equilibrium equation in the
+form<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">41</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">41</sup>For a derivation see appendix <a href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">G</span></a>.</span></span></span></p>
+<table id="Ax2.S3.EGx111" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E9.m1" class="ltx_Math" alttext="\displaystyle M(r)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E9.m2" class="ltx_Math" alttext="\displaystyle=-\frac{R_{s}T_{g}r}{G}{\left(\frac{\partial\ln T_{g}}{\partial%
+\ln r}+\frac{\partial\ln\rho_{g}}{\partial\ln r}\right)}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>R</mi><mi>s</mi></msub><mo>⁢</mo><msub><mi>T</mi><mi>g</mi></msub><mo>⁢</mo><mi>r</mi></mrow><mi>G</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ln</mi></mrow><mo>⁡</mo><msub><mi>T</mi><mi>g</mi></msub></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ln</mi></mrow><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ln</mi></mrow><mo>⁡</mo><msub><mi>ρ</mi><mi>g</mi></msub></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ln</mi></mrow><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Given <math id="S2.SS3.p1.m2" class="ltx_Math" alttext="M(r)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math>, one can then calculate the total
+matter density profile</p>
+<table id="Ax2.S3.EGx112" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E10.m1" class="ltx_Math" alttext="\displaystyle\rho(r)=\frac{1}{4\pi r^{2}}\frac{dM}{dr}." display="inline"><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>M</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The result of such an analysis <cite class="ltx_cite ltx_citemacro_citep">(Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite> can be seen in figure
+<a href="#F1" title="Figure 8.1 ‣ 8.2.3 X-ray observations of the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>.</p>
+</div>
+<figure id="F1" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F9.sf1" class="ltx_figure ltx_align_center"><img src="x22.png" id="F9.sf1.g1" class="ltx_graphics" width="406" height="403" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>Density profiles for gas density <math id="F9.sf1.m3" class="ltx_Math" alttext="\rho_{gas}" display="inline"><msub><mi>ρ</mi><mrow><mi>g</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>s</mi></mrow></msub></math> and total density
+<math id="F9.sf1.m4" class="ltx_Math" alttext="\rho_{tot}" display="inline"><msub><mi>ρ</mi><mrow><mi>t</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F9.sf2" class="ltx_figure ltx_align_center"><img src="x23.png" id="F9.sf2.g1" class="ltx_graphics" width="407" height="397" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>Temperature profiles.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 8.1: </span>Scaled density and temperature profiles for galaxy clusters
+observed with CHANDRA by <cite class="ltx_cite ltx_citemacro_citep">(Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite>. The yellow line are a NFW
+fit to the total gas density and a average fit to the temperature profiles.</figcaption>
+</figure>
+<div id="S2.SS3.p2" class="ltx_para">
+<p class="ltx_p">It is apparent, that the NFW profile provides a good fit for the density
+profile of the total mass of the clusters. The scatter in the baryonic density
+profiles is significantely larger and for lower temperature clusters the
+profiles are flatter towards the center of the cluster. The temperature
+profiles also show signs of self-similarity, at least for the higher
+temperature clusters <math id="S2.SS3.p2.m1" class="ltx_Math" alttext="T&gt;2.5\,\mathrm{keV}" display="inline"><mrow><mi class="ltx_unit">T</mi><mo>&gt;</mo><mrow><mpadded width="+1.7pt"><mn>2.5</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">keV</mi></mrow></mrow></math>, which are fitted by</p>
+<table id="Ax2.S3.EGx113" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E11.m1" class="ltx_Math" alttext="\displaystyle\frac{T(r)}{T_{mg}}=1.35\frac{(x/0.045)^{1.9}+0.45}{(x/0.045)^{1.%
+9}+1}\frac{1}{{\left[1+(x/0.6)^{2}\right]}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><msub><mi>T</mi><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi></mrow></msub></mfrac></mstyle><mo>=</mo><mrow><mn>1.35</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>/</mo><mn>0.045</mn></mrow><mo stretchy="false">)</mo></mrow><mn>1.9</mn></msup><mo>+</mo><mn>0.45</mn></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>/</mo><mn>0.045</mn></mrow><mo stretchy="false">)</mo></mrow><mn>1.9</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mo>[</mo><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>/</mo><mn>0.6</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>]</mo></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8.11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS3.p2.m2" class="ltx_Math" alttext="x=r/r_{500}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>r</mi><mo>/</mo><msub><mi>r</mi><mn>500</mn></msub></mrow></mrow></math> according to <cite class="ltx_cite ltx_citemacro_citep">(Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite>. Also visible from the
+temperature fit are a isothermal plateau at <math id="S2.SS3.p2.m3" class="ltx_Math" alttext="r\approx 0.2\,\mathrm{r_{500}}" display="inline"><mrow><mi class="ltx_unit">r</mi><mo>≈</mo><mrow><mpadded width="+1.7pt"><mn>0.2</mn></mpadded><mo>⁢</mo><msub><mi class="ltx_unit" mathvariant="normal">r</mi><mn>500</mn></msub></mrow></mrow></math> and
+the significant decrease of temperature towards the center. This behavior is
+often
+explained by assuming some cooling mechanism. Theoretically cooling
+should lead to lower pressure in the center of the cluster, thereby leading to
+an even denser core to maintain hydrostatic equilibrium. But, because cooling is
+even more effective at lower densities, this process is instable leading to
+catastrophic cooling of the core, which is not observed, giving rise to the
+so-called “cluster cooling flow problem”. Observationally emissions from the
+central cluster gas can be detected for gas temperatures between the ambient
+temperature <math id="S2.SS3.p2.m4" class="ltx_Math" alttext="T_{0}" display="inline"><msub><mi>T</mi><mn>0</mn></msub></math> and <math id="S2.SS3.p2.m5" class="ltx_Math" alttext="\sim T_{0}/2" display="inline"><mrow><mi></mi><mo>∼</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>/</mo><mn>2</mn></mrow></mrow></math>, but not below <math id="S2.SS3.p2.m6" class="ltx_Math" alttext="&lt;T_{0}/3" display="inline"><mrow><mi></mi><mo>&lt;</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>/</mo><mn>3</mn></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_citep">(Peterson<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib110" title="High-Resolution X-Ray Spectroscopic Constraints on Cooling-Flow Models for Clusters of Galaxies" class="ltx_ref">2003</a>)</cite>,
+so some sort of heating mechanism seems to be inhibiting the cooling below this
+temperature. There are plenty of candidates for this - supernovae, outflows
+from active galactic nuclei, thermal conduction and turbulent mixing - but
+there is still no consensus on the relative importance of these mechanisms.
+Turbulence is especially interesting because it was also
+suggested by <cite class="ltx_cite ltx_citemacro_citet">Nagai<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib94" title="Testing X-Ray Measurements of Galaxy Clusters with Cosmological Simulations" class="ltx_ref">2007</a>)</cite> as mechanism, which might explain some
+deviations in the computation of the total mass,
+based on the assumption of hydrostatic equilibrium, without taking
+turbulent pressure into account.</p>
+</div>
+</section>
+<section id="S2.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">8.2.4 </span>Turbulence in the ICM</h3>
+
+<div id="S2.SS4.p1" class="ltx_para">
+<p class="ltx_p">The “bottom-up” model or hierarchical model of cosmological structure
+formation
+<cite class="ltx_cite ltx_citemacro_citep">(eg., Ostriker, <a href="bib.html#bib104" title="Astronomical tests of the cold dark matter scenario" class="ltx_ref">1993</a>)</cite> explains the build up of clusters through a
+sequence of mergers of lower-mass systems (stars <math id="S2.SS4.p1.m1" class="ltx_Math" alttext="\rightarrow" display="inline"><mo>→</mo></math> galaxies
+<math id="S2.SS4.p1.m2" class="ltx_Math" alttext="\rightarrow" display="inline"><mo>→</mo></math> groups <math id="S2.SS4.p1.m3" class="ltx_Math" alttext="\rightarrow" display="inline"><mo>→</mo></math> clusters). In particular, mergers of galaxies
+play a fundamental role in
+determining the structure and dynamics of massive clusters of galaxies. It is
+found that major mergers induce temperature inhomogeneities and bulk motions
+with velocities <math id="S2.SS4.p1.m4" class="ltx_Math" alttext="&gt;1000\,\mathrm{km\ s^{-1}}" display="inline"><mrow><mi></mi><mo>&gt;</mo><mrow><mpadded width="+1.7pt"><mn>1000</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">km</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> in the intracluster medium (ICM)
+<cite class="ltx_cite ltx_citemacro_citep">(Norman and Bryan, <a href="bib.html#bib97" title="Cluster Turbulence" class="ltx_ref">1999</a>)</cite>. This results in complex hydrodynamic flows where most of
+the kinetic energy is quickly dissipated to heat by shocks, but some part may in
+principle also excite long-lasting turbulent gas motions.</p>
+</div>
+<div id="S2.SS4.p2" class="ltx_para">
+<p class="ltx_p">In numerical simulations of merging clusters <cite class="ltx_cite ltx_citemacro_citep">(Schindler and Mueller, <a href="bib.html#bib131" title="Simulations of the evolution of galaxy clusters. 11. Dynamics of the intra-cluster gas" class="ltx_ref">1993</a>; Roettiger<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib124" title="Numerical Simulations of Merging Clusters of Galaxies" class="ltx_ref">1997</a>; Ricker and Sarazin, <a href="bib.html#bib123" title="Off-Axis Cluster Mergers: Effects of a Strongly Peaked Dark Matter Profile" class="ltx_ref">2001</a>; Takizawa, <a href="bib.html#bib146" title="Hydrodynamic Simulations of a Moving Substructure in a Cluster of Galaxies: Cold Fronts and Turbulence Generation" class="ltx_ref">2005</a>)</cite> it has been shown that infalling
+subclusters generate a laminar bulk flow, but inject turbulent motions via
+Kelvin-Helmholtz instabilities at the interfaces between the bulk flows and the
+primary cluster gas. Such eddies redistribute the energy of the merger through
+the cluster volume and decay with time into more and more random and turbulent
+velocity fields, eventually developing a turbulent cascade with a spectrum of
+fluctuations expected to be close to a Kolmogorov spectrum <cite class="ltx_cite ltx_citemacro_citep">(Dolag<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib39" title="Turbulent gas motions in galaxy cluster simulations: the role of smoothed particle hydrodynamics viscosity" class="ltx_ref">2005</a>)</cite>.</p>
+</div>
+<div id="S2.SS4.p3" class="ltx_para">
+<p class="ltx_p">The turbulent nature of the flow could be directly confirmed with the help of
+high-resolution X-ray spectroscopy of emission line broadening of lines of
+heavy ions. It has been suggested <cite class="ltx_cite ltx_citemacro_citep">(Sunyaev<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib145" title="On the Detectability of Turbulence and Bulk Flows in X-ray Clusters" class="ltx_ref">2003</a>)</cite>, that the X-ray
+microcalorimeters (XRS) on board of the X-ray satellite ASTRO-E2<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">42</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">42</sup>Also
+called <em class="ltx_emph">Suzaku</em>.</span></span></span> should be able to detect this broadening. But due to a
+critical flaw discovered in the XRS instrument in August 2005, this test has to
+be
+postponed until future instruments like XEUS are available. Nevertheless other
+observations have revealed some signature for turbulence in the ICM.
+For example <cite class="ltx_cite ltx_citemacro_citet">Schuecker<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib137" title="Probing turbulence in the Coma galaxy cluster" class="ltx_ref">2004</a>)</cite> analyzed the pressure
+fluctuation spectrum of the Coma cluster claiming that it scales according to
+Kolmogorov-Obukhov theory (see figure <a href="#F2" title="Figure 8.2 ‣ 8.2.4 Turbulence in the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.2</span></a>).</p>
+</div>
+<figure id="F2" class="ltx_figure"><img src="x24.png" id="F2.g1" class="ltx_graphics ltx_centering" width="472" height="412" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 8.2: </span>Observed projected shot-noise-subtracted
+power spectral densities (dots with <math id="F2.m2" class="ltx_Math" alttext="1\sigma" display="inline"><mrow><mn>1</mn><mo>⁢</mo><mi>σ</mi></mrow></math> error bars) compared with model
+predictions (dashed lines). From <cite class="ltx_cite ltx_citemacro_citet">Schuecker<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib137" title="Probing turbulence in the Coma galaxy cluster" class="ltx_ref">2004</a>)</cite>.</figcaption>
+</figure>
+<figure id="F3" class="ltx_figure"><img src="x25.png" id="F3.g1" class="ltx_graphics ltx_centering" width="473" height="339" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 8.3: </span>Power spectra for two different
+inclination angles <math id="F3.m3" class="ltx_Math" alttext="\theta=30^{\circ}" display="inline"><mrow><mi>θ</mi><mo>=</mo><msup><mn>30</mn><mo>∘</mo></msup></mrow></math> and <math id="F3.m4" class="ltx_Math" alttext="\theta=45^{\circ}" display="inline"><mrow><mi>θ</mi><mo>=</mo><msup><mn>45</mn><mo>∘</mo></msup></mrow></math>.
+For comparison a Kolmogorov-like power spectrum is
+plotted as a straight dashed line. One can see that the calculated
+power spectra follow such a power spectrum over at least one order of
+magnitude. From <cite class="ltx_cite ltx_citemacro_citet">Vogt and Enßlin (<a href="bib.html#bib156" title="A Bayesian view on Faraday rotation maps Seeing the magnetic power spectra in galaxy clusters" class="ltx_ref">2005</a>)</cite>.</figcaption>
+</figure>
+<div id="S2.SS4.p4" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Vogt and Enßlin (<a href="bib.html#bib156" title="A Bayesian view on Faraday rotation maps Seeing the magnetic power spectra in galaxy clusters" class="ltx_ref">2005</a>)</cite> makes
+use of the Faraday rotation effect to investigate the magnetic field structure
+of the ICM in the Hydra cluster. They extract magnetic field strength power
+spectra from their data and find a Kolmogorov scaling behavior below a
+length scale of 1 <math id="S2.SS4.p4.m1" class="ltx_Math" alttext="kpc" display="inline"><mi class="ltx_unit">kpc</mi></math> (see figure <a href="#F3" title="Figure 8.3 ‣ 8.2.4 Turbulence in the ICM ‣ 8.2 Intracluster medium ‣ Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>) .</p>
+</div>
+<div id="S2.SS4.p5" class="ltx_para">
+<p class="ltx_p">Furthermore the broadening of the iron abundance profile
+in the core of the Perseus cluster <cite class="ltx_cite ltx_citemacro_citep">(Rebusco<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib122" title="Impact of stochastic gas motions on galaxy cluster abundance profiles" class="ltx_ref">2005</a>)</cite> and other galaxy
+clusters <cite class="ltx_cite ltx_citemacro_citep">(Rebusco<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib121" title="Effect of turbulent diffusion on iron abundance profiles" class="ltx_ref">2006</a>)</cite> and the lack of
+resonant scattering in the <math id="S2.SS4.p5.m1" class="ltx_Math" alttext="6.7\,\mathrm{keV}" display="inline"><mrow><mpadded width="+1.7pt"><mn>6.7</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">keV</mi></mrow></math> He-like iron K<math id="S2.SS4.p5.m2" class="ltx_Math" alttext="{}_{\alpha}" display="inline"><msub><mi></mi><mi>α</mi></msub></math> line in
+the Perseus cluster <cite class="ltx_cite ltx_citemacro_citep">(Churazov<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib32" title="XMM-Newton observations of the Perseus cluster - II. Evidence for gas motions in the core" class="ltx_ref">2004</a>)</cite> can also be interpreted as evidence for
+the turbulent state of the ICM.</p>
+</div>
+</section>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Numerical testing</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Simulations of galaxy clusters</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

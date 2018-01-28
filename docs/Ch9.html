@@ -1,0 +1,1341 @@
+<!DOCTYPE html><html>
+<head>
+<title>9 Simulations of galaxy clusters‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Cluster physics</span></a><a href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Summary and Conclusions</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">Chapter 9 </span>Simulations of galaxy clusters</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9.1 </span>Details of the simulations</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We performed two simulations of cluster formation with Enzo following
+<cite class="ltx_cite ltx_citemacro_citet">Iapichino and Niemeyer (<a href="bib.html#bib64" title="Hydrodynamical adaptive mesh refinement simulations of turbulent flows - II. Cosmological simulations of galaxy clusters" class="ltx_ref">2008</a>)</cite>. One simulation was done with the Schmidt SGS model
+including the Sarkar corrections and some additional modifications described
+below. For comparsion we conducted a second simulation without SGS model. In the
+following section we describe the common features of these two simulations, in
+section <a href="#S1.SS2" title="9.1.2 Numerical issues ‣ 9.1 Details of the simulations ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.1.2</span></a> we describe some additional numerical issues, which had
+to be taken into account when doing a cluster simulation with SGS model in
+comoving coordinates.</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.1.1 </span>Common features</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">The simulations were done using a flat (critical density <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="\Omega=1" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mn>1</mn></mrow></math>) cold dark
+matter (CDM) background cosmology with a dark energy density
+<math id="S1.SS1.p1.m2" class="ltx_Math" alttext="\Omega_{\Lambda}=0.7" display="inline"><mrow><msub><mi mathvariant="normal">Ω</mi><mi mathvariant="normal">Λ</mi></msub><mo>=</mo><mn>0.7</mn></mrow></math>, a total (including baryonic and dark matter) matter
+density <math id="S1.SS1.p1.m3" class="ltx_Math" alttext="\Omega_{m}=0.3" display="inline"><mrow><msub><mi mathvariant="normal">Ω</mi><mi>m</mi></msub><mo>=</mo><mn>0.3</mn></mrow></math>, a baryonic matter density <math id="S1.SS1.p1.m4" class="ltx_Math" alttext="\Omega_{b}=0.04" display="inline"><mrow><msub><mi mathvariant="normal">Ω</mi><mi>b</mi></msub><mo>=</mo><mn>0.04</mn></mrow></math>, the
+Hubble parameter set to <math id="S1.SS1.p1.m5" class="ltx_Math" alttext="h=0.7" display="inline"><mrow><mi>h</mi><mo>=</mo><mn>0.7</mn></mrow></math>, a galaxy fluctuation amplitude <math id="S1.SS1.p1.m6" class="ltx_Math" alttext="\sigma_{8}=0.9" display="inline"><mrow><msub><mi>σ</mi><mn>8</mn></msub><mo>=</mo><mn>0.9</mn></mrow></math>,
+and a scalar spectral index <math id="S1.SS1.p1.m7" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>. Both simulations were started with the same
+initial conditions at redshift <math id="S1.SS1.p1.m8" class="ltx_Math" alttext="z_{ini}=60" display="inline"><mrow><msub><mi>z</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mn>60</mn></mrow></math>, using the <cite class="ltx_cite ltx_citemacro_citet">Eisenstein and Hu (<a href="bib.html#bib41" title="Power Spectra for Cold Dark Matter and Its Variants" class="ltx_ref">1999</a>)</cite>
+transfer function, and evolved to <math id="S1.SS1.p1.m9" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. The simulations were adiabatic with a
+heat capacity ratio <math id="S1.SS1.p1.m10" class="ltx_Math" alttext="\gamma=5/3" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></mrow></math> assuming a fully ionized gas with a mean
+molecular weight <math id="S1.SS1.p1.m11" class="ltx_Math" alttext="m_{\mu}=0.6\,\mathrm{u}" display="inline"><mrow><msub><mi class="ltx_unit">m</mi><mi class="ltx_unit">μ</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>0.6</mn></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">u</mi></mrow></mrow></math>. Cooling physics, magnetic fields,
+feedback, and transport processes are neglected.</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p">The simulation box had a comoving size of <math id="S1.SS1.p2.m1" class="ltx_Math" alttext="128\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>128</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. It was
+resolved with a root grid (level <math id="S1.SS1.p2.m2" class="ltx_Math" alttext="l=0" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow></math>) of <math id="S1.SS1.p2.m3" class="ltx_Math" alttext="128^{3}" display="inline"><msup><mn>128</mn><mn>3</mn></msup></math> cells and <math id="S1.SS1.p2.m4" class="ltx_Math" alttext="128^{3}" display="inline"><msup><mn>128</mn><mn>3</mn></msup></math> N-body
+particles. A static child grid (<math id="S1.SS1.p2.m5" class="ltx_Math" alttext="l=1" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow></math>) was nested inside the root grid with a
+size of
+64 Mpc/h, <math id="S1.SS1.p2.m6" class="ltx_Math" alttext="128^{3}" display="inline"><msup><mn>128</mn><mn>3</mn></msup></math> cells and <math id="S1.SS1.p2.m7" class="ltx_Math" alttext="128^{3}" display="inline"><msup><mn>128</mn><mn>3</mn></msup></math> N-body particles. The mass of each particle
+in this grid was <math id="S1.SS1.p2.m8" class="ltx_Math" alttext="9\times 10^{9}\,\mathrm{M_{\odot}\ h^{-1}}" display="inline"><mrow><mrow><mn>9</mn><mo>×</mo><mpadded width="+1.7pt"><msup><mn>10</mn><mn>9</mn></msup></mpadded></mrow><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. Inside this grid, in
+a volume of <math id="S1.SS1.p2.m9" class="ltx_Math" alttext="38.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>38.4</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, adaptive grid refinement from level
+<math id="S1.SS1.p2.m10" class="ltx_Math" alttext="l=2" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>2</mn></mrow></math> to <math id="S1.SS1.p2.m11" class="ltx_Math" alttext="l=6" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>6</mn></mrow></math> was enabled using a overdensity refinement criteria as described
+in <cite class="ltx_cite ltx_citemacro_citet">Iapichino and Niemeyer (<a href="bib.html#bib64" title="Hydrodynamical adaptive mesh refinement simulations of turbulent flows - II. Cosmological simulations of galaxy clusters" class="ltx_ref">2008</a>)</cite> with an overdensity factor <math id="S1.SS1.p2.m12" class="ltx_Math" alttext="f=4.0" display="inline"><mrow><mi>f</mi><mo>=</mo><mn>4.0</mn></mrow></math>. The refinement
+factor between two levels was set to <math id="S1.SS1.p2.m13" class="ltx_Math" alttext="r=2" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>2</mn></mrow></math>, allowing for a effective resolution
+of <math id="S1.SS1.p2.m14" class="ltx_Math" alttext="8196^{3}" display="inline"><msup><mn>8196</mn><mn>3</mn></msup></math> cells or <math id="S1.SS1.p2.m15" class="ltx_Math" alttext="15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>.</p>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">The static and dynamically refined grids were nested around the place of
+formation of a galaxy cluster, identified by <cite class="ltx_cite ltx_citemacro_citet">Iapichino and Niemeyer (<a href="bib.html#bib64" title="Hydrodynamical adaptive mesh refinement simulations of turbulent flows - II. Cosmological simulations of galaxy clusters" class="ltx_ref">2008</a>)</cite> using the
+HOP algorithm <cite class="ltx_cite ltx_citemacro_citep">(Eisenstein and Hut, <a href="bib.html#bib42" title="HOP: A New Group-Finding Algorithm for N-Body Simulations" class="ltx_ref">1998</a>)</cite>. The cluster had a virial mass of
+<math id="S1.SS1.p3.m1" class="ltx_Math" alttext="M_{vir}=5.49\times 10^{14}\,\mathrm{M_{\odot}\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">M</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mrow><mn>5.49</mn><mo>×</mo><mpadded width="+1.7pt"><msup><mn>10</mn><mn>14</mn></msup></mpadded></mrow><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and a virial radius of
+<math id="S1.SS1.p3.m2" class="ltx_Math" alttext="R_{vir}=1.33\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">R</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>1.33</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> for both simulations.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.1.2 </span>Numerical issues</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Running robust simulations including a SGS model like the Schmidt or Sarkar
+model in a comoving cosmological background requires some additional techniques
+not yet discussed. Apart from the additional terms due
+to comoving coordinates in the filtered equations, these techniques help to
+handle the extreme high turbulent Mach numbers, which appear on the coarsest
+grids in these simulations and are briefly described in the following sections.</p>
+</div>
+<section id="S1.SS2.SSSx1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">Filtered equations of fluid dynamics in comoving coordinates</h4>
+
+<div id="S1.SS2.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Filtering the equations of fluid dynamics in comoving coordinates
+(<a href="A8.html#E25" title="(H.25) ‣ H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.25</span></a>)-(<a href="A8.html#E27" title="(H.27) ‣ H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.27</span></a>) can be done in the same way as
+filtering the equations in cartesian coordinates as shown in chapter <a href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>.
+As a result we get</p>
+<table id="Ax2.S3.EGx114" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\langle\tilde{\rho}\rangle+\frac{1}{a}%
+\frac{\partial}{\partial x_{j}}\hat{u}_{j}\langle\tilde{\rho}\rangle=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E1.m2" class="ltx_Math" alttext="\displaystyle 0," display="inline"><mrow><mn>0</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.1)</span></td>
+</tr>
+<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}\langle%
+\tilde{\rho}\rangle\hat{u}_{i}+\frac{1}{a}\frac{\partial}{\partial x_{j}}\hat{%
+u}_{j}\langle\tilde{\rho}\rangle\hat{u}_{i}=&amp;\displaystyle-\frac{1}{a}\frac{%
+\partial}{\partial x_{i}}\langle\tilde{p}\rangle+\frac{1}{a}\frac{\partial}{%
+\partial x_{j}}\langle\sigma^{\prime}_{ij}\rangle+\langle\tilde{\rho}\rangle%
+\hat{g}^{*}_{i}-\frac{1}{a}\frac{\partial}{\partial x_{j}}\hat{\tau}(u_{i},u_{%
+j})\\
+&amp;\displaystyle-\frac{\dot{a}}{a}\langle\tilde{\rho}\rangle\hat{u}_{i},\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msubsup><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mi>i</mi><mo>*</mo></msubsup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>i</mi></msub><mo>,</mo><msub><mi>u</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.2)</span></td>
+</tr>
+<tr id="E3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E3.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}\langle%
+\tilde{\rho}\rangle e_{res}+\frac{1}{a}\frac{\partial}{\partial x_{j}}\hat{u}_%
+{j}\langle\tilde{\rho}\rangle e_{res}=&amp;\displaystyle-\frac{1}{a}\frac{\partial%
+}{\partial x_{i}}\hat{u}_{i}\langle\tilde{p}\rangle+\frac{1}{a}\frac{\partial}%
+{\partial x_{j}}\hat{u}_{i}\langle\sigma^{\prime}_{ij}\rangle+\frac{1}{a}%
+\langle\tilde{\rho}\rangle\hat{u}_{i}\hat{g}^{*}_{i}\\
+&amp;\displaystyle-\frac{\dot{a}}{a}(\langle\tilde{\rho}\rangle e_{res}+\frac{1}{3%
+}\langle\tilde{\rho}\rangle\hat{u}_{i}\hat{u}_{i}+\langle\tilde{p}\rangle)\\
+&amp;\displaystyle+\langle\tilde{\rho}\rangle(\lambda+\epsilon)-\frac{1}{a}\hat{u}%
+_{i}\frac{\partial}{\partial x_{j}}\hat{\tau}(u_{i},u_{j})-\frac{1}{a}\frac{%
+\partial}{\partial x_{j}}\hat{\tau}(u_{j},e_{int}),\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msubsup><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mi>i</mi><mo>*</mo></msubsup></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow><mo>+</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>i</mi></msub><mo>,</mo><msub><mi>u</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>j</mi></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.3)</span></td>
+</tr>
+<tr id="E4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E4.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\langle\tilde{\rho}\rangle e_{t}+\frac%
+{1}{a}\frac{\partial}{\partial x_{j}}\hat{u}_{j}\langle\tilde{\rho}\rangle e_{%
+t}=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E4.m2" class="ltx_Math" alttext="\displaystyle\mathbb{D}+\Gamma-\langle\tilde{\rho}\rangle(\lambda+\epsilon)-%
+\frac{1}{a}\hat{\tau}(u_{j},u_{i})\frac{\partial}{\partial x_{j}}\hat{u_{i}}-2%
+\frac{\dot{a}}{a}\langle\tilde{\rho}\rangle e_{t}." display="inline"><mrow><mrow><mrow><mi>𝔻</mi><mo>+</mo><mi mathvariant="normal">Γ</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>j</mi></msub><mo>,</mo><msub><mi>u</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><msub><mi>u</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.4)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">In the source code of Enzo the derivatives are always taken with respect
+to <math id="S1.SS2.SSSx1.p2.m1" class="ltx_Math" alttext="r_{i}=ax_{i}" display="inline"><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></math> and the additional terms due to comoving coordinates in
+momentum and resolved energy equation are already implemented. So the only term
+we had to implement additionally compared to the non-comoving case was the term
+<math id="S1.SS2.SSSx1.p2.m2" class="ltx_Math" alttext="2\frac{\dot{a}}{a}\langle\tilde{\rho}\rangle e_{t}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></math> in the equation of turbulent energy. Furthermore
+for the subgrid model terms it is necessary to take into account that
+the Jacobian of the velocity in comoving coordinates is<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">43</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">43</sup>See equation
+(<a href="A8.html#E7" title="(H.7) ‣ H.2 Useful transformations ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.7</span></a>) in the Appendix.</span></span></span></p>
+<table id="Ax2.S3.EGx115" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E5.m1" class="ltx_Math" alttext="\displaystyle J_{ij}=\frac{\partial}{\partial r_{i}}v_{j}" display="inline"><mrow><msub><mi>J</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>j</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E5.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{a}\frac{\partial}{\partial x_{i}}u_{j}+\frac{\dot{a}}{a%
+}\delta_{ij}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The tracefree rate of strain tensor in comoving coordinates for example can then
+be easily expressed in terms of the Jacobian of the velocity field</p>
+<table id="Ax2.S3.EGx116" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E6.m1" class="ltx_Math" alttext="\displaystyle S^{*}_{ij}=\frac{1}{2}{\left(J_{ij}+J_{ji}\right)}-\frac{1}{3}%
+\delta_{ij}J_{kk}." display="inline"><mrow><mrow><msubsup><mi>S</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>J</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>J</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>J</mi><mrow><mi>k</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Basically all terms in the subgrid model using derivatives of the resolved
+velocity are therefore written in terms of the Jacobian of the velocity.</p>
+</div>
+</section>
+<section id="S1.SS2.SSSx2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">Turbulent energy cutoff and lower limit for temperature</h4>
+
+<div id="S1.SS2.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">High turbulent Mach numbers occur in cosmological simulations especially in the
+very cold, low-density voids of the computational domain. To make sure that in
+our adiabatic simulation the temperature and therefore the sound speed doesn’t
+drop to unphysical low values we introduced a lower limit of the temperature
+<math id="S1.SS2.SSSx2.p1.m1" class="ltx_Math" alttext="T_{min}=10\,\mathrm{K}" display="inline"><mrow><msub><mi class="ltx_unit">T</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>10</mn></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math>. This value is reasonable, since no gas in the
+universe can have a temperature lower than the cosmic microwave background
+temperature of 2.7 K for a longer time. Since there are presumably more
+heating mechanisms like UV-heating, choosing 10 K as a lower limit seems to be
+a rational choice.</p>
+</div>
+<div id="S1.SS2.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">On the other side, low density gas can be accelerated very quickly in a
+gravitating field, leading to high velocity gradients, which lead to
+production of high amounts of turbulent energy according to the turbulent
+viscosity hypothesis. However the validity of the turbulent viscosity
+hypothesis has never been tested or verified in astrophysical
+flows. We are therefore free to assume that for flows with high velocity
+gradients, the production of turbulent energy is restricted and use as an
+upper limit of the turbulent Mach number <math id="S1.SS2.SSSx2.p2.m1" class="ltx_Math" alttext="M_{t,max}=\sqrt{2}" display="inline"><mrow><msub><mi>M</mi><mrow><mi>t</mi><mo>,</mo><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msub><mo>=</mo><msqrt><mn>2</mn></msqrt></mrow></math>. The exact value
+of this limit is based on the idea that in an isothermal gas (speed of sound
+<math id="S1.SS2.SSSx2.p2.m2" class="ltx_Math" alttext="c_{\text{s,iso}}=\frac{p_{th}}{\rho}" display="inline"><mrow><msub><mi>c</mi><mtext>s,iso</mtext></msub><mo>=</mo><mfrac><msub><mi>p</mi><mrow><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></msub><mi>ρ</mi></mfrac></mrow></math>), the total pressure can be expressed as</p>
+<table id="Ax2.S3.EGx117" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E7.m1" class="ltx_Math" alttext="\displaystyle p_{tot}=\rho c_{\text{s,iso}}^{2}+\frac{1}{3}\rho q^{2}=\gamma_{%
+\text{eff}}\rho c_{\text{s,iso}}^{2}." display="inline"><mrow><mrow><msub><mi>p</mi><mrow><mi>t</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msubsup><mi>c</mi><mtext>s,iso</mtext><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><msub><mi>γ</mi><mtext>eff</mtext></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msubsup><mi>c</mi><mtext>s,iso</mtext><mn>2</mn></msubsup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If we assume that <math id="S1.SS2.SSSx2.p2.m3" class="ltx_Math" alttext="\gamma_{\text{eff}}" display="inline"><msub><mi>γ</mi><mtext>eff</mtext></msub></math> is not allowed to be higher than the
+adiabatic value <math id="S1.SS2.SSSx2.p2.m4" class="ltx_Math" alttext="\gamma=5/3" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></mrow></math>, we have to limit the isothermal turbulent Mach number to
+<math id="S1.SS2.SSSx2.p2.m5" class="ltx_Math" alttext="\frac{q}{c_{\text{s,iso}}}\leq\sqrt{2}" display="inline"><mrow><mfrac><mi>q</mi><msub><mi>c</mi><mtext>s,iso</mtext></msub></mfrac><mo>≤</mo><msqrt><mn>2</mn></msqrt></mrow></math>.</p>
+</div>
+</section>
+<section id="S1.SS2.SSSx3" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">Treatment of shocks</h4>
+
+<div id="S1.SS2.SSSx3.p1" class="ltx_para">
+<p class="ltx_p">Shocks form unavoidably during cosmological structure formation due to
+infalling plasma which accretes onto filaments, sheets, and halos, as well as
+due to supersonic flows associated with merging substructures
+<cite class="ltx_cite ltx_citemacro_citep">(Pfrommer<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib111" title="Detecting shock waves in cosmological smoothed particle hydrodynamics simulations" class="ltx_ref">2006</a>)</cite>. But shocks are the most localized and anisotropic
+features of a flow and therefore cannot be treated by an SGS model, which
+is based on the assumption of isotropy of the flow on the subgrid
+scales.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">44</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">44</sup>Also see chapter <a href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.</span></span></span> So in principle, shocks should
+be treated by the mechanisms of AMR alone and the SGS model should
+not influence the shocks. That’s why we implemented a simple shock detector</p>
+<table id="Ax2.S3.EGx118" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E8.m1" class="ltx_Math" alttext="\displaystyle-\frac{\partial v_{i}}{\partial r_{i}}l_{\Delta}&gt;c_{s}," display="inline"><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mrow></mrow><mo>&gt;</mo><msub><mi>c</mi><mi>s</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which marks all cells, where the velocity increments are greater than the
+speed of sound, as shocks. At these cells, we disable the SGS model, which
+means no production or dissipation of turbulence takes place. The turbulent
+energy is only advected in these cells.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9.2 </span>Results</h2>
+
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.1 </span>Energy conservation</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Energy conservation is crucial for any adiabatic fluid dynamic simulation.
+However it is difficult to test for this directly in our setup, since we cannot
+extract easily the energy injected by gravity into the system. By plotting the
+time development of the mass weighted mean total energy in the system, which is
+for the simulation without SGS model the sum of mass weighted mean internal
+energy and mass weighted mean kinetic energy and for the simulation with Sarkar
+model the sum of mass weighted means of internal, kinetic and turbulent energy,
+we can still gain some insights into the differences between the two
+simulations.</p>
+</div>
+<figure id="F1" class="ltx_figure"><img src="x26.png" id="F1.g1" class="ltx_graphics ltx_centering" width="474" height="332" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.1: </span>Time development of total energy in cluster simulation with and
+without SGS model.</figcaption>
+</figure>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">This is what has been done in figure <a href="#F1" title="Figure 9.1 ‣ 9.2.1 Energy conservation ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.1</span></a>. From it we can see
+that the time development of the total energy is nearly identical, if we take
+the turbulent energy into account when computing the total energy of the
+simulation with Sarkar model. On the other side, the difference between the sum
+of kinetic and internal energy between the simulations seems to be again mostly
+accounted for by the turbulent energy, a result similar to what was already
+found in the simulations of driven turbulence.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">45</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">45</sup>See section
+<a href="Ch7.html#S3" title="7.3 Energy conservation ‣ Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.3</span></a>.</span></span></span>
+We can also infer from figure <a href="#F1" title="Figure 9.1 ‣ 9.2.1 Energy conservation ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.1</span></a>, that the SGS model mainly changes
+the ratio of mean internal to mean kinetic energy and does not have much
+influence on the mean potential energy of the system. However, this is to be
+expected, since most of the gravitational potential is due to dark matter
+anyway, and we do not model the influence of gravity on subgrid scales and vice
+versa in our SGS model. This leads us to conclude that the general effects of
+our SGS model in a selfgravitating fluid are very similar to the effects found
+in the driven turbulence simulations without self gravity.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.2 </span>Mass fractions of different gas phases</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">The IGM on large scales of the universe can be classified roughly into four
+phases according to gas temperature: the hot gas with <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="T&gt;10^{7}\,\mathrm{K}" display="inline"><mrow><mi class="ltx_unit">T</mi><mo>&gt;</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>7</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math>
+inside and around clusters; the warm-hot intergalactic medium (WHIM) with
+<math id="S2.SS2.p1.m2" class="ltx_Math" alttext="10^{5}\,\mathrm{K}&lt;T&lt;10^{7}\,\mathrm{K}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>5</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow><mo>&lt;</mo><mi class="ltx_unit">T</mi><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>7</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math> found mostly in filaments; the low
+temperature WHIM with <math id="S2.SS2.p1.m3" class="ltx_Math" alttext="10^{4}\,\mathrm{K}&lt;T&lt;10^{5}\,\mathrm{K}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>4</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow><mo>&lt;</mo><mi class="ltx_unit">T</mi><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>5</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math> distributed mostly
+as sheetlike structures; and the diffuse cold gas with <math id="S2.SS2.p1.m4" class="ltx_Math" alttext="T&lt;10^{4}\,\mathrm{K}" display="inline"><mrow><mi class="ltx_unit">T</mi><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><msup><mn>10</mn><mn>4</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathvariant="normal">K</mi></mrow></mrow></math>
+residing mostly in voids <cite class="ltx_cite ltx_citemacro_citep">(Cen and Ostriker, <a href="bib.html#bib31" title="Where Are the Baryons?" class="ltx_ref">1999</a>; Kang<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib67" title="Shock-heated Gas in the Large-Scale Structure of the Universe" class="ltx_ref">2005</a>)</cite>. To investigate the influence
+of the SGS model on these different gas phases, we plotted the time development
+of the mass fractions according to each of the phase for the simulation with
+and without SGS model (figure <a href="#F1.sf1" title="(a) ‣ Figure 9.2 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a> and <a href="#F1.sf2" title="(b) ‣ Figure 9.2 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>).</p>
+</div>
+<figure id="F2" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F1.sf1" class="ltx_figure ltx_align_center"><img src="x27.png" id="F1.sf1.g1" class="ltx_graphics" width="304" height="214" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>No SGS model.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F1.sf2" class="ltx_figure ltx_align_center"><img src="x28.png" id="F1.sf2.g1" class="ltx_graphics" width="304" height="214" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>SGS model.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.2: </span>Time development of mass fractions of different gas phases in the
+whole simulation box had with a comoving size of
+<math id="F2.m2" class="ltx_Math" alttext="128\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>128</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>.</figcaption>
+</figure>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">We also show the mass fractions of each gas phase at redshift <math id="S2.SS2.p2.m1" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> in table
+<a href="#T1" title="Table 9.1 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.1</span></a>.</p>
+</div>
+<figure id="T1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_t">Run</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T1.m1" class="ltx_Math" alttext="\frac{m_{\text{cluster}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>cluster</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T1.m2" class="ltx_Math" alttext="\frac{m_{\text{filaments}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>filaments</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T1.m3" class="ltx_Math" alttext="\frac{m_{\text{sheets}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>sheets</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T1.m4" class="ltx_Math" alttext="\frac{m_{\text{voids}}}{m_{all}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>voids</mtext></msub><msub><mi>m</mi><mrow><mi>a</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_tt">no SGS</th>
+<td class="ltx_td ltx_align_center ltx_border_tt">5.50</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">40.3</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">4.22</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">49.1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b">SGS</th>
+<td class="ltx_td ltx_align_center ltx_border_b">5.47</td>
+<td class="ltx_td ltx_align_center ltx_border_b">37.5</td>
+<td class="ltx_td ltx_align_center ltx_border_b">3.28</td>
+<td class="ltx_td ltx_align_center ltx_border_b">53.0</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 9.1: </span>Mass fractions of different gas phases at redshift <math id="T1.m6" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>.</figcaption>
+</figure>
+<div id="S2.SS2.p3" class="ltx_para">
+<p class="ltx_p">The results seem to indicate that the SGS model leads to higher mass fraction
+of the voids and a lower mass fraction of the filaments compared to the
+simulation without SGS model. However our simulation domain is not very well
+resolved outside the central region, since we do not allow for adaptive
+refinement there. If we restrict our analysis to the adaptively refined region
+in the box with a size of <math id="S2.SS2.p3.m1" class="ltx_Math" alttext="38.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>38.4</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, the differences between
+the simulation with SGS model and without SGS model vanish
+(figure <a href="#F2.sf1" title="(a) ‣ Figure 9.3 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a> and <a href="#F2.sf2" title="(b) ‣ Figure 9.3 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>).</p>
+</div>
+<figure id="F3" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F2.sf1" class="ltx_figure ltx_align_center"><img src="x29.png" id="F2.sf1.g1" class="ltx_graphics" width="304" height="214" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>No SGS model.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F2.sf2" class="ltx_figure ltx_align_center"><img src="x30.png" id="F2.sf2.g1" class="ltx_graphics" width="304" height="214" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>SGS model.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.3: </span>Time development of mass fractions of different gas phases in the
+centered subset of the simulation box with a comoving size of
+<math id="F3.m2" class="ltx_Math" alttext="38.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>38.4</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. One can see that the total mass in this open region
+is not conserved.</figcaption>
+</figure>
+<div id="S2.SS2.p4" class="ltx_para">
+<p class="ltx_p">This can also be seen from the mass fractions at redshift <math id="S2.SS2.p4.m1" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> normalized to
+the total mass in the central region in table <a href="#T2" title="Table 9.2 ‣ 9.2.2 Mass fractions of different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.2</span></a>.</p>
+</div>
+<figure id="T2" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_t">Run</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.m1" class="ltx_Math" alttext="\frac{m_{\text{cluster}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>cluster</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.m2" class="ltx_Math" alttext="\frac{m_{\text{filaments}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>filaments</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.m3" class="ltx_Math" alttext="\frac{m_{\text{sheets}}}{m_{\text{all}}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>sheets</mtext></msub><msub><mi>m</mi><mtext>all</mtext></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.m4" class="ltx_Math" alttext="\frac{m_{\text{voids}}}{m_{all}}\ [\%]" display="inline"><mrow><mpadded width="+5pt"><mfrac><msub><mi>m</mi><mtext>voids</mtext></msub><msub><mi>m</mi><mrow><mi>a</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mfrac></mpadded><mrow><mo stretchy="false">[</mo><mo lspace="0pt" rspace="3.5pt">%</mo><mo stretchy="false">]</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_tt">no SGS</th>
+<td class="ltx_td ltx_align_center ltx_border_tt">19.2</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">40.8</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">2.61</td>
+<td class="ltx_td ltx_align_center ltx_border_tt">37.5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b">SGS</th>
+<td class="ltx_td ltx_align_center ltx_border_b">19.0</td>
+<td class="ltx_td ltx_align_center ltx_border_b">40.1</td>
+<td class="ltx_td ltx_align_center ltx_border_b">2.64</td>
+<td class="ltx_td ltx_align_center ltx_border_b">38.2</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 9.2: </span>Mass fractions of different gas phases at redshift <math id="T2.m7" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> for the
+adaptively refined region with a size of <math id="T2.m8" class="ltx_Math" alttext="38.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>38.4</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>.</figcaption>
+</figure>
+<div id="S2.SS2.p5" class="ltx_para">
+<p class="ltx_p">From these results we conclude that the SGS model has no or only very little
+influence on the mass fractions of the different gas phases in the simulations.
+For the important mass fraction of the WHIM we get <math id="S2.SS2.p5.m1" class="ltx_Math" alttext="\approx 38\%" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mn>38</mn><mo lspace="0pt" rspace="3.5pt">%</mo></mrow></mrow></math>, which is
+higher than found by <cite class="ltx_cite ltx_citemacro_citet">Davé<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib35" title="Baryons in the Warm-Hot Intergalactic Medium" class="ltx_ref">2001</a>, simulation B1)</cite> (<math id="S2.SS2.p5.m2" class="ltx_Math" alttext="\approx 32\%" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mn>32</mn><mo lspace="0pt" rspace="3.5pt">%</mo></mrow></mrow></math>) with a
+lower resolution AMR simulation, but lower than found by <cite class="ltx_cite ltx_citemacro_citet">Gottlöber<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib58" title="Dark and baryonic matter in the MareNostrum Universe" class="ltx_ref">2006</a>)</cite>
+(<math id="S2.SS2.p5.m3" class="ltx_Math" alttext="\approx 40\%" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><mn>40</mn><mo lspace="0pt" rspace="3.5pt">%</mo></mrow></mrow></math>), who used smoothed particle hydrodynamic (SPH) with
+<math id="S2.SS2.p5.m4" class="ltx_Math" alttext="2\times 1024^{3}" display="inline"><mrow><mn>2</mn><mo>×</mo><msup><mn>1024</mn><mn>3</mn></msup></mrow></math> particles to simulate a box of size <math id="S2.SS2.p5.m5" class="ltx_Math" alttext="500\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>500</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>;
+so we are also consistent with the literature in this respect.</p>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.3 </span>Development of turbulence in different gas phases</h3>
+
+<div id="S2.SS3.p1" class="ltx_para">
+<p class="ltx_p">The eddy turnover time <math id="S2.SS3.p1.m1" class="ltx_Math" alttext="t_{l}" display="inline"><msub><mi>t</mi><mi>l</mi></msub></math> associated with a scale <math id="S2.SS3.p1.m2" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math></p>
+<table id="Ax2.S3.EGx119" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E9.m1" class="ltx_Math" alttext="\displaystyle t(l)=\frac{l}{q(l)}" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>l</mi><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">is the typical time for a structure of size <math id="S2.SS3.p1.m3" class="ltx_Math" alttext="\sim l" display="inline"><mrow><mi></mi><mo>∼</mo><mi>l</mi></mrow></math> to undergo a significant
+distortion due to turbulent motions characterized by the
+typical turbulent velocity <math id="S2.SS3.p1.m4" class="ltx_Math" alttext="q(l)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow></math> at that scale <cite class="ltx_cite ltx_citemacro_citep">(Frisch, <a href="bib.html#bib51" title="Turbulence. The legacy of A.N. Kolmogorov" class="ltx_ref">1995</a>)</cite>. So if we
+divide the age of the universe <math id="S2.SS3.p1.m5" class="ltx_Math" alttext="t(z)" display="inline"><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> by the eddy turnover time, we get the
+number of eddy turnovers</p>
+<table id="Ax2.S3.EGx120" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E10.m1" class="ltx_Math" alttext="\displaystyle n(l,z)=\frac{t(z)}{t(l)}" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">at a given redshift <math id="S2.SS3.p1.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> at a scale <math id="S2.SS3.p1.m7" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>. If <math id="S2.SS3.p1.m8" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, there has been enough time
+for eddies of size <math id="S2.SS3.p1.m9" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> to cascade down to smaller scales and we can call the
+fluid turbulent at scale <math id="S2.SS3.p1.m10" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>.</p>
+</div>
+<div id="S2.SS3.p2" class="ltx_para">
+<p class="ltx_p">In static grid simulations one often chooses to use the grid resolution
+<math id="S2.SS3.p2.m1" class="ltx_Math" alttext="l_{\Delta}" display="inline"><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></math> as characteristic length scale and to compute a characteristic
+velocity and eddy turnover time for this scale. However in an AMR code it is not
+trivial to compute the turbulent velocity <math id="S2.SS3.p2.m2" class="ltx_Math" alttext="q_{l}" display="inline"><msub><mi>q</mi><mi>l</mi></msub></math> associated with a characteristic
+length scale <math id="S2.SS3.p2.m3" class="ltx_Math" alttext="l=l_{\Delta}" display="inline"><mrow><mi>l</mi><mo>=</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mrow></math>, since <math id="S2.SS3.p2.m4" class="ltx_Math" alttext="l_{\Delta}" display="inline"><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></math> is varying in time and space.
+To circumvent this difficulty, we assume that below the grid resolution at a
+certain position turbulent velocity scales according to Kolmogorov</p>
+<table id="Ax2.S3.EGx121" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E11.m1" class="ltx_Math" alttext="\displaystyle q(l)\sim l^{1/3}." display="inline"><mrow><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∼</mo><msup><mi>l</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We thereby assume that locally, the cascade starts at a different length scale
+characterized by the different resolution of our grid at that position. We also
+assume that our refinement criterion tracks and finds the regions inside the
+fluid, which do not scale according to Kolmogorov, and refines them until a
+Kolmogorov scaling is reached. Of course one might doubt that our refinement
+criterion based on overdensity will accomplish that. But since in cosmological
+simulations gravity is basically the energy-injecting force in the fluid and
+gravity is strongest in regions of high density, one can argue that in regions
+of high density, the Kolmogorov cascade starts at smaller length scales and
+the energy injecting scales in these regions have to be refined with a finer
+grid. Of course a criterion solely based on density might be necessary,
+but is not at all sufficient to track regions of Non-Kolmogorov scaling.
+More research needs to be done in this direction, but it is outside of the
+scope of this work.</p>
+</div>
+<div id="S2.SS3.p3" class="ltx_para">
+<p class="ltx_p">For the analysis in our work, we adopt the hypothesis of local Kolmogorov
+scaling below the grid resolution. As a characteristic scale of our analysis,
+we choose the length scale of our highest resolved regions, which is
+<math id="S2.SS3.p3.m1" class="ltx_Math" alttext="l_{min}=15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">l</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. The turbulent velocity in the highest
+resolved regions can be directly computed from the values of the turbulent
+energy <math id="S2.SS3.p3.m2" class="ltx_Math" alttext="q(l)=\sqrt{2e_{t}}" display="inline"><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></msqrt></mrow></math> on the grid; the turbulent velocity in less
+refined regions is scaled down according to our local Kolmogorov hypothesis as</p>
+<table id="Ax2.S3.EGx122" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E12.m1" class="ltx_Math" alttext="\displaystyle q(l_{min})=q(l_{\Delta}){\left(\frac{l_{min}}{l_{\Delta}}\right)%
+}^{1/3}." display="inline"><mrow><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Using this scaled turbulent velocity to compute the eddy turnover time, we
+plotted the mean mass weighted number of eddy turnovers at <math id="S2.SS3.p3.m3" class="ltx_Math" alttext="l_{min}" display="inline"><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> with
+respect to redshift (see figure <a href="#F4" title="Figure 9.4 ‣ 9.2.3 Development of turbulence in different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.4</span></a>).</p>
+</div>
+<figure id="F4" class="ltx_figure"><img src="x31.png" id="F4.g1" class="ltx_graphics ltx_centering" width="474" height="332" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.4: </span>Mean number of eddy turnovers for gas phases of
+different temperature over time.</figcaption>
+</figure>
+<div id="S2.SS3.p4" class="ltx_para">
+<p class="ltx_p">We can clearly see from this graph, that starting from a redshift <math id="S2.SS3.p4.m1" class="ltx_Math" alttext="z=2" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>2</mn></mrow></math> all gas
+phases are turbulent at the scale <math id="S2.SS3.p4.m2" class="ltx_Math" alttext="l_{min}=15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">l</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. We also
+see that the amount of turbulence in terms of eddy turnover times is higher in
+regions of higher temperature and therefore highest in the cluster gas.</p>
+</div>
+<div id="S2.SS3.p5" class="ltx_para">
+<p class="ltx_p">Another important measure for turbulence is the turbulent Mach number
+introduced in section <a href="Ch5.html#S3.SS2" title="5.3.2 Dimensional analysis ‣ 5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3.2</span></a>. Like the eddy turnover time, the
+turbulent Mach number is scale dependent</p>
+<table id="Ax2.S3.EGx123" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E13.m1" class="ltx_Math" alttext="\displaystyle M_{t}(l)=\frac{q(l)}{c_{s}}." display="inline"><mrow><mrow><mrow><msub><mi>M</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><msub><mi>c</mi><mi>s</mi></msub></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In figure <a href="#F5" title="Figure 9.5 ‣ 9.2.3 Development of turbulence in different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.5</span></a> we plot the mean mass weighted turbulent Mach
+number characteristic for the scale of our analysis
+<math id="S2.SS3.p5.m1" class="ltx_Math" alttext="l_{min}=15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">l</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> making again use of our local Kolmogorov
+hypothesis.</p>
+</div>
+<figure id="F5" class="ltx_figure"><img src="x32.png" id="F5.g1" class="ltx_graphics ltx_centering" width="474" height="332" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.5: </span>Mean turbulent Mach number at a scale
+<math id="F5.m2" class="ltx_Math" alttext="l_{min}=15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">l</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> for gas phases of different temperature over
+time.</figcaption>
+</figure>
+<div id="S2.SS3.p6" class="ltx_para">
+<p class="ltx_p">It is evident that the turbulence at <math id="S2.SS3.p6.m1" class="ltx_Math" alttext="l_{min}" display="inline"><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> is subsonic in all gas phases
+during the whole time of the simulation. At redshift <math id="S2.SS3.p6.m2" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> the average
+turbulent Mach number is <math id="S2.SS3.p6.m3" class="ltx_Math" alttext="\approx 0.2" display="inline"><mrow><mi></mi><mo>≈</mo><mn>0.2</mn></mrow></math>. If the
+amount of turbulence would be equal in each gas phase one would expect the
+turbulent Mach number to scale <math id="S2.SS3.p6.m4" class="ltx_Math" alttext="\sim 1/c_{s}\sim 1/\sqrt{T}" display="inline"><mrow><mi></mi><mo>∼</mo><mrow><mn>1</mn><mo>/</mo><msub><mi>c</mi><mi>s</mi></msub></mrow><mo>∼</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mi>T</mi></msqrt></mrow></mrow></math>. However this is
+not the case. The cluster gas is much more turbulent than estimated by this
+simple scaling relation; in fact there is more turbulent energy compared to
+internal energy in the hottest gas phase than in the WHIM, although there is a
+substantial drop of the turbulent Mach number between redshift <math id="S2.SS3.p6.m5" class="ltx_Math" alttext="z=1-2" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mn>2</mn></mrow></mrow></math>. The
+drop in turbulent Mach number is presumably due to heating of the cluster gas
+during a phase of major mergers at that time. In the next section, we will
+present some further evidence for this interpretation.</p>
+</div>
+</section>
+<section id="S2.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.4 </span>Scaling of turbulent energy</h3>
+
+<div id="S2.SS4.p1" class="ltx_para">
+<p class="ltx_p">In chapter <a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a> we studied the scaling of the turbulent energy
+with the resolution and were able to show that the scaling
+of turbulent energy in our simulations of driven turbulence actually follows
+the Kolmogorov scaling law. In this section we repeat this analysis for our
+cluster simulation. Figure <a href="#F6" title="Figure 9.6 ‣ 9.2.4 Scaling of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.6</span></a> shows the time development of
+the mass weighted mean turbulent energy for every level of our AMR simulation.</p>
+</div>
+<figure id="F6" class="ltx_figure"><img src="x33.png" id="F6.g1" class="ltx_graphics ltx_centering" width="474" height="354" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.6: </span>Time development of mean turbulent energy over time for each level of
+refinement.</figcaption>
+</figure>
+<div id="S2.SS4.p2" class="ltx_para">
+<p class="ltx_p">We see from the plot, that the turbulent energy on the higher levels (meaning
+at smaller scales) is higher at times <math id="S2.SS4.p2.m1" class="ltx_Math" alttext="t&lt;6\,\mathrm{Gyr}" display="inline"><mrow><mi class="ltx_unit">t</mi><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><mn>6</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">Gyr</mi></mrow></mrow></math>. Later this picture
+changes, but not completely. For example the turbulent energy on level 4 stays
+above the turbulent energy of level 3 for the whole simulation time. Also
+striking are the high fluctuations in the time <math id="S2.SS4.p2.m2" class="ltx_Math" alttext="2\,\mathrm{Gyr}&lt;t&lt;6\,\mathrm{Gyr}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">Gyr</mi></mrow><mo>&lt;</mo><mi class="ltx_unit">t</mi><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><mn>6</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">Gyr</mi></mrow></mrow></math>,
+which correspond to a redshift <math id="S2.SS4.p2.m3" class="ltx_Math" alttext="z=3-1" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mn>3</mn><mo>-</mo><mn>1</mn></mrow></mrow></math> of the turbulent energy at the smaller
+scales. This is also the time when the turbulent Mach number inside the
+cluster drops significantly (see last section), so we can interpret these high
+fluctuations as further evidence for violent major mergers, that happen at that
+time, producing turbulent energy, which is then dissipated into internal energy
+heating up the cluster gas. However at the time <math id="S2.SS4.p2.m4" class="ltx_Math" alttext="t&gt;13\,\mathrm{Gyr}" display="inline"><mrow><mi class="ltx_unit">t</mi><mo>&gt;</mo><mrow><mpadded width="+1.7pt"><mn>13</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">Gyr</mi></mrow></mrow></math>, the
+simulation seems to reach some kind of stable state, similar to what is found in
+driven turbulence simulations. We therefore can compute mean turbulent energies
+by averaging the turbulent energy from <math id="S2.SS4.p2.m5" class="ltx_Math" alttext="t=13\,\mathrm{Gyr}" display="inline"><mrow><mi class="ltx_unit">t</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>13</mn></mpadded><mo>⁢</mo><mi class="ltx_unit">Gyr</mi></mrow></mrow></math> to the end of the
+simulation and plot them against the grid length scale of the associated level.
+The result (in terms of the turbulent velocity) can be seen in figure
+<a href="#F7" title="Figure 9.7 ‣ 9.2.4 Scaling of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.7</span></a>.</p>
+</div>
+<figure id="F7" class="ltx_figure"><img src="x34.png" id="F7.g1" class="ltx_graphics ltx_centering" width="474" height="354" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.7: </span>Scaling of mean turbulent energy. The dotted line is a fit showing the
+scaling behavior of turbulent energy below <math id="F7.m3" class="ltx_Math" alttext="100\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>100</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, the dashed
+line is a fit showing the scaling behavior above <math id="F7.m4" class="ltx_Math" alttext="100\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>100</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>.</figcaption>
+</figure>
+<div id="S2.SS4.p3" class="ltx_para">
+<p class="ltx_p">It is obvious that this is no Kolmogorov scaling. However, we do not expect to
+see a Kolmogorov scaling again, since, as explained in the last section, we
+assume the resolved regions to be non-Kolmogorov anyway. Still the result is
+interesting, showing a peak in the turbulence around <math id="S2.SS4.p3.m1" class="ltx_Math" alttext="100\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>100</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>
+and a drop off towards higher and smaller scales. Also shown in the figure are
+power-law fits, which gave a scaling of <math id="S2.SS4.p3.m2" class="ltx_Math" alttext="q\sim l^{-0.78}" display="inline"><mrow><mi>q</mi><mo>∼</mo><msup><mi>l</mi><mrow><mo>-</mo><mn>0.78</mn></mrow></msup></mrow></math> for scales bigger
+than <math id="S2.SS4.p3.m3" class="ltx_Math" alttext="100\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>100</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> and a scaling of <math id="S2.SS4.p3.m4" class="ltx_Math" alttext="q\sim l^{0.24}\sim l^{1/4}" display="inline"><mrow><mi>q</mi><mo>∼</mo><msup><mi>l</mi><mn>0.24</mn></msup><mo>∼</mo><msup><mi>l</mi><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow></math>
+for smaller scales. If one wants to interpret this result in terms of a
+turbulent cascade, one could say that up to a length scale of
+<math id="S2.SS4.p3.m5" class="ltx_Math" alttext="100\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>100</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, energy is injected into the system, cascading down
+towards smaller scales with a scaling behavior <math id="S2.SS4.p3.m6" class="ltx_Math" alttext="q\sim l^{1/4}" display="inline"><mrow><mi>q</mi><mo>∼</mo><msup><mi>l</mi><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow></math> flatter than
+expected for a Kolmogorov scaling with <math id="S2.SS4.p3.m7" class="ltx_Math" alttext="q\sim l^{1/3}" display="inline"><mrow><mi>q</mi><mo>∼</mo><msup><mi>l</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></math>. But, assuming our local
+Kolmogorov hypothesis holds, it would follow, that below the grid resolution
+of <math id="S2.SS4.p3.m8" class="ltx_Math" alttext="15.7\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>15.7</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> the cascade should be Kolmogorov again. Of course
+a interpretation like this is highly speculative; much more data on
+turbulence in cluster simulations is necessary to show that the
+observed power-law scalings are real indeed.</p>
+</div>
+</section>
+<section id="S2.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.5 </span>Radial profiles of the cluster</h3>
+
+<div id="S2.SS5.p1" class="ltx_para">
+<p class="ltx_p">As mentioned in section <a href="#S1.SS1" title="9.1.1 Common features ‣ 9.1 Details of the simulations ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.1.1</span></a>, the simulation is centered around a
+galaxy cluster with a virial mass of <math id="S2.SS5.p1.m1" class="ltx_Math" alttext="M_{vir}=5.49\times 10^{14}\,\mathrm{M_{\odot}\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">M</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mrow><mn>5.49</mn><mo>×</mo><mpadded width="+1.7pt"><msup><mn>10</mn><mn>14</mn></msup></mpadded></mrow><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and a virial radius of <math id="S2.SS5.p1.m2" class="ltx_Math" alttext="R_{vir}=1.33\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">R</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>1.33</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> for both simulations, which center is identified using the
+HOP algorithm. In the following we present plots of radial profiles of several
+quantities around the center of this cluster (figure
+<a href="#F7.sf1" title="(a) ‣ Figure 9.8 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a>-<a href="#F8.sf3" title="(c) ‣ Figure 9.9 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a>)
+obtained by using a modified version<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">46</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">46</sup>We modified <span class="ltx_text ltx_font_typewriter">enzo_anyl</span> to
+allow plotting of SGS model quantities like the turbulent velocity.</span></span></span> of the
+<span class="ltx_text ltx_font_typewriter">enzo_anyl</span> tool, which is part of the public Enzo release.</p>
+</div>
+<figure id="F8" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F7.sf1" class="ltx_figure ltx_align_center"><img src="x35.png" id="F7.sf1.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>Gas density.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F7.sf2" class="ltx_figure ltx_align_center"><img src="x36.png" id="F7.sf2.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>Temperature.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F7.sf3" class="ltx_figure ltx_align_center"><img src="x37.png" id="F7.sf3.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(c) </span>Entropy.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F7.sf4" class="ltx_figure ltx_align_center"><img src="x38.png" id="F7.sf4.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(d) </span>X-ray luminosity.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F7.sf5" class="ltx_figure ltx_align_center"><img src="x39.png" id="F7.sf5.g1" class="ltx_graphics" width="474" height="354" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(e) </span>Radial profile of effective polytropic index <math id="F7.sf5.m2" class="ltx_Math" alttext="n_{\text{eff}}(r)" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.8: </span>Radial profiles of several thermodynamic quantities around the center
+of the galaxy cluster. The results for the simulation with and without Sarkar
+SGS model are
+plotted in red and black respectively.</figcaption>
+</figure>
+<figure id="F9" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F8.sf1" class="ltx_figure ltx_align_center"><img src="x40.png" id="F8.sf1.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>Radial velocity.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F8.sf2" class="ltx_figure ltx_align_center"><img src="x41.png" id="F8.sf2.g1" class="ltx_graphics" width="303" height="229" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>Radial averaged velocity dispersion.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F8.sf3" class="ltx_figure ltx_align_center"><img src="x42.png" id="F8.sf3.g1" class="ltx_graphics" width="474" height="354" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(c) </span>Scaled turbulent velocity.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.9: </span>Radial profiles of several velocity related quantities around the
+center of the galaxy cluster. The results for the simulation with and without
+Sarkar SGS model are plotted in red and black respectively.</figcaption>
+</figure>
+<div id="S2.SS5.p2" class="ltx_para">
+<p class="ltx_p">The plots show the mass weighted average values at radius <math id="S2.SS5.p2.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> of temperature
+<math id="S2.SS5.p2.m2" class="ltx_Math" alttext="T(r)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> in Kelvin, the density<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">47</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">47</sup>The density is not mass weighted
+.</span></span></span> <math id="S2.SS5.p2.m3" class="ltx_Math" alttext="\rho(r)" display="inline"><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> in <math id="S2.SS5.p2.m4" class="ltx_Math" alttext="\mathrm{M_{\odot}/Mpc^{3}}" display="inline"><mrow><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub><mo>/</mo><msup><mi class="ltx_unit">Mpc</mi><mn>3</mn></msup></mrow></math>, the scaled turbulent velocity
+according to equation (<a href="#E12" title="(9.12) ‣ 9.2.3 Development of turbulence in different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.12</span></a>) <math id="S2.SS5.p2.m5" class="ltx_Math" alttext="v_{t}(r)" display="inline"><mrow><msub><mi>v</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> in <math id="S2.SS5.p2.m6" class="ltx_Math" alttext="\mathrm{km\ s^{-1}}" display="inline"><mrow><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">km</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
+the radial component of the resolved velocity <math id="S2.SS5.p2.m7" class="ltx_Math" alttext="v_{r}(r)" display="inline"><mrow><msub><mi>v</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> in <math id="S2.SS5.p2.m8" class="ltx_Math" alttext="\mathrm{km\ s^{-1}}" display="inline"><mrow><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">km</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
+the entropy <math id="S2.SS5.p2.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> in code units, which is defined as<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">48</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">48</sup>This definition of
+entropy is often used in literature on galaxy clusters
+<cite class="ltx_cite ltx_citemacro_citep">(Voit, <a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>; Iapichino and Niemeyer, <a href="bib.html#bib64" title="Hydrodynamical adaptive mesh refinement simulations of turbulent flows - II. Cosmological simulations of galaxy clusters" class="ltx_ref">2008</a>)</cite>.</span></span></span></p>
+<table id="Ax2.S3.EGx124" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E14.m1" class="ltx_Math" alttext="\displaystyle K=\frac{T}{\rho^{\gamma-1}}" display="inline"><mrow><mi>K</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>T</mi><msup><mi>ρ</mi><mrow><mi>γ</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="S2.SS5.p2.m10" class="ltx_Math" alttext="\gamma=5/3" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></mrow></math>, the x-ray luminosity <math id="S2.SS5.p2.m11" class="ltx_Math" alttext="L_{X}\sim\rho^{2}T^{1/2}" display="inline"><mrow><msub><mi>L</mi><mi>X</mi></msub><mo>∼</mo><mrow><msup><mi>ρ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>T</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mrow></math> and the
+radially averaged velocity dispersion, which is defined as the standard
+deviation of the velocity averaged over a spherical shell as</p>
+<table id="Ax2.S3.EGx125" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E15.m1" class="ltx_Math" alttext="\displaystyle\sigma(r)=\frac{\sum_{i}m_{i}{\left(v_{i}-\langle v(r)\rangle%
+\right)}^{2}}{\sum_{i}m_{i}}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>-</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><msub><mi>m</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS5.p2.m12" class="ltx_Math" alttext="\langle v(r)\rangle=\frac{\sum_{i}m_{i}}{\sum_{i}m_{i}}" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mfrac><mrow><mstyle displaystyle="false"><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub></mstyle><msub><mi>m</mi><mi>i</mi></msub></mrow><mrow><mstyle displaystyle="false"><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub></mstyle><msub><mi>m</mi><mi>i</mi></msub></mrow></mfrac></mrow></math> is the mass weighted mean
+value of velocity in the spherical shell at radius <math id="S2.SS5.p2.m13" class="ltx_Math" alttext="r\pm\delta r" display="inline"><mrow><mi>r</mi><mo>±</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>r</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S2.SS5.p3" class="ltx_para">
+<p class="ltx_p">At first it is apparent from these plots that, except for the radial
+component of the resolved velocity, the run with SGS model only shows
+significant deviations from the run without SGS model in the cluster core at
+<math id="S2.SS5.p3.m1" class="ltx_Math" alttext="r&lt;0.1\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>. However since <span class="ltx_text ltx_font_typewriter">enzo_anyl</span> proved not to be
+robust for
+<math id="S2.SS5.p3.m2" class="ltx_Math" alttext="r&lt;0.07\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>0.07</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> <cite class="ltx_cite ltx_citemacro_citep">(Iapichino and Niemeyer, <a href="bib.html#bib64" title="Hydrodynamical adaptive mesh refinement simulations of turbulent flows - II. Cosmological simulations of galaxy clusters" class="ltx_ref">2008</a>)</cite>, one cannot use the values
+obtained by these plots for a consistent analysis of the cluster core; this
+will be done in the next chapter using a different tool.
+Nevertheless the general trend from these plots is, that the SGS model lowers
+the entropy in the core, which leads to a higher density and a lower
+temperature in the center of the cluster. Since the X-ray luminosity is
+proportional to <math id="S2.SS5.p3.m3" class="ltx_Math" alttext="\rho^{2}" display="inline"><msup><mi>ρ</mi><mn>2</mn></msup></math>, it is higher in the cluster core of the simulation
+with SGS model. Looking more precisely at the radial profile of entropy
+(fig. <a href="#F7.sf3" title="(c) ‣ Figure 9.8 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a>), one can also see that in the simulation without the SGS
+model, the entropy inside the core of the cluster <math id="S2.SS5.p3.m4" class="ltx_Math" alttext="r&gt;0.1\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> is
+basically constant, which suggests that the gas is adiabatic there. With the
+SGS model this is not the case; the entropy is falling steadily towards the
+center of the core.</p>
+</div>
+<div id="S2.SS5.p4" class="ltx_para">
+<p class="ltx_p">The last observation can be discussed more quantitatively in terms of
+polytropic processes. A polytropic process is defined as a process, where</p>
+<table id="Ax2.S3.EGx126" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E16.m1" class="ltx_Math" alttext="\displaystyle\frac{T}{\rho^{n-1}}=const.," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>T</mi><msup><mi>ρ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>.</mo><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.16)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS5.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is called the polytropic index. By reversing that logic we can
+compute an effective polytropic <math id="S2.SS5.p4.m2" class="ltx_Math" alttext="n_{\text{eff}}(r)" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> index by demanding that</p>
+<table id="Ax2.S3.EGx127" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E17.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dr}{\left(\frac{T}{\rho^{n_{\text{eff}}(r)-1}}\right)}=0," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>T</mi><msup><mi>ρ</mi><mrow><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which leads to</p>
+<table id="Ax2.S3.EGx128" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E18.m1" class="ltx_Math" alttext="\displaystyle n_{\text{eff}}(r)=\frac{\rho}{T}\frac{\frac{dT}{dr}}{\frac{d\rho%
+}{dr}}+1=\frac{d\ln\rho}{d\ln T}+1." display="inline"><mrow><mrow><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>ρ</mi><mi>T</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>T</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ρ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mfrac></mstyle></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>ρ</mi></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>T</mi></mrow></mrow></mfrac></mstyle><mo>+</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In figure <a href="#F7.sf5" title="(e) ‣ Figure 9.8 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">e</span></a>
+we show a plot of the radial dependence of the effective
+polytropic index for our two simulations with and without SGS model.
+We see that the polytropic index in the simulation without SGS
+model is <math id="S2.SS5.p4.m3" class="ltx_Math" alttext="n_{\text{eff}}\approx 1.7" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>≈</mo><mn>1.7</mn></mrow></math>, which is near to the adiabatic case
+<math id="S2.SS5.p4.m4" class="ltx_Math" alttext="n_{\text{eff}}\approx 5/3" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>≈</mo><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></mrow></math>, as expected. The simulation with SGS model is
+clearly not
+adiabatic, with <math id="S2.SS5.p4.m5" class="ltx_Math" alttext="n_{\text{eff}}\approx 1.3\approx 4/3" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>≈</mo><mn>1.3</mn><mo>≈</mo><mrow><mn>4</mn><mo>/</mo><mn>3</mn></mrow></mrow></math> in the center. We
+also note that at a radius <math id="S2.SS5.p4.m6" class="ltx_Math" alttext="r\approx 0.2\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>≈</mo><mrow><mpadded width="+5pt"><mn>0.2</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>, the gas behaves
+basically
+isothermal, which can also be seen in the temperature profile
+(figure <a href="#F7.sf2" title="(b) ‣ Figure 9.8 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>). At an even bigger distance from the core
+<math id="S2.SS5.p4.m7" class="ltx_Math" alttext="r&gt;0.2\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mrow><mpadded width="+5pt"><mn>0.2</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>, the cluster gas in both simulations behaves similarly,
+with a
+polytropic index rising from <math id="S2.SS5.p4.m8" class="ltx_Math" alttext="n\approx 1.3" display="inline"><mrow><mi>n</mi><mo>≈</mo><mn>1.3</mn></mrow></math> to <math id="S2.SS5.p4.m9" class="ltx_Math" alttext="n\approx 1.4" display="inline"><mrow><mi>n</mi><mo>≈</mo><mn>1.4</mn></mrow></math>.
+If we compute an average polytropic index over the region
+<math id="S2.SS5.p4.m10" class="ltx_Math" alttext="0.05\ R_{vir}&lt;r&lt;1.0\ R_{vir}" display="inline"><mrow><mrow><mpadded width="+5pt"><mn>0.05</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>1.0</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> we get <math id="S2.SS5.p4.m11" class="ltx_Math" alttext="n_{\text{eff}}=1.27" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>=</mo><mn>1.27</mn></mrow></math>
+and <math id="S2.SS5.p4.m12" class="ltx_Math" alttext="n_{\text{eff}}=1.18" display="inline"><mrow><msub><mi>n</mi><mtext>eff</mtext></msub><mo>=</mo><mn>1.18</mn></mrow></math>
+for the simulation without and with SGS respectively. It is
+interesting to compare these values with results from observations. For example
+<cite class="ltx_cite ltx_citemacro_citet">Markevitch<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib85" title="The Temperature Structure of 30 Nearby Clusters Observed with ASCA: Similarity of Temperature Profiles" class="ltx_ref">1998</a>)</cite> found that they could fit their measured temperature
+profiles with a polytropic index of <math id="S2.SS5.p4.m13" class="ltx_Math" alttext="n=1.2-1.3" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1.2</mn><mo>-</mo><mn>1.3</mn></mrow></mrow></math>, which would fit reasonably
+well to our average values. However, <cite class="ltx_cite ltx_citemacro_citet">Pratt and Arnaud (<a href="bib.html#bib117" title="The mass profile of A1413 observed with XMM-Newton: Implications for the M-T relation" class="ltx_ref">2002</a>)</cite> claim that
+<math id="S2.SS5.p4.m14" class="ltx_Math" alttext="n=1.07\pm 0.1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1.07</mn><mo>±</mo><mn>0.1</mn></mrow></mrow></math> is the best fit to their observed temperature profile, and
+therefore state, that the whole cluster can be seen as nearly isothermal.
+But newer measurements by <cite class="ltx_cite ltx_citemacro_citet">Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite> now reveal, that the
+temperature profile cannot be fitted by a single polytropic index in agreement
+with our analysis. <cite class="ltx_cite ltx_citemacro_citet">Vikhlinin<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib154" title="Chandra Sample of Nearby Relaxed Galaxy Clusters: Mass, Gas Fraction, and Mass-Temperature Relation" class="ltx_ref">2006</a>)</cite> also find a broad plateau of
+temperature at <math id="S2.SS5.p4.m15" class="ltx_Math" alttext="r=0.2\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.2</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> in most of their clusters, however all
+their
+temperature profiles show a decline of temperature towards the center of the
+cluster at <math id="S2.SS5.p4.m16" class="ltx_Math" alttext="r&lt;0.2\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>0.2</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>, a so-called ”cool core”. This feature
+could
+neither be reproduced by the simulation without SGS nor with SGS. It seems like
+including turbulence alone in a cluster simulation cannot be a solution to the
+”cool core” problem.</p>
+</div>
+<div id="S2.SS5.p5" class="ltx_para">
+<p class="ltx_p">The radial resolved velocity is not changed significantely by
+the SGS model, but comparing this plot with the radial profile of the turbulent
+velocity the following picture emerges: From a radius <math id="S2.SS5.p5.m1" class="ltx_Math" alttext="r&gt;R_{vir}" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></math>
+material is falling onto the cluster, being decelerated strongly at the
+virial radius <math id="S2.SS5.p5.m2" class="ltx_Math" alttext="r=R_{vir}" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></math> (see drop of radial velocity at this point in
+figure <a href="#F8.sf1" title="(a) ‣ Figure 9.9 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a>). This deceleration leads to a steady rise in turbulent
+energy at <math id="S2.SS5.p5.m3" class="ltx_Math" alttext="r&lt;R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></math> up to a peak at <math id="S2.SS5.p5.m4" class="ltx_Math" alttext="r=0.5\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.5</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> followed by a drop of to
+a quite stable value of <math id="S2.SS5.p5.m5" class="ltx_Math" alttext="\sim 110\,\mathrm{kms^{-1}}" display="inline"><mrow><mi></mi><mo>∼</mo><mrow><mpadded width="+1.7pt"><mn>110</mn></mpadded><mo>⁢</mo><msup><mi class="ltx_unit">kms</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> in the region
+<math id="S2.SS5.p5.m6" class="ltx_Math" alttext="r&lt;0.3\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>0.3</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>. One might want to compare these value to the velocity
+dispersion, however these values are not comparable directly. The turbulent
+velocity depicted in the plot is computed for the characteristic scale
+<math id="S2.SS5.p5.m7" class="ltx_Math" alttext="15.7\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>15.7</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, which is constant with the radius. The velocity
+dispersion is the deviation of velocity in a spherical shell at radius <math id="S2.SS5.p5.m8" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, so
+the characteristic scale of <math id="S2.SS5.p5.m9" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> is basically the circumference of this
+shell
+<math id="S2.SS5.p5.m10" class="ltx_Math" alttext="l=2\pi r" display="inline"><mrow><mi>l</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>r</mi></mrow></mrow></math>, which is of course not independent of the radius. Therefore we
+cannot interpret the value of <math id="S2.SS5.p5.m11" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> in the same local sense as we can do for
+the other quantities. We therefore doubt that it is useful to draw conclusions
+about the local nature of turbulence from a plot like fig. <a href="#F8.sf2" title="(b) ‣ Figure 9.9 ‣ 9.2.5 Radial profiles of the cluster ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>, as
+is often done in the literature (e.g. <cite class="ltx_cite ltx_citemacro_citep">(Norman and Bryan, <a href="bib.html#bib97" title="Cluster Turbulence" class="ltx_ref">1999</a>)</cite>).</p>
+</div>
+</section>
+<section id="S2.SS6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.6 </span>Spatial distribution of turbulent energy</h3>
+
+<div id="S2.SS6.p1" class="ltx_para">
+<p class="ltx_p">To investigate the time development of the spatial distribution of turbulent
+energy, we generated slices of density and turbulent energy with the graphical
+analysis tool VisIt.</p>
+</div>
+<figure id="F10" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F9.sf1" class="ltx_figure ltx_align_center"><img src="x43.png" id="F9.sf1.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span><math id="F9.sf1.m2" class="ltx_Math" alttext="z=0.15" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.15</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F9.sf2" class="ltx_figure ltx_align_center"><img src="x44.png" id="F9.sf2.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span><math id="F9.sf2.m2" class="ltx_Math" alttext="z=0.15" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.15</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F9.sf3" class="ltx_figure ltx_align_center"><img src="x45.png" id="F9.sf3.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(c) </span><math id="F9.sf3.m2" class="ltx_Math" alttext="z=0.1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.1</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F9.sf4" class="ltx_figure ltx_align_center"><img src="x46.png" id="F9.sf4.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(d) </span><math id="F9.sf4.m2" class="ltx_Math" alttext="z=0.1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.1</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.10: </span>Slices of density (left) and turbulent energy at a length scale of
+<math id="F10.m4" class="ltx_Math" alttext="15.6\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> (right) at varying redshifts <math id="F10.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. The color coding
+shows both quantities in code units using a logarithmic scaling. The overlayed
+contours show density and the overlayed vector field depicts the strength and
+direction of the baryonic velocity field in code units using a linear scale. The
+slices show a
+region of <math id="F10.m6" class="ltx_Math" alttext="6.4\times 6.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mrow><mn>6.4</mn><mo>×</mo><mpadded width="+1.7pt"><mn>6.4</mn></mpadded></mrow><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. </figcaption>
+</figure>
+<figure id="F11" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F10.sf1" class="ltx_figure ltx_align_center"><img src="x47.png" id="F10.sf1.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span><math id="F10.sf1.m2" class="ltx_Math" alttext="z=0.05" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.05</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F10.sf2" class="ltx_figure ltx_align_center"><img src="x48.png" id="F10.sf2.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span><math id="F10.sf2.m2" class="ltx_Math" alttext="z=0.05" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.05</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F10.sf3" class="ltx_figure ltx_align_center"><img src="x49.png" id="F10.sf3.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(c) </span><math id="F10.sf3.m2" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F10.sf4" class="ltx_figure ltx_align_center"><img src="x50.png" id="F10.sf4.g1" class="ltx_graphics" width="312" height="304" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(d) </span><math id="F10.sf4.m2" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.11: </span>Slices of density (left) and turbulent energy at a length scale of
+<math id="F11.m4" class="ltx_Math" alttext="15.6\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> (right) at varying redshifts <math id="F11.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. The color coding
+shows both quantities in code units using a logarithmic scaling. The overlayed
+contours show density and the overlayed vector field depicts the strength and
+direction of the baryonic velocity field in code units using a linear scale. The
+slices show a region of <math id="F11.m6" class="ltx_Math" alttext="6.4\times 6.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mrow><mn>6.4</mn><mo>×</mo><mpadded width="+1.7pt"><mn>6.4</mn></mpadded></mrow><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. </figcaption>
+</figure>
+<div id="S2.SS6.p2" class="ltx_para">
+<p class="ltx_p">The slices are taken around the place of
+formation of our main galaxy cluster and show a region of size
+<math id="S2.SS6.p2.m1" class="ltx_Math" alttext="6.4\times 6.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mrow><mn>6.4</mn><mo>×</mo><mpadded width="+1.7pt"><mn>6.4</mn></mpadded></mrow><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. Overlayed onto the slices are density
+contour lines and a vector field showing the strength and direction of
+the velocity. In the density slice at redshift <math id="S2.SS6.p2.m2" class="ltx_Math" alttext="z=0.15" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.15</mn></mrow></math>
+(figure <a href="#F9.sf1" title="(a) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a>), we can see from the velocity vectors that material
+is falling onto the cluster along filament from the lower left and from the
+upper right corner. But from the upper right corner we do not have a smooth
+inflow of matter, instead two small clumps are approaching. Over the course of
+the simulation these two clumps merge with the main cluster
+(figure <a href="#F9.sf3" title="(c) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a>-<a href="#F9.sf3" title="(c) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a>) and are assimilated completely
+at redshift <math id="S2.SS6.p2.m3" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. Only the velocity field still shows some disturbance
+due to the infalling clumps.</p>
+</div>
+<div id="S2.SS6.p3" class="ltx_para">
+<p class="ltx_p">In the slice of the turbulent energy (figure <a href="#F9.sf2" title="(b) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>) at <math id="S2.SS6.p3.m1" class="ltx_Math" alttext="z=0.15" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.15</mn></mrow></math>,
+we see a hot spot of turbulent energy in the center of our cluster, which is due
+to a former major merger. The turbulent energy produced due to this merger is
+declining (figure <a href="#F9.sf4" title="(d) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">d</span></a>-<a href="#F10.sf4" title="(d) ‣ Figure 9.11 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">d</span></a>) and at redshift
+<math id="S2.SS6.p3.m2" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> it is presumably dissipated into internal energy completely, so there
+is only little turbulent energy left at the center of the cluster.</p>
+</div>
+<div id="S2.SS6.p4" class="ltx_para">
+<p class="ltx_p">However the two approaching clumps will drive turbulence again in the cluster.
+Thereby the left clump can be identified in the turbulent energy slice at
+<math id="S2.SS6.p4.m1" class="ltx_Math" alttext="z=0.15" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0.15</mn></mrow></math> (figure <a href="#F9.sf2" title="(b) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>) as a ring-like structure, showing that
+turbulence is not produced in the center of the infalling clump, but is
+presumably produced at the front (behind a
+bow shock) and in the wake of the infalling material. But the right clump only
+shows some turbulence production in its wake, which might be due to its smaller
+size and smaller velocity. However, on their way towards the main cluster, both
+clumps develop a hot spot of turbulent energy (figure
+<a href="#F9.sf4" title="(d) ‣ Figure 9.10 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">d</span></a>-<a href="#F10.sf2" title="(b) ‣ Figure 9.11 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>). The hot spot of turbulent energy can
+even be identified after the two clumps have merged with the main cluster
+(figure <a href="#F10.sf4" title="(d) ‣ Figure 9.11 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">d</span></a>) and are not visible in the density slice (figure
+<a href="#F10.sf3" title="(c) ‣ Figure 9.11 ‣ 9.2.6 Spatial distribution of turbulent energy ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a>) anymore. In this sense,
+the distribution of turbulent energy traces the local merging history of a
+galaxy cluster until it is dissipated into heat completely. Also the merging of
+the two small clumps with the main cluster drives turbulence only in its
+outer rim, showing that smaller mergers might only be able to drive turbulence
+in the outer regions (<math id="S2.SS6.p4.m2" class="ltx_Math" alttext="r&gt;R_{vir}" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></math>) of a cluster. But turbulence is
+sustained for a longer time in a galaxy cluster than one might expect from just
+looking at density development.</p>
+</div>
+</section>
+<section id="S2.SS7" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.7 </span>Cluster core analysis</h3>
+
+<div id="S2.SS7.p1" class="ltx_para">
+<p class="ltx_p">As mentioned we couldn’t use the <span class="ltx_text ltx_font_typewriter">enzo_anyl</span> tool to compute average
+values of
+thermodynamic quantities of the cluster core. Instead we analyzed the cluster
+core using the interactive parallel visualization and graphical analysis tool
+VisIt<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">49</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">49</sup>Freely available from https://wci.llnl.gov/codes/visit.</span></span></span>. Using
+this tool we computed several mass-weighted averaged quantities within a sphere
+of radius <math id="S2.SS7.p1.m1" class="ltx_Math" alttext="R=0.1\ R_{vir}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>, centered at the cluster center. The results of this
+analysis are summarized in tables
+<a href="#T3" title="Table 9.3 ‣ 9.2.7 Cluster core analysis ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3</span></a><span class="ltx_ERROR undefined">\subref</span>tab:avg1-<a href="#T3" title="Table 9.3 ‣ 9.2.7 Cluster core analysis ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3</span></a><span class="ltx_ERROR undefined">\subref</span>tab:avg3.</p>
+</div>
+<figure id="T3" class="ltx_table">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subtable">
+<figure id="T2.st1" class="ltx_table ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_t"><span class="ltx_text" style="font-size:90%;">Run</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st1.m1" class="ltx_Math" alttext="m_{bar}" display="inline"><msub><mi mathsize="90%">m</mi><mrow><mi mathsize="90%">b</mi><mo>⁢</mo><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">r</mi></mrow></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st1.m2" class="ltx_Math" alttext="\rho" display="inline"><mi mathsize="90%">ρ</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st1.m3" class="ltx_Math" alttext="T" display="inline"><mi mathsize="90%">T</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st1.m4" class="ltx_Math" alttext="K" display="inline"><mi mathsize="90%">K</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st1.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi mathsize="90%">σ</mi></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td"></td>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st1.m6" class="ltx_Math" alttext="[\mathrm{10^{12}\ M_{\odot}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">12</mn></msup></mpadded><mo>⁢</mo><msub><mi class="ltx_unit" mathsize="90%" mathvariant="normal">M</mi><mo mathsize="90%" stretchy="false">⊙</mo></msub></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st1.m7" class="ltx_Math" alttext="[\mathrm{10^{14}\ M_{\odot}\ Mpc^{-3}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">14</mn></msup></mpadded><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathsize="90%" mathvariant="normal">M</mi><mo mathsize="90%" stretchy="false">⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">Mpc</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">3</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st1.m8" class="ltx_Math" alttext="[\mathrm{10^{7}\ K}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">7</mn></msup></mpadded><mo>⁢</mo><mi class="ltx_unit" mathsize="90%" mathvariant="normal">K</mi></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st1.m9" class="ltx_Math" alttext="[\mathrm{10^{5}\times code\ units}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mrow><msup><mn mathsize="90%">10</mn><mn mathsize="90%">5</mn></msup><mo mathsize="90%" stretchy="false">×</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit" mathsize="90%">code</mi></mpadded></mrow><mo>⁢</mo><mi class="ltx_unit" mathsize="90%">units</mi></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st1.m10" class="ltx_Math" alttext="[\mathrm{km\ s^{-1}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit" mathsize="90%">km</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_t"><span class="ltx_text" style="font-size:90%;">no SGS</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">2.73</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">0.996</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">7.88</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">4.40</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">200</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b"><span class="ltx_text" style="font-size:90%;">SGS</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">3.37</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">1.29</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">6.99</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">3.38</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">257</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption" style="font-size:90%;"><span class="ltx_tag ltx_tag_table">(a) </span>General quantities.</figcaption>
+</figure>
+</td>
+<td class="ltx_subtable">
+<figure id="T2.st2" class="ltx_table ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_t"><span class="ltx_text" style="font-size:90%;">Run</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st2.m1" class="ltx_Math" alttext="p_{th}/\rho" display="inline"><mrow><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">t</mi><mo>⁢</mo><mi mathsize="90%">h</mi></mrow></msub><mo mathsize="90%" stretchy="false">/</mo><mi mathsize="90%">ρ</mi></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st2.m2" class="ltx_Math" alttext="p_{res}/\rho" display="inline"><mrow><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">r</mi><mo>⁢</mo><mi mathsize="90%">e</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msub><mo mathsize="90%" stretchy="false">/</mo><mi mathsize="90%">ρ</mi></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st2.m3" class="ltx_Math" alttext="\frac{p_{res}}{p_{th}+p_{res}}" display="inline"><mfrac><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">r</mi><mo>⁢</mo><mi mathsize="90%">e</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msub><mrow><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">t</mi><mo>⁢</mo><mi mathsize="90%">h</mi></mrow></msub><mo mathsize="90%" stretchy="false">+</mo><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">r</mi><mo>⁢</mo><mi mathsize="90%">e</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msub></mrow></mfrac></math></th>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_th ltx_th_row"></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st2.m4" class="ltx_Math" alttext="[\mathrm{10^{16}\ cm^{2}s^{-2}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">16</mn></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">cm</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st2.m5" class="ltx_Math" alttext="[\mathrm{10^{14}\ cm^{2}s^{-2}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">14</mn></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">cm</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st2.m6" class="ltx_Math" alttext="[\mathrm{\%}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mo lspace="0pt" mathsize="90%" rspace="3.5pt" stretchy="false">%</mo><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_t"><span class="ltx_text" style="font-size:90%;">no SGS</span></th>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">1.05</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">1.34</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">1.25</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b"><span class="ltx_text" style="font-size:90%;">SGS</span></th>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">0.936</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">2.20</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">2.30</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption" style="font-size:90%;"><span class="ltx_tag ltx_tag_table">(b) </span>Resolved and thermal pressure.</figcaption>
+</figure>
+</td>
+<td class="ltx_subtable">
+<figure id="T2.st3" class="ltx_table ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_t"><span class="ltx_text" style="font-size:90%;">Run</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st3.m1" class="ltx_Math" alttext="p_{turb}/\rho" display="inline"><mrow><msub><mi mathsize="90%">p</mi><mrow><mi mathsize="90%">t</mi><mo>⁢</mo><mi mathsize="90%">u</mi><mo>⁢</mo><mi mathsize="90%">r</mi><mo>⁢</mo><mi mathsize="90%">b</mi></mrow></msub><mo mathsize="90%" stretchy="false">/</mo><mi mathsize="90%">ρ</mi></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st3.m2" class="ltx_Math" alttext="\epsilon" display="inline"><mi mathsize="90%">ϵ</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_t"><math id="T2.st3.m3" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathsize="90%" mathvariant="normal">Σ</mi></math></th>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_th ltx_th_row"></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st3.m4" class="ltx_Math" alttext="[\mathrm{10^{14}\ cm^{2}s^{-2}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mn mathsize="90%">14</mn></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">cm</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st3.m5" class="ltx_Math" alttext="[\mathrm{10^{-5}\ cm^{2}s^{-3}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">5</mn></mrow></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">cm</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">3</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column"><math id="T2.st3.m6" class="ltx_Math" alttext="[\mathrm{10^{-5}\ cm^{2}s^{-3}}]" display="inline"><mrow><mo maxsize="90%" minsize="90%">[</mo><mrow><mpadded width="+5pt"><msup><mn mathsize="90%">10</mn><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">5</mn></mrow></msup></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%">cm</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><msup><mi class="ltx_unit" mathsize="90%" mathvariant="normal">s</mi><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">3</mn></mrow></msup></mrow><mo maxsize="90%" minsize="90%">]</mo></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_t"><span class="ltx_text" style="font-size:90%;">no SGS</span></th>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">0.0</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">0.0</span></td>
+<td class="ltx_td ltx_align_center ltx_border_t"><span class="ltx_text" style="font-size:90%;">0.0</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b"><span class="ltx_text" style="font-size:90%;">SGS</span></th>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">0.380</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">3.06</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b"><span class="ltx_text" style="font-size:90%;">2.92</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption" style="font-size:90%;"><span class="ltx_tag ltx_tag_table">(c) </span>SGS quantities.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 9.3: </span>Mass weighted values of some quantities, calculated
+within a sphere with <math id="T3.m2" class="ltx_Math" alttext="R=0.1\ R_{vir}" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math> centred at the cluster center at
+z=0.</figcaption>
+</figure>
+<div id="S2.SS7.p2" class="ltx_para">
+<p class="ltx_p">The table lists as general quantities of the simulations the baryonic mass
+<math id="S2.SS7.p2.m1" class="ltx_Math" alttext="m_{bar}" display="inline"><msub><mi>m</mi><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow></msub></math> inside the chosen sphere, the density <math id="S2.SS7.p2.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>, the temperature <math id="S2.SS7.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, the
+entropy <math id="S2.SS7.p2.m4" class="ltx_Math" alttext="K=\frac{T}{\rho^{\gamma-1}}" display="inline"><mrow><mi>K</mi><mo>=</mo><mfrac><mi>T</mi><msup><mi>ρ</mi><mrow><mi>γ</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mrow></math> with <math id="S2.SS7.p2.m5" class="ltx_Math" alttext="\gamma=5/3" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></mrow></math> and the baryonic
+velocity dispersion <math id="S2.SS7.p2.m6" class="ltx_Math" alttext="\sigma=\frac{\sum_{i}m_{i}{\left(v_{i}-\langle v\rangle\right)}^{2}}{m_{bar}}" display="inline"><mrow><mi>σ</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="false"><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>-</mo><mrow><mo stretchy="false">⟨</mo><mi>v</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><msub><mi>m</mi><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mfrac></mrow></math> at the length scale
+<math id="S2.SS7.p2.m7" class="ltx_Math" alttext="l=0.1\ R_{vir}=133\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mi class="ltx_unit">l</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi class="ltx_unit">R</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>133</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. According to <cite class="ltx_cite ltx_citemacro_citet">Voit (<a href="bib.html#bib157" title="Tracing cosmic evolution with clusters of galaxies" class="ltx_ref">2005</a>)</cite> entropy
+is the most important quantity to look at, because it determines
+the structure of the intracluster medium and it records the thermodynamic
+history of the cluster’s gas; the temperature and density are just
+manifestations of the entropy.
+We find that the ratio of the entropies in the cluster core of the two
+simulations (in the
+following 1 is used to subscript quantities of the run without SGS model, 2
+subscripts quantities of the simulation with SGS model) is</p>
+<table id="Ax2.S3.EGx129" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E19.m1" class="ltx_Math" alttext="\displaystyle\frac{K_{1}}{K_{2}}=1.30={\left(\frac{\rho_{1}}{\rho_{2}}\right)}%
+^{-1}={\left(\frac{\sigma_{1}}{\sigma_{2}}\right)}^{-1}." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msub><mi>K</mi><mn>1</mn></msub><msub><mi>K</mi><mn>2</mn></msub></mfrac></mstyle><mo>=</mo><mn>1.30</mn><mo>=</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>ρ</mi><mn>1</mn></msub><msub><mi>ρ</mi><mn>2</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>σ</mi><mn>1</mn></msub><msub><mi>σ</mi><mn>2</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S2.SS7.p2.m8" class="ltx_Math" alttext="\frac{K_{1}}{K_{2}}={\left(\frac{T_{1}}{T_{2}}\right)}{\left(\frac{\rho_{1}}{%
+\rho_{2}}\right)}^{-2/3}" display="inline"><mrow><mfrac><msub><mi>K</mi><mn>1</mn></msub><msub><mi>K</mi><mn>2</mn></msub></mfrac><mo>=</mo><mrow><mrow><mo>(</mo><mfrac><msub><mi>T</mi><mn>1</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><msub><mi>ρ</mi><mn>1</mn></msub><msub><mi>ρ</mi><mn>2</mn></msub></mfrac><mo>)</mo></mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></msup></mrow></mrow></math> by definition, this
+yields</p>
+<table id="Ax2.S3.EGx130" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E20.m1" class="ltx_Math" alttext="\displaystyle{\left(\frac{T_{1}}{T_{2}}\right)}={\left(\frac{\rho_{1}}{\rho_{2%
+}}\right)}^{-1/3}=1.09," display="inline"><mrow><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>T</mi><mn>1</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mo>=</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>ρ</mi><mn>1</mn></msub><msub><mi>ρ</mi><mn>2</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mrow></msup><mo>=</mo><mn>1.09</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.20)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which is roughly fulfilled, since from the data directly
+we get <math id="S2.SS7.p2.m9" class="ltx_Math" alttext="T_{1}/T_{2}=1.13" display="inline"><mrow><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>/</mo><msub><mi>T</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>1.13</mn></mrow></math>. So temperature and density are really just
+manifestations of entropy, but also the velocity dispersion of the baryonic
+gas in the cluster core seems to be directly connected to the entropy.
+Because of this, the velocity dispersion at a length scale of <math id="S2.SS7.p2.m10" class="ltx_Math" alttext="l=0.1\ R_{vir}" display="inline"><mrow><mi>l</mi><mo>=</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>
+in
+the simulation with the SGS model is significantely higher than in the
+simulation without SGS model.</p>
+</div>
+<div id="S2.SS7.p3" class="ltx_para">
+<p class="ltx_p">In table <a href="#T2.st2" title="(b) ‣ Table 9.3 ‣ 9.2.7 Cluster core analysis ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a> we list the thermodynamic pressure <math id="S2.SS7.p3.m1" class="ltx_Math" alttext="p_{th}" display="inline"><msub><mi>p</mi><mrow><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></msub></math> and the
+resolved pressure, which is defined as</p>
+<table id="Ax2.S3.EGx131" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E21.m1" class="ltx_Math" alttext="\displaystyle p_{res}=\frac{1}{3}\rho\sigma^{2}," display="inline"><mrow><mrow><msub><mi>p</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.21)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and the ratio between resolved and thermodynamic pressure. We see that, in
+the case of the SGS model simulation, the ratio of resolved to thermal pressure
+is nearly twice as high compared to the simulation without SGS model, since
+density and velocity dispersion are higher in the core when using the SGS
+model.</p>
+</div>
+<div id="S2.SS7.p4" class="ltx_para">
+<p class="ltx_p">Listed in table <a href="#T2.st3" title="(c) ‣ Table 9.3 ‣ 9.2.7 Cluster core analysis ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">c</span></a> is also the turbulent pressure, defined as</p>
+<table id="Ax2.S3.EGx132" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E22.m1" class="ltx_Math" alttext="\displaystyle p_{res}=\frac{1}{3}\rho q^{2}," display="inline"><mrow><mrow><msub><mi>p</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS7.p4.m1" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> is related to the velocity fluctuations at grid length scale
+<math id="S2.SS7.p4.m2" class="ltx_Math" alttext="l=15.7\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><mi class="ltx_unit">l</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.7</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. So directly comparing or adding the resolved
+pressure to the turbulent pressure is not useful, since both are related to the
+deviations of the velocity on different length scales. However,
+the ratio of turbulent production <math id="S2.SS7.p4.m3" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> to turbulent dissipation <math id="S2.SS7.p4.m4" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>
+in the core of the cluster is interesting</p>
+<table id="Ax2.S3.EGx133" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E23.m1" class="ltx_Math" alttext="\displaystyle\frac{\Sigma}{\epsilon}=0.95," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">Σ</mi><mi>ϵ</mi></mfrac></mstyle><mo>=</mo><mn>0.95</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.23)</span></td>
+</tr>
+</table>
+<p class="ltx_p">showing that we are actually in a regime of near equilibrium of production and
+dissipation of turbulent energy, a sign that a turbulent cascade has
+established.</p>
+</div>
+</section>
+<section id="S2.SS8" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">9.2.8 </span>Influence of SGS parameters on cluster core</h3>
+
+<div id="S2.SS8.p1" class="ltx_para">
+<p class="ltx_p">In an attempt to better understand the influence of the SGS model on the
+thermodynamic properties of the cluster core, we conducted a series of
+simulations with different parameters for the SGS model. Because of our
+restricted CPU budget we could not afford to do these simulations with the full
+<math id="S2.SS8.p1.m1" class="ltx_Math" alttext="128^{3}" display="inline"><msup><mn>128</mn><mn>3</mn></msup></math> root grid resolution, rather we were only able to do these studies using
+a
+root grid resolution of <math id="S2.SS8.p1.m2" class="ltx_Math" alttext="32^{3}" display="inline"><msup><mn>32</mn><mn>3</mn></msup></math> grid cells and <math id="S2.SS8.p1.m3" class="ltx_Math" alttext="32^{3}" display="inline"><msup><mn>32</mn><mn>3</mn></msup></math> N-body particles. In
+analogy to the high resolution simulation, we also nested a static child grid
+inside the root grid, with <math id="S2.SS8.p1.m4" class="ltx_Math" alttext="32^{3}" display="inline"><msup><mn>32</mn><mn>3</mn></msup></math> cells and <math id="S2.SS8.p1.m5" class="ltx_Math" alttext="32^{3}" display="inline"><msup><mn>32</mn><mn>3</mn></msup></math> N-body particles. The mass
+of each particle in this grid was <math id="S2.SS8.p1.m6" class="ltx_Math" alttext="5.8\times 10^{11}\,\mathrm{M_{\odot}\ h^{-1}}" display="inline"><mrow><mrow><mn>5.8</mn><mo>×</mo><mpadded width="+1.7pt"><msup><mn>10</mn><mn>11</mn></msup></mpadded></mrow><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
+so the resolution of the gravitational potential due to dark matter was much
+lower in these runs. We allowed adaptive grid refinement from level
+<math id="S2.SS8.p1.m7" class="ltx_Math" alttext="l=2" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>2</mn></mrow></math> to <math id="S2.SS8.p1.m8" class="ltx_Math" alttext="l=8" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>8</mn></mrow></math> in a volume of <math id="S2.SS8.p1.m9" class="ltx_Math" alttext="38.4\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><mpadded width="+1.7pt"><mn>38.4</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> inside this grid, so
+the effective resolution of the baryonic component and all the other
+parameters were equal to the high resolution runs.
+The galaxy clusters that formed in these simulations had a virial mass of
+roughly <math id="S2.SS8.p1.m10" class="ltx_Math" alttext="M_{vir}=6.9\times 10^{14}\,\mathrm{M_{\odot}\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">M</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mrow><mn>6.9</mn><mo>×</mo><mpadded width="+1.7pt"><msup><mn>10</mn><mn>14</mn></msup></mpadded></mrow><mo>⁢</mo><mpadded width="+5pt"><msub><mi class="ltx_unit" mathvariant="normal">M</mi><mo>⊙</mo></msub></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and a virial
+radius
+of <math id="S2.SS8.p1.m11" class="ltx_Math" alttext="R_{vir}=1.27\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">R</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>1.27</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>.</p>
+</div>
+<figure id="F12" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subfigure">
+<figure id="F11.sf1" class="ltx_figure ltx_align_center"><img src="x51.png" id="F11.sf1.g1" class="ltx_graphics" width="304" height="213" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(a) </span>Linear scaling.</figcaption>
+</figure>
+</td>
+<td class="ltx_subfigure">
+<figure id="F11.sf2" class="ltx_figure ltx_align_center"><img src="x52.png" id="F11.sf2.g1" class="ltx_graphics" width="304" height="213" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">(b) </span>Logarithmic scaling.</figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 9.12: </span>Plot of turbulent pressure over density versus turbulent dissipation
+in the center of the cluster core for different parameters of the SGS model.</figcaption>
+</figure>
+<div id="S2.SS8.p2" class="ltx_para">
+<p class="ltx_p">As parameters we chose all combination of <math id="S2.SS8.p2.m1" class="ltx_Math" alttext="C_{\nu}=(0.0,0.05),C_{\lambda}=(0.0,-0.2),C_{\mathbb{D}}=(0.0,0.4)" display="inline"><mrow><mrow><msub><mi>C</mi><mi>ν</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0.0</mn><mo>,</mo><mn>0.05</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><msub><mi>C</mi><mi>λ</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0.0</mn><mo>,</mo><mrow><mo>-</mo><mn>0.2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>C</mi><mi>𝔻</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0.0</mn><mo>,</mo><mn>0.4</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="S2.SS8.p2.m2" class="ltx_Math" alttext="C_{p}=(0.0,1.0)" display="inline"><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0.0</mn><mo>,</mo><mn>1.0</mn><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">50</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">50</sup>Setting <math id="S2.SS8.p2.m3" class="ltx_Math" alttext="C_{p}=0.0" display="inline"><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>=</mo><mn>0.0</mn></mrow></math> means switching off
+the influence of the turbulent pressure in the momentum equation.</span></span></span>, which
+gave use 16 combinations altogether. In complete analogy to the high resolution
+runs we analyzed the average values of thermodynamic quantities of the cluster
+core. Albeit one interesting preliminary result emerged. By plotting the
+average values of the turbulent pressure over the average value of turbulent
+dissipation in the cluster core (figures <a href="#F11.sf1" title="(a) ‣ Figure 9.12 ‣ 9.2.8 Influence of SGS parameters on cluster core ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a>,<a href="#F11.sf2" title="(b) ‣ Figure 9.12 ‣ 9.2.8 Influence of SGS parameters on cluster core ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>),
+we found that they seem to be related as</p>
+<table id="Ax2.S3.EGx134" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E24.m1" class="ltx_Math" alttext="\displaystyle\langle\frac{p_{t}(l_{min})}{\rho}\rangle=C(\langle\epsilon%
+\rangle R_{vir})^{2/3}," display="inline"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>p</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mi>ρ</mi></mfrac></mstyle><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ϵ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.24)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS8.p2.m4" class="ltx_Math" alttext="\langle\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></math> means the mass weighted average over the cluster core
+<math id="S2.SS8.p2.m5" class="ltx_Math" alttext="r&lt;0.1\ R_{vir}" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mpadded width="+5pt"><mn>0.1</mn></mpadded><mo>⁢</mo><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mrow></math>, <math id="S2.SS8.p2.m6" class="ltx_Math" alttext="l_{min}=15.6\,\mathrm{kpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">l</mi><mrow><mi class="ltx_unit">m</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">n</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>15.6</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">kpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and <math id="S2.SS8.p2.m7" class="ltx_Math" alttext="R_{vir}=1.27\,\mathrm{Mpc\ h^{-1}}" display="inline"><mrow><msub><mi class="ltx_unit">R</mi><mrow><mi class="ltx_unit">v</mi><mo>⁢</mo><mi class="ltx_unit">i</mi><mo>⁢</mo><mi class="ltx_unit">r</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mn>1.27</mn></mpadded><mo>⁢</mo><mpadded class="ltx_unit" width="+5pt"><mi class="ltx_unit">Mpc</mi></mpadded><mo>⁢</mo><msup><mi class="ltx_unit" mathvariant="normal">h</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>. The constant <math id="S2.SS8.p2.m8" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> can be found
+from a linear fit to be <math id="S2.SS8.p2.m9" class="ltx_Math" alttext="C\approx 1" display="inline"><mrow><mi>C</mi><mo>≈</mo><mn>1</mn></mrow></math> (see fit in figures
+<a href="#F11.sf1" title="(a) ‣ Figure 9.12 ‣ 9.2.8 Influence of SGS parameters on cluster core ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">a</span></a>,<a href="#F11.sf2" title="(b) ‣ Figure 9.12 ‣ 9.2.8 Influence of SGS parameters on cluster core ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">b</span></a>).
+If we use again our scaling relation for the
+turbulent velocity (<a href="#E12" title="(9.12) ‣ 9.2.3 Development of turbulence in different gas phases ‣ 9.2 Results ‣ Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.12</span></a>), we get with
+<math id="S2.SS8.p2.m10" class="ltx_Math" alttext="\langle\frac{p_{t}(l_{min})}{\rho}\rangle=\langle q^{2}(l_{min})\rangle" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mfrac><mrow><msub><mi>p</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mi>ρ</mi></mfrac><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow></math> and <math id="S2.SS8.p2.m11" class="ltx_Math" alttext="C=1" display="inline"><mrow><mi>C</mi><mo>=</mo><mn>1</mn></mrow></math></p>
+<table id="Ax2.S3.EGx135" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E25.m1" class="ltx_Math" alttext="\displaystyle\langle q^{2}(l)\rangle={\left(\frac{R_{vir}}{l_{min}}\right)}^{2%
+/3}\langle\epsilon\rangle^{2/3}l^{2/3}" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">⟨</mo><mi>ϵ</mi><mo stretchy="false">⟩</mo></mrow><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msup><mi>l</mi><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.25)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If we assume, that the value of <math id="S2.SS8.p2.m12" class="ltx_Math" alttext="\frac{R_{vir}}{l_{min}}^{2/3}=18.8" display="inline"><mrow><msup><mfrac><msub><mi>R</mi><mrow><mi>v</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub><msub><mi>l</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mfrac><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>=</mo><mn>18.8</mn></mrow></math> is
+universal, we get for cluster core turbulence the relation</p>
+<table id="Ax2.S3.EGx136" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E26.m1" class="ltx_Math" alttext="\displaystyle\langle q^{2}(l)\rangle=18.8\langle\epsilon\rangle^{2/3}l^{2/3}." display="inline"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mn>18.8</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">⟨</mo><mi>ϵ</mi><mo stretchy="false">⟩</mo></mrow><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msup><mi>l</mi><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9.26)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In this sense, we can interpret <math id="S2.SS8.p2.m13" class="ltx_Math" alttext="C_{k,core}=18.8" display="inline"><mrow><msub><mi>C</mi><mrow><mi>k</mi><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi></mrow></mrow></msub><mo>=</mo><mn>18.8</mn></mrow></math> as a Kolmogorov constant for
+the cluster core turbulence, which is more than 10 times higher than what is
+found for the Kolmogorov constant in simulations of incompressible turbulence.
+</p>
+</div>
+</section>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Cluster physics</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Summary and Conclusions</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

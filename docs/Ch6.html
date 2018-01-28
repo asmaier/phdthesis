@@ -1,0 +1,379 @@
+<!DOCTYPE html><html>
+<head>
+<title>6 AMR and LES‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>LES and SGS model</span></a><a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Numerical testing</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_authors_1line">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">Chapter 6 </span>AMR and LES</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">As mentioned in the last chapter, in LES we try to solve the FE
+instead of the UE and treat the unresolved scales with a subgrid scale model,
+which acts like a filter with a characteristic length <math id="p1.m1" class="ltx_Math" alttext="l_{\Delta}" display="inline"><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></math> for the UE.
+However we can only model the subgrid scales in an averaging sense, which can
+only be correct, if the fluid motions on the subgrid scales are nearly
+isotropic. This limits the LES methodology to flows where we can resolve all
+anisotropies, which stem from large-scale features like boundary conditions or
+external forces. Therefore the ideal numerical method for LES would include
+adaptive gridding to ensure automatically that the grid, and hence the filter,
+are everywhere sufficiently fine to resolve the energy-containing motions
+<cite class="ltx_cite ltx_citemacro_citep">(Pope, <a href="bib.html#bib116" title="Turbulent Flows" class="ltx_ref">2000</a>, p. 636)</cite>.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.1 </span>Adaptive mesh refinement</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The most powerful technique for grid-based solvers to resolve localized
+and anisotropic structures in a flow is adaptive mesh refinement (AMR).
+Using AMR the grid will be refined<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">30</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">30</sup>Refined means that the values from a
+coarse parent grid are interpolated onto a finer child grid and then
+integrated independently from the coarse grid. However, the way how to
+interpolate the values from coarse to fine grid is not discussed in the
+literature and most often not described by the developers of AMR fluid codes.
+Although outside the scope of our work, the dependence of the solution and the
+spectrum of the solution on this interpolation routines should be investigated
+in the future.</span></span></span>, depending on a refinement criterion, only at
+the defined “interesting” areas of the flow field. This allows for
+treating a much bigger range of dynamic scales of the fluid with the same
+number of grid cells compared to a static grid.</p>
+</div>
+<figure id="F1" class="ltx_figure"><img src="x7.png" id="F1.g1" class="ltx_graphics ltx_centering" width="473" height="293" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 6.1: </span>Hierarchy of rectangular subgrids in blockstructured
+AMR <cite class="ltx_cite ltx_citemacro_citep">(Deiterding, <a href="bib.html#bib36" title="Parallel adaptive simulation of multi-dimensional detonation structures" class="ltx_ref">2003</a>)</cite>.</figcaption>
+</figure>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The grid structure can thereby
+be understood as a hierarchy of grid patches (see figure <a href="#F1" title="Figure 6.1 ‣ 6.1 Adaptive mesh refinement ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>) that
+approximate the flow on various levels of resolution
+<cite class="ltx_cite ltx_citemacro_citep">(Berger and Oliger, <a href="bib.html#bib11" title="Adaptive mesh refinement for hyperbolic partial differential equations" class="ltx_ref">1984</a>; Berger and Colella, <a href="bib.html#bib10" title="Local adaptive mesh refinement for shock hydrodynamics" class="ltx_ref">1989</a>)</cite>. But not only the spatial resolution, also
+the time resolution is adaptive. All grids on
+a given level are advanced simultaneously with a
+maximum timestep such that the Courant condition is
+satisfied by all the cells on that level. This results in
+a hierarchy of timesteps: a coarse, parent grid on level <math id="S1.p2.m1" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> is advanced by
+<math id="S1.p2.m2" class="ltx_Math" alttext="\Delta t^{\text{coarse}}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>coarse</mtext></msup></mrow></math>, and then its finer, subgrid(s) on level <math id="S1.p2.m3" class="ltx_Math" alttext="l+1" display="inline"><mrow><mi>l</mi><mo>+</mo><mn>1</mn></mrow></math> are
+advanced by one or more timesteps <math id="S1.p2.m4" class="ltx_Math" alttext="\Delta t^{\text{fine}}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>fine</mtext></msup></mrow></math> until they reach
+the same physical time as their parent grid.
+At this point, the coarse grid values <math id="S1.p2.m5" class="ltx_Math" alttext="u^{\text{coarse}}" display="inline"><msup><mi>u</mi><mtext>coarse</mtext></msup></math> are replaced by the
+underlying fine grid values <math id="S1.p2.m6" class="ltx_Math" alttext="u_{i}^{\text{fine}}" display="inline"><msubsup><mi>u</mi><mi>i</mi><mtext>fine</mtext></msubsup></math> using mass weighted,
+conservative averaging<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">31</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">31</sup>Density itself is not weighted by mass but only
+by volume <math id="S1.p2.m7" class="ltx_Math" alttext="\rho^{\text{coarse}}=\frac{1}{V}\sum_{i}\rho_{i}^{\text{fine}}V_{i}" display="inline"><mrow><msup><mi>ρ</mi><mtext>coarse</mtext></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mi>V</mi></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><mrow><msubsup><mi>ρ</mi><mi>i</mi><mtext>fine</mtext></msubsup><mo>⁢</mo><msub><mi>V</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow></math>.</span></span></span></p>
+<table id="Ax2.S3.EGx81" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle u^{\text{coarse}}=\frac{1}{M}\sum_{i}\rho_{i}u_{i}^{\text{fine}}%
+V_{i}," display="inline"><mrow><mrow><msup><mi>u</mi><mtext>coarse</mtext></msup><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>M</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>ρ</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>u</mi><mi>i</mi><mtext>fine</mtext></msubsup><mo>⁢</mo><msub><mi>V</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p2.m8" class="ltx_Math" alttext="M=\sum_{i}\rho_{i}V_{i}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><mrow><msub><mi>ρ</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>V</mi><mi>i</mi></msub></mrow></mrow></mrow></math> is the total mass of the underlying subgrid cells
+and <math id="S1.p2.m9" class="ltx_Math" alttext="V_{i}" display="inline"><msub><mi>V</mi><mi>i</mi></msub></math> is the volume of a fine grid cell.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">To completely ensure mass conservation, however, one not only has to replace the
+coarse grid values with averaged fine grid values, but also must correct
+coarse grid cells, which abut fine grid cells, but are not themselves
+covered by any fine grid. This can be understood, by writing the underlying,
+conservative, explicit finite difference scheme as</p>
+<table id="Ax2.S3.EGx82" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle u_{n}(t+\Delta t^{\text{coarse}})=u(t)-\frac{\Delta t^{\text{%
+coarse}}}{\delta x}{\left(F^{\text{coarse}}_{n+1/2}-F^{\text{coarse}}_{n-1/2}%
+\right)}," display="inline"><mrow><mrow><mrow><msub><mi>u</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>coarse</mtext></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>coarse</mtext></msup></mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msubsup><mi>F</mi><mrow><mi>n</mi><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mtext>coarse</mtext></msubsup><mo>-</mo><msubsup><mi>F</mi><mrow><mi>n</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mtext>coarse</mtext></msubsup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p3.m1" class="ltx_Math" alttext="F_{n\pm 1/2}" display="inline"><msub><mi>F</mi><mrow><mi>n</mi><mo>±</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msub></math> are the fluxes on the left and right hand
+side of the cell number <math id="S1.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> respectively. If the left hand side of cell <math id="S1.p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+abuts on a fine grid, the flux <math id="S1.p3.m4" class="ltx_Math" alttext="F^{\text{coarse}}_{n-1/2}" display="inline"><msubsup><mi>F</mi><mrow><mi>n</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mtext>coarse</mtext></msubsup></math> has to be replaced
+by the fluxes of the neighboring fine grid cells</p>
+<table id="Ax2.S3.EGx83" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E3.m1" class="ltx_Math" alttext="\displaystyle F^{\text{fine}}_{n-1/2}=\sum_{i}F_{i+1/2}(t+i\Delta t^{\text{%
+fine}})," display="inline"><mrow><mrow><msubsup><mi>F</mi><mrow><mi>n</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mtext>fine</mtext></msubsup><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>F</mi><mrow><mi>i</mi><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>fine</mtext></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the sum is due to the refinement in time. This flux replacement is most
+often implemented as a correction pass after a grid has been integrated using
+equation <a href="#E2" title="(6.2) ‣ 6.1 Adaptive mesh refinement ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.2</span></a></p>
+<table id="Ax2.S3.EGx84" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E4.m1" class="ltx_Math" alttext="\displaystyle u_{n}(t+\Delta t^{\text{coarse,corr}})=u_{n}(t+\Delta t^{\text{%
+coarse}})+\Delta F" display="inline"><mrow><mrow><msub><mi>u</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>coarse,corr</mtext></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>u</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>coarse</mtext></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>F</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">with</p>
+<table id="Ax2.S3.EGx85" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E5.m1" class="ltx_Math" alttext="\displaystyle\Delta F=-F^{\text{coarse}}_{n-1/2}+\sum_{i}F_{i+1/2}(t+i\Delta t%
+^{\text{fine}})." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>F</mi></mrow><mo>=</mo><mrow><mrow><mo>-</mo><msubsup><mi>F</mi><mrow><mi>n</mi><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mtext>coarse</mtext></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>F</mi><mrow><mi>i</mi><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>t</mi><mtext>fine</mtext></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This ”Flux Correction” step is the most difficult and error-prone part of an
+AMR implementation, since one has to track all the fluxes of the time varying
+boundaries of coarse and fine grids, and correctly maintain them between
+processors, if the simulation is run in parallel on several CPUs.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Nevertheless, if done correctly, this technique has proven to be very well
+suited for astrophysical problems which include strong
+shocks or gravitational collapse <cite class="ltx_cite ltx_citemacro_citep">(Bryan<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib24" title="Achieving Extreme Resolution in Numerical Cosmology Using Adaptive Mesh Refinement: Resolving Primordial Star Formation" class="ltx_ref">2001</a>)</cite> among many other
+applications. However, in the case of astrophysically relevant Reynolds
+numbers<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">32</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">32</sup>See section <a href="Ch2.html#S2" title="2.2 The Kolmogorov theory ‣ Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2</span></a>.</span></span></span> even with AMR we cannot hope to
+resolve all relevant scales down to the dissipative scales
+<cite class="ltx_cite ltx_citemacro_citep">(Schmidt<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib135" title="A localised subgrid scale model for fluid dynamical simulations in astrophysics. II. Application to type Ia supernovae" class="ltx_ref">2006a</a>)</cite>.
+</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">But as mentioned in the introduction, we do not have to
+resolve all scales if we use a SGS model. We only need to resolve
+energy-containing motions. That’s the reason why combining LES and AMR offers
+the
+possibility of treating turbulence in astrophysical simulations in a much better
+way. Though there is one big problem, when trying to combine LES with AMR. Most
+of the terms of a SGS model like the Schmidt model do depend on the
+cutoff scale <math id="S1.p5.m1" class="ltx_Math" alttext="l_{\Delta}" display="inline"><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></math> of the grid and this cutoff scale varies in time and
+space if one uses AMR. But when filtering the fluid dynamic equations, we
+assumed our filter operation to commute with time and spatial derivatives and
+hence be static and isotropic, in direct contradiction to the methods of AMR.
+Therefore combining LES and AMR seem to pose a big challenge and only few
+attempts have been made so far.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.2 </span>Attempts to combine LES and AMR</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Although proposals to combine LES and AMR are frequently made
+(e.g <cite class="ltx_cite ltx_citemacro_citet">Pope (<a href="bib.html#bib115" title="Ten questions concerning the large-eddy simulation of turbulent flows" class="ltx_ref">2004</a>)</cite>), literature on the topic is still rare.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Probably the first attempt to combine LES and AMR is due to
+<cite class="ltx_cite ltx_citemacro_citet">Sullivan<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib143" title="A grid nesting method for large-eddy simulation of planetary boundary-layer flows" class="ltx_ref">1996</a>)</cite>. They used a kind of zero-filling to interpolate
+the solution between the coarse and fine grid. But their simulation of
+planetary boundary layers only used one static nested fine grid within a coarse
+grid and was therefore of limited use for more general problems.
+<cite class="ltx_cite ltx_citemacro_citet">Boersma<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib16" title="Local Grid Refinement in Large-Eddy Simulation" class="ltx_ref">1997</a>)</cite> came to the conclusion, using the methods of
+<cite class="ltx_cite ltx_citemacro_citet">Sullivan<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib143" title="A grid nesting method for large-eddy simulation of planetary boundary-layer flows" class="ltx_ref">1996</a>)</cite>, that with respect to statistics, the nested grid
+simulations are clearly superior to the results obtained with a simulation on a
+coarse grid in the whole flow domain. They also found that their
+solution of a 2d Kelvin-Helmholtz instability improves even in the area only
+covered by the coarse grid, an encouraging fact. Another approach to large eddy
+simulations using AMR was put forward by <cite class="ltx_cite ltx_citemacro_citet">Cook (<a href="bib.html#bib33" title="A Consistent Approach to Large Eddy Simulation Using Adaptive Mesh Refinement" class="ltx_ref">1999</a>)</cite>. He presented a
+method for computing a fine grid solution given a coarse grid solution and vice
+versa using a deconvolution with a gaussian filter. He showed how to avoid
+commutation errors with this technique, and that boundary errors are usually
+small. He also emphasized the advantage of using several nested grids instead
+of one stretched grid. He came to the conclusion, however, that shocks and
+other
+high-frequency phenomena should not be allowed to cross grid boundaries, which
+renders his method invalid for simulating compressible flows in astrophysics.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">A sophisticated approach is the multilevel algorithm for large-eddy
+simulation of turbulent flow by <cite class="ltx_cite ltx_citemacro_citet">Terracol<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib148" title="A Multilevel Algorithm for Large-Eddy Simulation of Turbulent Compressible Flows" class="ltx_ref">2001</a>, <a href="bib.html#bib147" title="A time self-adaptive multilevel algorithm for large-eddy simulation" class="ltx_ref">2003</a>)</cite>.
+<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">33</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">33</sup>Also see the book of <cite class="ltx_cite ltx_citemacro_citet">Sagaut<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib128" title="Multiscale and Multiresolution Approaches in Turbulence" class="ltx_ref">2006</a>)</cite>.</span></span></span> But although
+they use a time-dependent number of grids, the finer grids in their simulations
+always cover the whole computational domain and and are only used to improve
+the overall LES performance. Also methods based on wavelets have been proposed
+by <cite class="ltx_cite ltx_citemacro_citet">Goldstein and Vasilyev (<a href="bib.html#bib57" title="Stochastic coherent adaptive large eddy simulation method" class="ltx_ref">2004</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Léonard<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib82" title="A wavelet-based adaptive mesh refinement criterion for large-eddy simulation" class="ltx_ref">2006</a>)</cite> and even for
+adaptive, unstructured grids <cite class="ltx_cite ltx_citemacro_citep">(Mitran, <a href="bib.html#bib91" title="A Comparison of Adaptive Mesh Refinement Approaches for Large Eddy Simulation" class="ltx_ref">2001</a>; NÃ¤gele and Wittum, <a href="bib.html#bib100" title="Large-eddy simulation and multigrid methods" class="ltx_ref">2003</a>)</cite>, but
+seem to be
+rarely used. The newest method to combine LES and blockstructured AMR comes from
+<cite class="ltx_cite ltx_citemacro_citet">Pantano<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib106" title="A low numerical dissipation patch-based adaptive mesh refinement method for large-eddy simulation of compressible flows" class="ltx_ref">2007</a>)</cite>, but they use a very different SGS-model compared to the
+Schmidt model considered in our work and therefore it is unclear if their
+method is of general use.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Finally in an astrophysical context <cite class="ltx_cite ltx_citemacro_citet">Falle (<a href="bib.html#bib44" title="The Effect of Turbulence on the Largescale Structure of Radio Jets" class="ltx_ref">1994</a>)</cite> claims to use a
+<math id="S2.p4.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-<math id="S2.p4.m2" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> subgrid scale model build into the hierarchical adaptive grid
+code <math id="S2.p4.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>Cobra to treat the effect of turbulence on the large structure of
+radio jets. However the specific problems due to adaptive gridding are not
+mentioned in this paper and <cite class="ltx_cite ltx_citemacro_citet">Falle (<a href="bib.html#bib44" title="The Effect of Turbulence on the Largescale Structure of Radio Jets" class="ltx_ref">1994</a>)</cite> himself comes to the conclusion
+that his treatment of turbulence is rather dubious. Nevertheless, the same model
+seems to be used in a recent paper by <cite class="ltx_cite ltx_citemacro_citet">Pope<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib114" title="The generation of optical emission-line filaments in galaxy clusters" class="ltx_ref">2008</a>)</cite> on the generation of
+optical emission-line filaments in galaxy clusters.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.3 </span><math id="S3.m1" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>-based approach to combine AMR and
+LES</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">In this chapter, we want to present a new simple method to address the problem
+of combination of AMR and LES. It is based on the finding of section
+<a href="Ch5.html#S3" title="5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a>, that the turbulent dissipation <math id="S3.p1.m1" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> is related to the
+dissipation scale, but in the Schmidt model (and most other SGS models) modeled
+depending on the cutoff scale. This is no problem, if we use a static grid in
+our fluid dynamic simulation, but it poses a problem in AMR simulations. The
+reason is that the time and spatial variance of <math id="S3.p1.m2" class="ltx_Math" alttext="l_{\Delta}" display="inline"><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></math> in an adaptive
+simulation leads to an artificial dependence of <math id="S3.p1.m3" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> on the grid
+structure of the simulation. But as we now from Kolmogorovs theory of turbulence
+the average rate of dissipation should be independent of the length scale in
+fully developed turbulence. This would not be the case in a AMR simulation of
+fully developed turbulence, if <math id="S3.p1.m4" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> depends on the cutoff scale, since
+the average turbulent energy and therefore the turbulent velocity <math id="S3.p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is
+independent of the lengthscale in a conservative AMR code. So our idea is to
+try to enforce the independence of <math id="S3.p1.m6" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> on the grid patches of different
+cutoff scale in our AMR simulations of turbulence. Explicitely this can be
+written as</p>
+<table id="Ax2.S3.EGx86" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E6.m1" class="ltx_Math" alttext="\displaystyle\epsilon(l_{\Delta,1})=\epsilon(l_{\Delta,2}),\ l_{\Delta,1}&gt;l_{%
+\Delta,2}" display="inline"><mrow><mrow><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub><mo>&gt;</mo><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p1.m7" class="ltx_Math" alttext="\epsilon(l_{\Delta,1})" display="inline"><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the value of the turbulent dissipation in
+one grid cell of the coarse grid and <math id="S3.p1.m8" class="ltx_Math" alttext="\epsilon(l_{\Delta,2})" display="inline"><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the average
+value of the turbulent dissipation after interpolation on a overlapping fine
+grid patch.
+Inserting our model for epsilon (<a href="Ch5.html#E3" title="(5.3) ‣ 5.2.3 Turbulent dissipation ϵ ‣ 5.2 Schmidt model ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a>) we get</p>
+<table id="Ax2.S3.EGx87" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E7.m1" class="ltx_Math" alttext="\displaystyle C_{\epsilon,1}\frac{q_{1}^{3}}{l_{\Delta,1}}=C_{\epsilon,2}\frac%
+{q_{2}^{3}}{l_{\Delta,2}}." display="inline"><mrow><mrow><mrow><msub><mi>C</mi><mrow><mi>ϵ</mi><mo>,</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>1</mn><mn>3</mn></msubsup><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub></mfrac></mstyle></mrow><mo>=</mo><mrow><msub><mi>C</mi><mrow><mi>ϵ</mi><mo>,</mo><mn>2</mn></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>2</mn><mn>3</mn></msubsup><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Assuming <math id="S3.p1.m9" class="ltx_Math" alttext="C_{\epsilon,1}=C_{\epsilon,2}" display="inline"><mrow><msub><mi>C</mi><mrow><mi>ϵ</mi><mo>,</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>ϵ</mi><mo>,</mo><mn>2</mn></mrow></msub></mrow></math> this leads to</p>
+<table id="Ax2.S3.EGx88" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E8.m1" class="ltx_Math" alttext="\displaystyle\frac{q_{1}^{2}}{q_{2}^{2}}={\left(\frac{l_{\Delta,1}}{l_{\Delta,%
+2}}\right)}^{2/3}," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>q</mi><mn>2</mn><mn>2</mn></msubsup></mfrac></mstyle><mo>=</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which is a scaling relation for the turbulent energy. This scaling relation
+should hold between the turbulent energy on grid patches of different cutoff
+scale. But on the other side, the total energy must be locally conserved</p>
+<table id="Ax2.S3.EGx89" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E9.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2}v_{1}^{2}+\frac{1}{2}q_{1}^{2}+u_{1}=\frac{1}{2}v_{2}^%
+{2}+\frac{1}{2}q_{2}^{2}+u_{2}." display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msubsup><mi>q</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since in a conservative AMR code <math id="S3.p1.m10" class="ltx_Math" alttext="u_{1}=u_{2}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>=</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></math> and using the scaling relation
+(<a href="#E8" title="(6.8) ‣ 6.3 ϵ -based approach to combine AMR and LES ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.8</span></a>) to eliminate <math id="S3.p1.m11" class="ltx_Math" alttext="q_{2}" display="inline"><msub><mi>q</mi><mn>2</mn></msub></math> we get</p>
+<table id="Ax2.S3.EGx90" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E10.m1" class="ltx_Math" alttext="\displaystyle v_{2}^{2}=v_{1}^{2}+q_{1}^{2}{\left(1-r^{-2/3}\right)}," display="inline"><mrow><mrow><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mrow><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>r</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where we introduced the refinement factor
+<math id="S3.p1.m12" class="ltx_Math" alttext="r=\frac{l_{\Delta,1}}{l_{\Delta,2}}" display="inline"><mrow><mi>r</mi><mo>=</mo><mfrac><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>1</mn></mrow></msub><msub><mi>l</mi><mrow><mi mathvariant="normal">Δ</mi><mo>,</mo><mn>2</mn></mrow></msub></mfrac></mrow></math>.
+If we divide (<a href="#E10" title="(6.10) ‣ 6.3 ϵ -based approach to combine AMR and LES ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.10</span></a>) by <math id="S3.p1.m13" class="ltx_Math" alttext="v_{1}^{2}" display="inline"><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup></math> and assume isotropy, we can derive
+a relation for the components of velocity</p>
+<table id="Ax2.S3.EGx91" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E11.m1" class="ltx_Math" alttext="\displaystyle v_{2,i}=v_{1,i}\sqrt{1+\frac{q_{1}^{2}}{v_{1}^{2}}{\left(1-r^{-2%
+/3}\right)}}." display="inline"><mrow><mrow><msub><mi>v</mi><mrow><mn>2</mn><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo><mrow><msub><mi>v</mi><mrow><mn>1</mn><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>r</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If we write equation (<a href="#E8" title="(6.8) ‣ 6.3 ϵ -based approach to combine AMR and LES ‣ Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.8</span></a>) like</p>
+<table id="Ax2.S3.EGx92" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E12.m1" class="ltx_Math" alttext="\displaystyle q_{2}^{2}=q_{1}^{2}-q_{1}^{2}{\left(1-r^{-2/3}\right)}" display="inline"><mrow><msubsup><mi>q</mi><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><mrow><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><mo>-</mo><mrow><msubsup><mi>q</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>r</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">we see, that for infinite refinement <math id="S3.p1.m14" class="ltx_Math" alttext="r\rightarrow\infty" display="inline"><mrow><mi>r</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> the turbulent
+velocity <math id="S3.p1.m15" class="ltx_Math" alttext="q_{2}" display="inline"><msub><mi>q</mi><mn>2</mn></msub></math> is zero as expected.
+</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>LES and SGS model</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Numerical testing</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html><html>
+<head>
+<title>H Fluid dynamics in comoving coordinates‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">G </span>Hydrostatic equilibrium</span></a><a href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">I </span>Color fields</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_appendix ltx_authors_1line">
+<h1 class="ltx_title ltx_title_appendix">
+<span class="ltx_tag ltx_tag_appendix">Appendix H </span>Fluid dynamics in comoving coordinates</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<section id="S1" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">H.1 </span>Introduction</h1>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">On large scales (<math id="S1.p1.m1" class="ltx_Math" alttext="&gt;" display="inline"><mo>&gt;</mo></math> 100Mpc) the distribution of matter
+in the universe is isotropic (it looks the same in all directions)
+and homogeneous (it is isotropic at each point). But only the space
+is assumed to be isotropic and homogenous. The observed expansion of
+the universe singles out a special direction in time.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">62</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">62</sup>In other
+words: The universe is not a maximally symmetric 4-dimensional manifold, but can
+be depicted as maximally symmetric 3-dimensional spacelike sheets
+in a 4-dimensional spacetime. The metric on such a manifold is the
+Robertson-Walker-metric.</span></span></span></p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The physical distance on large scales<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">63</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">63</sup>This is a very important
+point. If the space would also
+expand on small scales we couldn’t measure the expansion, because everything
+including our distance measurement device would expand. But on small scales
+the universe is not homogenous. On small scales the metric of the universe is
+not a Robertson-Walker metric, but more like a Schwarzschild metric, which
+is isotropic, but not homogenous.</span></span></span>
+between two points in such an expanding universe varies with time like</p>
+<table id="Ax2.S3.EGx209" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle r_{i}=a(t)x_{i}." display="inline"><mrow><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The factor <math id="S1.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is a dimensionless scale factor greater than zero, which must
+be the same for each component of the distance vector because of the assumed
+isotropy.
+The scale factor can only depend on the time <math id="S1.p2.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and not on the position
+<math id="S1.p2.m3" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> because of the assumed homogeneity of space.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The change of the distance with time in an expanding universe is then</p>
+<table id="Ax2.S3.EGx210" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle\dot{r}_{i}=\dot{a}x_{i}+a\dot{x}_{i}." display="inline"><mrow><mrow><msub><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mi>i</mi></msub><mo>=</mo><mrow><mrow><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>i</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The global velocity of a particle <math id="S1.p3.m1" class="ltx_Math" alttext="v_{i}=\dot{r}_{i}" display="inline"><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><msub><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mi>i</mi></msub></mrow></math> which does not move
+relative to the expanding space (<math id="S1.p3.m2" class="ltx_Math" alttext="\dot{x}_{i}=0" display="inline"><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow></math>) is</p>
+<table id="Ax2.S3.EGx211" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E3.m1" class="ltx_Math" alttext="\displaystyle\dot{v}_{i}=\dot{a}x_{i}=\frac{\dot{a}}{a}r_{i}=H(t)r_{i}" display="inline"><mrow><msub><mover accent="true"><mi>v</mi><mo>˙</mo></mover><mi>i</mi></msub><mo>=</mo><mrow><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p3.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the so called Hubble parameter. Is a particle moving relative to
+the expanding space (<math id="S1.p3.m4" class="ltx_Math" alttext="\dot{x}_{i}\neq 0" display="inline"><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>i</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>) then we measure the additional
+local (also called proper) velocity <math id="S1.p3.m5" class="ltx_Math" alttext="u_{i}=a\dot{x}_{i}" display="inline"><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>i</mi></msub></mrow></mrow></math> of the particle. This
+local
+velocity can, according to special relativity, be never greater than the speed
+of light
+<math id="S1.p3.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Nevertheless, the global velocity (e.g. the measured escape velocities of
+galaxies at
+great distances) can be greater than <math id="S1.p3.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> <cite class="ltx_cite ltx_citemacro_citep">(Davis and Lineweaver, <a href="bib.html#bib34" title="Expanding Confusion: Common Misconceptions of Cosmological Horizons and the Superluminal Expansion of the Universe" class="ltx_ref">2004</a>)</cite>. Generally the
+physical velocity
+of a particle is the sum of global and local velocity</p>
+<table id="Ax2.S3.EGx212" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E4.m1" class="ltx_Math" alttext="\displaystyle v_{i}=\dot{a}x_{i}+u_{i}(x_{i},t)." display="inline"><mrow><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.4)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">H.2 </span>Useful transformations</h1>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">From the definition of the distance <math id="S2.p1.m1" class="ltx_Math" alttext="r_{i}" display="inline"><msub><mi>r</mi><mi>i</mi></msub></math> and the velocity <math id="S2.p1.m2" class="ltx_Math" alttext="v_{i}" display="inline"><msub><mi>v</mi><mi>i</mi></msub></math> in comoving
+coordinates we get</p>
+<table id="Ax2.S3.EGx213" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E5.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial r_{i}}" display="inline"><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E5.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{a}\frac{\partial}{\partial x_{i}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.5)</span></td>
+</tr>
+<tr id="E6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E6.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial r_{i}}v_{i}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E6.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{a}\frac{\partial}{\partial x_{i}}u_{i}+3\frac{\dot{a}}{%
+a}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.6)</span></td>
+</tr>
+<tr id="E7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E7.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial r_{i}}v_{j}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>j</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E7.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{a}\frac{\partial}{\partial x_{i}}u_{j}+\frac{\dot{a}}{a%
+}\delta_{ij}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.7)</span></td>
+</tr>
+<tr id="E8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E8.m1" class="ltx_Math" alttext="\displaystyle{\left(\frac{\partial A}{\partial t}\right)}_{r}+v_{j}\frac{%
+\partial A}{\partial r_{j}}" display="inline"><mrow><msub><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mi>r</mi></msub><mo>+</mo><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E8.m2" class="ltx_Math" alttext="\displaystyle={\left(\frac{\partial A}{\partial t}\right)}_{x}+\frac{1}{a}u_{j%
+}\frac{\partial A}{\partial x_{j}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mi>x</mi></msub><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.8)</span></td>
+</tr>
+<tr id="E9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E9.m1" class="ltx_Math" alttext="\displaystyle A(r_{i},v_{i},t)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E9.m2" class="ltx_Math" alttext="\displaystyle\neq A(x_{i},u_{i},t)." display="inline"><mrow><mrow><mi></mi><mo>≠</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>u</mi><mi>i</mi></msub><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">With the help of transformation (<a href="#E6" title="(H.6) ‣ H.2 Useful transformations ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.6</span></a>) and (<a href="#E7" title="(H.7) ‣ H.2 Useful transformations ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.7</span></a>) we
+can transform the stress tensor for a newtonian fluid in cartesian coordinates</p>
+<table id="Ax2.S3.EGx214" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E10.m1" class="ltx_Math" alttext="\displaystyle\sigma^{\prime}_{ij}=2\eta{\left[\frac{1}{2}{\left(\frac{\partial%
+}{\partial r_{j}}v_{i}+\frac{\partial}{\partial r_{i}}v_{j}\right)}-\frac{1}{n%
+}\delta_{ij}\frac{\partial}{\partial r_{k}}v_{k}\right]}+\zeta\delta_{ij}\frac%
+{\partial}{\partial r_{k}}v_{k}" display="inline"><mrow><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>j</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">into the stress tensor for a newtonian fluid in comoving coordinates</p>
+<table id="Ax2.S3.EGx215" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E11.m1" class="ltx_Math" alttext="\displaystyle\sigma^{\prime}_{ij}=" display="inline"><mrow><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E11.m2" class="ltx_Math" alttext="\displaystyle 2\eta{\left[\frac{1}{2}{\left(\frac{1}{a}\frac{\partial}{%
+\partial x_{j}}u_{i}+\frac{\dot{a}}{a}\delta_{ij}+\frac{1}{a}\frac{\partial}{%
+\partial x_{i}}u_{j}+\frac{\dot{a}}{a}\delta_{ji}\right)}-\frac{1}{n}\delta_{%
+ij}{\left(\frac{1}{a}\frac{\partial}{\partial x_{k}}u_{k}+n\frac{\dot{a}}{a}%
+\right)}\right]}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.11)</span></td>
+</tr>
+<tr id="E12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E12.m2" class="ltx_Math" alttext="\displaystyle+\zeta\delta_{ij}{\left(\frac{1}{a}\frac{\partial}{\partial x_{k}%
+}u_{k}+n\frac{\dot{a}}{a}\right)}" display="inline"><mrow><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.12)</span></td>
+</tr>
+<tr id="E13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E13.m1" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E13.m2" class="ltx_Math" alttext="\displaystyle 2\eta{\left[\frac{1}{2a}{\left(\frac{\partial}{\partial x_{j}}u_%
+{i}+\frac{\partial}{\partial x_{i}}u_{j}\right)}+\frac{\dot{a}}{a}\delta_{ij}-%
+\frac{n}{n}\frac{\dot{a}}{a}\delta_{ij}-\frac{1}{na}\delta_{ij}\frac{\partial}%
+{\partial x_{k}}u_{k}\right]}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mi>n</mi><mi>n</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>n</mi><mo>⁢</mo><mi>a</mi></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.13)</span></td>
+</tr>
+<tr id="E14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E14.m2" class="ltx_Math" alttext="\displaystyle+\zeta\delta_{ij}{\left(\frac{1}{a}\frac{\partial}{\partial x_{k}%
+}u_{k}+n\frac{\dot{a}}{a}\right)}" display="inline"><mrow><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.14)</span></td>
+</tr>
+<tr id="E15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E15.m1" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E15.m2" class="ltx_Math" alttext="\displaystyle\frac{1}{a}{\left\{2\eta{\left[\frac{1}{2}{\left(\frac{\partial}{%
+\partial x_{j}}u_{i}+\frac{\partial}{\partial x_{i}}u_{j}\right)}-\frac{1}{n}%
+\delta_{ij}\frac{\partial}{\partial x_{k}}u_{k}\right]}+\zeta\delta_{ij}{\left%
+(\frac{\partial}{\partial x_{k}}u_{k}+n\dot{a}\right)}\right\}}." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>{</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>η</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>k</mi></msub></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mover accent="true"><mi>a</mi><mo>˙</mo></mover></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.15)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">H.3 </span>Equations in comoving coordinates</h1>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">With the help of the relations described in the last section, we can write
+down the fluid dynamic equations in explicit comoving form</p>
+<table id="Ax2.S3.EGx216" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E16.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\rho+\frac{1}{a}\frac{\partial}{%
+\partial x_{j}}(u_{j}\rho)=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E16.m2" class="ltx_Math" alttext="\displaystyle-3\frac{\dot{a}}{a}\rho," display="inline"><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.16)</span></td>
+</tr>
+<tr id="E17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E17.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\rho u_{i})+\frac{1}{a}\frac{\partial%
+}{\partial x_{j}}(u_{j}\rho u_{i})=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E17.m2" class="ltx_Math" alttext="\displaystyle-\frac{1}{a}\frac{\partial}{\partial x_{i}}p+\frac{1}{a}\frac{%
+\partial}{\partial x_{j}}\sigma^{\prime}_{ij}+\rho g^{*}_{i}-4\frac{\dot{a}}{a%
+}\rho u_{i}," display="inline"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo>+</mo><mrow><mi>ρ</mi><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.17)</span></td>
+</tr>
+<tr id="E18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E18.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}(\rho e)+%
+\frac{1}{a}\frac{\partial}{\partial x_{j}}(u_{j}\rho e)=&amp;\displaystyle-\frac{1%
+}{a}\frac{\partial}{\partial x_{j}}(u_{j}p)+\frac{1}{a}\frac{\partial}{%
+\partial x_{j}}(u_{i}\sigma^{\prime}_{ij})+\frac{1}{a}u_{i}\rho g^{*}_{i}\\
+&amp;\displaystyle-3\frac{\dot{a}}{a}(\rho e+\frac{1}{3}\rho u^{2}_{i}+p),\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><mi>e</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>e</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mi>e</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msubsup><mi>u</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>+</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">with Newtonian Gravity in comoving coordinates (Poisson Equation)</p>
+<table id="Ax2.S3.EGx217" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E19.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{a}\frac{\partial}{\partial x_{i}}g^{*}_{i}=4\pi G," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>G</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where
+<math id="S3.p1.m1" class="ltx_Math" alttext="g_{i}^{*}=-\frac{1}{a}\frac{\partial\varphi}{\partial x_{i}}" display="inline"><mrow><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>a</mi></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mrow></mrow></mrow></math> and the gauge transformed
+newtonian potential <math id="S3.p1.m2" class="ltx_Math" alttext="\varphi=\phi+\frac{1}{2}a\ddot{a}x_{i}^{2}" display="inline"><mrow><mi>φ</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mover accent="true"><mi>a</mi><mo>¨</mo></mover><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">The energy equation is the sum of the equation for the kinetic energy and the
+internal energy</p>
+<table id="Ax2.S3.EGx218" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E20.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\rho e_{k})+\frac{1}{a}\frac{\partial%
+}{\partial x_{j}}(u_{j}\rho e_{k})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E20.m2" class="ltx_Math" alttext="\displaystyle=-\frac{1}{a}u_{i}\frac{\partial}{\partial x_{i}}p+\frac{1}{a}u_{%
+i}\frac{\partial}{\partial x_{j}}\sigma^{\prime}_{ij}+\frac{1}{a}\rho u_{i}g^{%
+*}_{i}-5\frac{\dot{a}}{a}\rho e_{k}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.20)</span></td>
+</tr>
+<tr id="E21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E21.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\rho e_{int})+\frac{1}{a}\frac{%
+\partial}{\partial x_{j}}(u_{j}\rho e_{int})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E21.m2" class="ltx_Math" alttext="\displaystyle=-\frac{1}{a}p\frac{\partial}{\partial x_{j}}u_{j}-\frac{1}{a}%
+\sigma^{\prime}_{ij}\frac{\partial}{\partial x_{j}}u_{i}-3\frac{\dot{a}}{a}(%
+\rho e_{int}+p)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>j</mi></msub></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow><mo>+</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.21)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">A even simpler form of the equations of fluid dynamics in comoving coordinates
+can be found by expressing density and pressure in comoving coordinates.
+The connection between the density in physical coordinates
+<math id="S3.p3.m1" class="ltx_Math" alttext="r_{i}=a(t)\cdot x_{i}" display="inline"><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></math> and the comoving coordinates <math id="S3.p3.m2" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> is given by</p>
+<table id="Ax2.S3.EGx219" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E22.m1" class="ltx_Math" alttext="\displaystyle\rho(r_{i})=\frac{dM}{dV}=\frac{dM}{dr_{1}dr_{2}dr_{3}}=\frac{1}{%
+a(t)^{3}}\frac{dM}{dx_{1}dx_{2}dx_{3}}=\frac{1}{a(t)^{3}}\rho(x_{i})=\frac{1}{%
+a(t)^{3}}\tilde{\rho}" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>M</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>V</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>M</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>r</mi><mn>1</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>r</mi><mn>2</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>r</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>M</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and in analogy for the pressure</p>
+<table id="Ax2.S3.EGx220" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E23.m1" class="ltx_Math" alttext="\displaystyle p(r_{i})=\frac{1}{a(t)^{3}}p(x_{i})=\frac{1}{a(t)^{3}}\tilde{p}." display="inline"><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.23)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Because</p>
+<table id="Ax2.S3.EGx221" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E24.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\rho=\frac{\partial}{\partial t}\frac{%
+1}{a(t)^{3}}\tilde{\rho}=\frac{1}{a(t)^{3}}\frac{\partial}{\partial t}\tilde{%
+\rho}-3\frac{\dot{a}}{a}\rho" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>a</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.24)</span></td>
+</tr>
+</table>
+<p class="ltx_p">the source term on the right hand side of the momentum equation
+(<a href="#E17" title="(H.17) ‣ H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.17</span></a>) and energy conservation equation (<a href="#E18" title="(H.18) ‣ H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.18</span></a>) is reduced
+and even vanishes in the mass conservation equation (<a href="#E16" title="(H.16) ‣ H.3 Equations in comoving coordinates ‣ Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">H.16</span></a>), so that
+we can write the system of equations for fluid dynamic in comoving coordinates
+like</p>
+<table id="Ax2.S3.EGx222" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E25.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\tilde{\rho}+\frac{1}{a}\frac{\partial%
+}{\partial x_{j}}(u_{j}\tilde{\rho})=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E25.m2" class="ltx_Math" alttext="\displaystyle 0," display="inline"><mrow><mn>0</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.25)</span></td>
+</tr>
+<tr id="E26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E26.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\tilde{\rho}u_{i})+\frac{1}{a}\frac{%
+\partial}{\partial x_{j}}(u_{j}\tilde{\rho}u_{i})=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E26.m2" class="ltx_Math" alttext="\displaystyle-\frac{1}{a}\frac{\partial}{\partial x_{i}}\tilde{p}+\frac{1}{a}%
+\frac{\partial}{\partial x_{j}}\sigma^{\prime}_{ij}+\tilde{\rho}g^{*}_{i}-%
+\frac{\dot{a}}{a}\tilde{\rho}u_{i}," display="inline"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo>+</mo><mrow><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.26)</span></td>
+</tr>
+<tr id="E27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E27.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}(\tilde{\rho%
+}e)+\frac{1}{a}\frac{\partial}{\partial x_{j}}(u_{j}\tilde{\rho}e)=&amp;%
+\displaystyle-\frac{1}{a}\frac{\partial}{\partial x_{j}}(u_{j}\tilde{p})+\frac%
+{1}{a}\frac{\partial}{\partial x_{j}}(u_{i}\sigma^{\prime}_{ij})+\frac{1}{a}u_%
+{i}\tilde{\rho}g^{*}_{i}\\
+&amp;\displaystyle-\frac{\dot{a}}{a}(\tilde{\rho}e+\frac{1}{3}\tilde{\rho}u^{2}_{i%
+}+\tilde{p}).\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>e</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>e</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>j</mi></msub><mo>⁢</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msubsup><mi>g</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>a</mi><mo>˙</mo></mover><mi>a</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>e</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>ρ</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msubsup><mi>u</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>+</mo><mover accent="true"><mi>p</mi><mo stretchy="false">~</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(H.27)</span></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">G </span>Hydrostatic equilibrium</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">I </span>Color fields</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

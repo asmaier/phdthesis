@@ -1,0 +1,145 @@
+<!DOCTYPE html><html>
+<head>
+<title>E The divergence equation‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
+<!--Generated on Sun Jan 28 22:29:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 28, 2018.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML" type="text/javascript"></script>
+<link rel="up" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="start" href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="prev" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="next" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Filter formalism ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Numerical testing ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch8.html" title="Chapter 8 Cluster physics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch9.html" title="Chapter 9 Simulations of galaxy clusters ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="chapter" href="Ch10.html" title="Chapter 10 Summary and Conclusions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A1.html" title="Appendix A Dimensional analysis ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A2.html" title="Appendix B Properties of second order tensors ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A3.html" title="Appendix C Derivation of the stress tensor for a newtonian fluid ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A7.html" title="Appendix G Hydrostatic equilibrium ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A8.html" title="Appendix H Fluid dynamics in comoving coordinates ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="A9.html" title="Appendix I Color fields ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="bibliography" href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax1.html" title="Acknowledgment ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+<link rel="appendix" href="Ax2.html" title="Zusammenfassung ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="." title="Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title">Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</span></a><a href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D </span>Fourier transform and structure functions</span></a><a href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">F </span>Vlasov-Poisson Equations</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_appendix ltx_authors_1line">
+<h1 class="ltx_title ltx_title_appendix">
+<span class="ltx_tag ltx_tag_appendix">Appendix E </span>The divergence equation</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We start with the momentum equation (<a href="Ch2.html#E2" title="(2.2) ‣ Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2</span></a>)</p>
+<table id="Ax2.S3.EGx188" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ex1.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\rho v_{i})+\frac{\partial}{\partial r%
+_{j}}(v_{j}\rho v_{i})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ex1.m2" class="ltx_Math" alttext="\displaystyle=-\frac{\partial}{\partial r_{i}}p+\frac{\partial}{\partial r_{j}%
+}\sigma^{\prime}_{ij}-\rho\frac{\partial}{\partial r_{i}}\phi," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow></mrow><mo>-</mo><mrow><mi>ρ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we assumed <math id="p1.m1" class="ltx_Math" alttext="g_{i}=-\frac{\partial}{\partial r_{i}}\phi" display="inline"><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></math>. If we make the substitutions
+<math id="p1.m2" class="ltx_Math" alttext="\frac{\partial}{\partial r_{i}}p\rightarrow\frac{\partial}{\partial r_{j}}p%
+\delta_{ij}" display="inline"><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><mi>p</mi></mrow><mo>→</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math> and
+<math id="p1.m3" class="ltx_Math" alttext="\frac{\partial}{\partial r_{i}}\phi\rightarrow\frac{\partial}{\partial r_{j}}%
+\phi\delta_{ij}" display="inline"><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><mi>ϕ</mi></mrow><mo>→</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math> we can write it in the
+form</p>
+<table id="Ax2.S3.EGx189" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ex2.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}(\rho v_{i})+\frac{\partial}{\partial r%
+_{j}}(v_{j}\rho v_{i}+p\delta_{ij}-\sigma^{\prime}_{ij})=-\rho\frac{\partial}{%
+\partial r_{j}}\phi\delta_{ij}." display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>ρ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the divergence of this equation we get
+</p>
+<table id="Ax2.S3.EGx190" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ex3.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}{\left[\frac{\partial}{\partial r_{i}}%
+(\rho v_{i})\right]}+\frac{\partial^{2}}{\partial r_{i}\partial r_{j}}(v_{j}%
+\rho v_{i}+p\delta_{ij}-\sigma^{\prime}_{ij})=-\frac{\partial}{\partial r_{i}}%
+{\left(\rho\frac{\partial}{\partial r_{j}}\phi\delta_{ij}\right)}," display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>ρ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we assumed that <math id="p1.m4" class="ltx_Math" alttext="\frac{\partial}{\partial t}" display="inline"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></math> and <math id="p1.m5" class="ltx_Math" alttext="\frac{\partial}{\partial r_{i}}" display="inline"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></math> commute. Using the continuity
+equation (<a href="Ch2.html#E1" title="(2.1) ‣ Chapter 2 Turbulence ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1</span></a>) we get a interesting form of the fluiddynamic
+equations</p>
+<table id="Ax2.S3.EGx191" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial^{2}}{\partial t^{2}}\rho-\frac{\partial^{2}}{%
+\partial r_{i}\partial r_{j}}(v_{j}\rho v_{i}+p\delta_{ij}-\sigma^{\prime}_{ij%
+})=+\frac{\partial}{\partial r_{i}}{\left(\rho\frac{\partial}{\partial r_{j}}%
+\phi\delta_{ij}\right)}." display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>ρ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(E.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In case of no gravitation, the fluiddynamic equation can be written in a form
+showing some similarity to a wave equation</p>
+<table id="Ax2.S3.EGx192" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ex4.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial^{2}}{\partial t^{2}}\rho-\frac{\partial^{2}}{%
+\partial r_{i}\partial r_{j}}(v_{j}\rho v_{i}+p\delta_{ij}-\sigma^{\prime}_{ij%
+})=0." display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>v</mi><mi>j</mi></msub><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But despite its simple form, this equation hides an extreme complexity.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Solving for pressure this equation is written like</p>
+<table id="Ax2.S3.EGx193" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial^{2}}{\partial r_{i}^{2}}p=\frac{\partial^{2}}{%
+\partial t^{2}}\rho-\frac{\partial^{2}}{\partial r_{i}\partial r_{j}}(\rho v_{%
+i}v_{j}-\sigma^{\prime}_{ij})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>j</mi></msub></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(E.2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and sometimes called the equation for the instantaneous pressure.</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="A4.html" title="Appendix D Fourier transform and structure functions ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">D </span>Fourier transform and structure functions</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="A6.html" title="Appendix F Vlasov-Poisson Equations ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">F </span>Vlasov-Poisson Equations</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jan 28 22:29:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

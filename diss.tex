@@ -63,21 +63,15 @@
 % distance of line from head:
 \headsep4mm
 
+\iflatexml
+%% nothing
+\else
 % recompute type area
 \typearea[10mm]{current}		
+\fi
 
 % no indentation at the beginning of a new paragraph
 %\setlength{\parindent}{0pt}
-
-% change caption with package caption2
-%\renewcommand{\figurename}{Abb.}
-\addto\captionsngerman % see http://www.faqs.org/faqs/de-tex-faq/part8/
-{
-    \renewcommand{\figurename}{Fig.}%
-    \renewcommand{\tablename}{Tab.}%
-}
-%\renewcommand{\captionlabelfont}{\bf}
-%\renewcommand{\captionlabeldelim}{.}
 
 % new commands for math mode
 
