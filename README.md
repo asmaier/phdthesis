@@ -2,7 +2,9 @@
 This is my PhD thesis. It is written in LaTeX and converted to HTML via LaTeXML.
 The HTML output can be seen at
 
- - https://asmaier.github.io/phdthesis
+ - https://asmaier.github.io/phdthesis/
+
+The official PDF can be obtained from http://d-nb.info/991992733 . 
 
 ## Prerequisites
 To convert the LaTeX source you need to install [LaTeXML](http://dlmf.nist.gov/LaTeXML/). On Mac OS X do
