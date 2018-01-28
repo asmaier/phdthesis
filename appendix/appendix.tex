@@ -1,0 +1,775 @@
+\chapter{Dimensional analysis}\label{dimanal}
+We want to write down the general equations of fluid dynamics in dimensionless
+form. Therefore we introduce the following dimensionless quantities
+\begin{align*}
+r_i^*=\frac{r_i}{l_0} &\Rightarrow
+\pd{r_i}=\pd{r_i^*}\ppd{r_i}{r_i^*}=\frac{1}{l_0}\pd{r_i^*},\\
+v_i^*=\frac{v_i}{v_0},\\
+t^*=\frac{t}{l_0} &\Rightarrow
+\pd{t}=\pd{t^*}\ppd{t}{t^*}=\frac{1}{t_0}\pd{t^*},\\
+\rho^*=\frac{\rho}{\rho_0}.
+\end{align*}
+Inserting these into the continuity equation \eqref{eq:mass} we get
+\begin{align*}
+\frac{\rho_0}{t_0}\pd{t^*}\rho^* 
++ \frac{v_0 \rho_0}{l_0} \pd{r_j^*}(v_j^*\rho^*) &= 0 \ | 
+\cdot \frac{l_0}{\rho_0 v_0},\\
+\underbrace{\frac{l_0}{v_0 t_0}}_{Sr}\pd{t^*}\rho^* 
++ \pd{r_j^*}(v_j^*\rho^*) = 0.
+\end{align*}
+This derivation shows that solutions of the continuity equation
+are similar, if the Strouhal number $Sr = \frac{l_0}{v_0 t_0}$ is the
+same. Flows with a Strouhal number $Sr=0$ are so called stationary flows.
+Nevertheless, the Strouhal number is most often set to one, by assuming
+$v_o=\frac{l_0}{t_0}$. 
+Using the additional dimensionless quantities
+$p^*=\frac{p}{p_0},\sigma_{ij}^*=\frac{\sigma_{ij}}{\sigma_0},
+g^*=\frac{g}{g_0 }$
+in the momentum equation \eqref{eq:mom} yields
+\begin{align*}
+\frac{\rho_0 v_0}{t_0}\pd{t^*}(\rho^* v_i^*) 
++ \frac{\rho_0 v_0^2}{l_0}\pd{r_j^*}(v_j^* \rho^* v_i^*) &= 
+- \frac{p_0}{l_0}\pd{r_i^*}p^* 
++\frac{\sigma_0}{l_0}\pd{r_j^*}\sigma_{ij}^*
++\rho_0 g_0 \rho^* g_i^*\ | \cdot \frac{l_0}{\rho_0 v_0^2},\\
+\underbrace{\frac{l_0}{v_0 t_0}}_{Sr}\pd{t^*}(\rho^* v_i^*) 
++ \pd{r_j^*}(v_j^* \rho^* v_i^*) &= 
+-\underbrace{\frac{p_0}{\rho_0 v_0^2}}_{Ma^{-2}_{iso}}\pd{r_i^*}p^* 
++\underbrace{\frac{\sigma_0}{\rho_0 v_0^2}}_{Re^{-1}}\pd{r_j^*}\sigma_{ij}^*
++\underbrace{\frac{\rho_0 g_0 l_0}{\rho_0 v_0^2}}_{Fr^{-1}} \rho^* g_i^*.
+\end{align*}
+The occurring dimensionless numbers are the isothermal Mach number $Ma_{iso}$,
+which is related to the Euler number $Eu$ or the Ruark number $Ru$ like
+$Ma^2_{iso}=Eu=Ru^{-1}$, the Froude number $Fr$, which is related to the
+Richardson number $Ri$ like $Fr=Ri^{-1}$ and the Reynolds number $Re$.
+All these numbers measure the importance of the term they are related to
+compared to the nonlinear advection term $\pd{r_j^*}(v_j^* \rho^* v_i^*)$,
+e.g. for high Mach numbers, the pressure term $\pd{r_i^*}p^*$ becomes less and
+less important compared to the advection term; for high Reynolds numbers the 
+stress term $\pd{r_j^*}\sigma_{ij}^*$ becomes less and less important compared
+to the advection term, and the equation shows more and more nonlinear behavior.
+For a newtonian fluid with
+\begin{align}
+\sigma_{ij} \simeq \eta \ppd{r_j}{v_i} = 
+\frac{\eta_0 v_0}{l_0} \eta^* \ppd{r_j^*}{v_i^*},
+\end{align}
+where we introduced the dimensionless quantity $\eta^*=\frac{\eta}{\eta_0}$,
+we get $\sigma_0= \frac{\eta_0 v_0}{l_0}$ and therefore we can express the
+Reynolds number\footnote{We neglected the second viscosity $\zeta$. In 
+principle there exists a second Reynolds number $Re_2=\frac{\rho_0 l_0 v_0
+}{\zeta_0}$.} like
+\begin{align}
+Re=\frac{l_0 \rho_0 v_0^2 }{\eta_0 v_0} = \frac{\rho_0 l_0 v_0 }{\eta_0}.
+\end{align}
+Playing the same game with the equation for the internal energy 
+\begin{align}
+\pd{t} \rho e_{int} + \pd{r_j} v_j \rho e_{int} = T \lra{\pd{t} \rho s +
+\pd{r_j} v_j \rho s} -p \pd{r_j} v_j \label{eq:eint}
+\end{align}
+using $e_{int}^*=\frac{e_{int}}{u_0}$ we get
+\begin{align*}
+\underbrace{\frac{l_0}{v_0 t_0}}_{Sr} \pd{t^*}\rho^* e_{int}^* 
++ \pd{r_j^*} v_j^* \rho^* e_{int}^* &= 
+-\underbrace{\frac{p_0}{\rho_0 u_0}}_{Ga_1} p^*\pd{r_j^*}v_j^*
++\underbrace{\frac{\sigma_0}{\rho_0 u_0}}_{Ga_2} \sigma_{ij}^* \pd{r_j^*}v_i^*.
+\end{align*}
+The new dimensionless quantities that occur in the energy equation seem to have
+no name in the literature, but we will call them "Gamma1" (Ga1) and "Gamma2"
+(Ga2) for now, since they are related to the adiabatic coefficient.
+This can be seen by replacing $p_0 p^*$ according to equation
+\begin{align}
+p_0 p^* = (\gamma-1) \rho_0 u_0 \rho^* e_{int}^*,
+\end{align}
+which is valid for an an ideal, nonisothermal ($\gamma \neq 1$) gas. Doing this
+we get\footnote{We cannot get rid of Ga2 in the same way, since therefore we
+would have to assume an equation relating $\sigma_0 \sigma_{ij}^*$ to the
+internal energy. But this would only be possible, if we would assume that the
+internal energy is a tensorial quantity, which is not the way how
+internal energy is defined normally.}
+\begin{align*}
+ Sr \cdot \pd{t^*}\rho^* e_{int}^* 
++ \pd{r_j^*} v_j^* \rho^* e_{int}^* &= 
+-(\gamma-1) \rho^* e_{int}^* \pd{r_j^*}v_j^*
++Ga_2 \cdot \sigma_{ij}^* \pd{r_j^*}v_i^*.
+\end{align*}
+For a selfgravitating fluid we even have on more dimensionless quantity, which
+appears, when we write down the dimesionless form of the Poisson equation of
+gravity
+\begin{align}
+\underbrace{\frac{g_0}{4\pi G \rho_0 l_0}}_{C_G}\ppd{r_i^*}{g_i^*} = \rho^*.
+\end{align}
+But this quantity $C_G$ also seems to have no name in the literature
+\citep[e.g.][]{Durst2007}.
+
+
+\chapter{Properties of second order tensors}
+A second order tensor can be decomposed into a symmetric and an antisymmetric
+part in the following way
+\begin{align}
+T_{ij}=\underbrace{\frac{1}{2}\lra{T_{ij}+T_{ji}}}_{\text{symmetric}}
++\underbrace{\frac{1}{2}\lra{T_{ij}-T_{ji}}}_{\text{antisymmetric}}.
+\end{align}
+It can also be decomposed into an isotropic and deviatoric part by subtracting
+and adding the trace of the tensor like
+\begin{align}
+T_{ij}=\underbrace{\frac{1}{n}\delta_{ij} T_{kk}}_{\text{isotropic}}
++\underbrace{T_{ij}-\frac{1}{n}\delta_{ij} T_{kk}}_{\text{deviatoric, 
+tracefree}}.
+\end{align}
+Combining these two relations yields the general decomposition
+\begin{align}
+\begin{split}
+T_{ij}=&
+\overbrace{\frac{1}{n}\delta_{ij} T_{kk}}^{\text{isotropic}}
++
+\overbrace{
+\underbrace{\frac{1}{2}\lra{T_{ij}+T_{ji}-\frac{2}{n}\delta_{ij}
+T_{kk}}}_{\text{symmetric, tracefree}}
++\frac{1}{2}\lra{T_{ij}-T_{ji}}}^{\text{deviatoric, tracefree}}\\[-1em]
+&\underbrace{\hphantom{\frac{1}{n}\delta_{ij}
+T_{kk}+\frac{1}{2}\lra{T_{ij}+T_{ji}-\frac{2}{n}\delta_{ij}
+T_{kk}}}}_{\text{symmetric}}
+\hphantom{+}
+\underbrace{\hphantom{\frac{1}{2}\lra{T_{ij}-T_{ji}}}}_{\text{
+antisymmetric}}.
+\end{split}
+\end{align}
+
+An interesting relation can be found when computing the contraction of a
+unsymmetric tensor $U_{ij} \neq U_{ji}$ with a  symmetric tensor
+$V_{ij}=V_{ji}$
+\begin{align}
+U_{ij}V_{ij}
+= \frac{1}{2} U_{ij}V_{ij} + \frac{1}{2} U_{ji}V_{ji} 
+= \frac{1}{2} U_{ij}V_{ij} + \frac{1}{2} U_{ji}V_{ij}
+= \frac{1}{2} \lra{U_{ij}+U_{ji}} V_{ij}.
+\label{eq:uscontr}
+\end{align}
+In analogy one finds for the contraction of an unsymmetric tensor $U_{ij}$ with
+an
+antisymmetric tensor $W_{ij}=-W_{ji}$
+\begin{align}
+U_{ij}W_{ij} = \frac{1}{2} \lra{U_{ij}-U_{ji}} W_{ij}.
+\label{eq:uascontr}
+\end{align}
+
+\chapter{Derivation of the stress tensor for a newtonian fluid}\label{stress}
+We derive the stress tensor by considering the dissipation of a motionless
+fluid seen by a rotating observer. This derivation is different from what
+is found in the literature \citep[eg.][]{Greiner1991} and therefore presented
+here.
+
+It is generally assumed that friction between fluid elements is proportional
+to the area of their surfaces. So in general the frictional or viscous force
+on a fluid element can be expressed like
+\begin{align}
+F_{visc,i}= \oint_A \sigma'_{ij} n_j dA = \int_V \pd{r_j} \sigma'_{ij} dV.
+\end{align}
+This force leads to an irreversible rise of temperature in the fluid or an
+irreversible
+decrease of kinetic energy expressed by the equation for the
+dissipation\footnote{See \citet{Landau1991}.}
+\begin{align}
+\pd{t} E_{kin,visc} = - \int_V \sigma'_{ij} \pd{r_j} v_i dV.
+\end{align}
+For a motionless fluid ($v_i=0$) and for a fluid with constant velocity 
+($\ppd{r_j}{v_i} = 0$) this integral is zero. But also a rotating observer
+of a motionless fluid should not see a rise in the temperature of a fluid
+\footnote{We do not consider here the a rigidly rotating fluid as is often
+done in the literature, because a rigidly rotating fluid is unphysical. This is
+so, because a rigidly rotating fluid can never fulfill the
+boundary condition $v_i=0$. However, for a rotating observer, the boundary
+is also rotating, so that the boundary condition for a boundary at distance $R$
+is
+$v_i=\epsilon_{ijk}\omega_j R_k$ and there is no contradiction to the velocity 
+field \eqref{eq:rotfield}.}
+that means
+\begin{align}
+ \int_V \sigma'_{ij} \pd{r_j} v_i dV = 0 .\label{eq:nodiss}
+\end{align}
+A rotating observer of a motionless fluid sees a velocity field of the form
+\begin{align}
+v_i=\epsilon_{ijk}\omega_j r_k \label{eq:rotfield}.
+\end{align}
+where $\omega_j$ is the angular velocity vector and $r_k$ is the position
+vector.
+It can be shown that for such a velocity field the Jacobian is antisymmetric
+\citep{Greiner1991}, that means
+\begin{align}
+\ppd{r_j}{v_i} = -\ppd{r_i}{v_j}.
+\end{align}
+Using this and equation \eqref{eq:uascontr} in equation \eqref{eq:nodiss} we get
+\begin{align}
+\int_V \frac{1}{2}\lra{\sigma'_{ij}-\sigma'_{ji}} \pd{r_j} v_i dV = 0.
+\end{align}
+This relation can only be fulfilled if the stress tensor $\sigma'_{ij}$
+is symmetric
+\begin{align}
+\sigma'_{ij} = \sigma'_{ji}.
+\end{align}
+For a newtonian fluid is it assumed that the stress tensor is proportional only
+to the first derivatives of the velocity field. Together with the requirement of
+symmetry the most general form of such a tensor is
+\begin{align}
+\sigma'_{ij} = a\lra{\ppd{r_i}{v_j}+\ppd{r_j}{v_i}}+b \delta_{ij}\ppd{r_k}{v_k}.
+\end{align}
+Usually the trace is split off the first term and added to the second term so
+\begin{align}
+\sigma'_{ij} = a \lra{\ppd{r_i}{v_j}+\ppd{r_j}{v_i}
+-\frac{2}{3}\delta_{ij}\ppd{r_k}{v_k}}+\lra{\frac{2
+a}{3}+b}\delta_{ij}\ppd{r_k}{v_k}.
+\end{align}
+Using the definitions $a = \eta$ and $\frac{2 a}{3}+b=\zeta$ we get the form
+most common in literature
+\begin{align}
+\sigma'_{ij} =  
+2\eta\lrb{\frac{1}{2}\lra{\ppd{r_j}{v_i}+\ppd{r_i}{v_j}}
+-\frac{1}{3}\delta_{ij}\ppd{r_k}{v_k}}
++\zeta \delta_{ij}\ppd{r_k}{v_k}.
+\end{align}
+
+\chapter{Fourier transform and structure functions}
+The continuous one-dimensional Fourier transform in $k$-space $F(k)$ of some
+function in
+$x$-space $f(x)$is defined like
+\begin{align}
+F(k)&=\ft\iinf f(x) e^{-ikx} dx\ \ \text{(Fourier transform)}.
+\end{align}
+Using the Fourier transform on a function twice will produce
+the original function again, but mirrored at the origin.
+That's why one conventionally defines an inverse Fourier
+transform\footnote{Nature does not know about the inverse Fourier transform.
+If you have some optical device, which produces the Fourier transform
+of some image and you use it twice on your image you will get a mirrored
+image!},
+that will generate the not mirrored original function again, when used on the
+Fourier transform of a function
+\begin{align}
+f(x)&=\ft\iinf F(k) e^{ikx} dx\ \ \text{(inverse Fourier transform)}.
+\end{align}
+In three dimensions one defines the Fourier transform like
+\begin{align}
+F(\vec{k})=\ffft\iiiinf f(\vec{x}) e^{-i\vec{k}\vec{x}} dV, \\
+f(\vec{x})=\ffft\iiiinf F(\vec{k}) e^{i\vec{k}\vec{x}} dK.
+\end{align}
+In cartesian coordinates the kernel of the Fourier transform 
+$e^{-i\vec{k}\vec{x}}=e^{-i(k_xx+k_yy+k_zz)}$
+separates and so the three-dimensional Fourier transform of a function
+which separates in cartesian coordinates $f(\vec{x})=a(x)b(y)c(z)$ is 
+also separable
+\begin{align*}
+F(\vec{k})=A(k_x)B(k_y)C(k_z)=
+\ffft\iinf a(x) e^{-ik_xx} dx 
+\iinf b(y) e^{-ik_yy} dy
+\iinf c(z) e^{-ik_zz} dz.
+\end{align*}
+Thats why we like to use cartesian coordinates when we are using Fourier
+transforms.
+\section{Fourier transform of a delta function}
+An important result can be derived by computing the inverse Fourier
+transform of the Fourier transform of a delta function
+\begin{align*}
+\delta(x-x_0) &= \ft\iinf\ft\iinf \delta(x-x_0) e^{-ikx} dx e^{ikx} dk\\
+&=\fft\iinf e^{-ikx_0} e^{ikx} dk = \fft\iinf e^{ik(x-x_0)} dk.
+\end{align*}
+From this we get that the inverse Fourier transform of a
+constant is the delta function
+\begin{align*}
+\ft\iinf e^{ik(x-x_0)} dk = \sqrt{2\pi} \delta(x-x_0).
+\end{align*}
+Taking the complex conjugate of this equation and making use of the fact
+that $\delta^*(x-x_0) = \delta(x-x_0)$ we get as a definition for the delta
+function
+\begin{align}
+\delta(x-x_0)= \fft\iinf e^{\pm ik(x-x_0)} dk.
+\end{align}
+Using this we can derive the astonishing result
+\begin{align}
+\iinf f(x) dx = \sqrt{2\pi} F(0)
+\end{align}
+as can be seen from
+\begin{align*}
+\iinf f(x) dx &= \iinf \ft \iinf F(k) e^{ikx} dk dx 
+= \ft \iinf F(k) \underbrace{\iinf e^{ikx}}_{2\pi \delta(k)} dx dk\\
+&= \sqrt{2\pi} \iinf F(k) \delta(k) dk = \sqrt{2\pi} F(0).
+\end{align*}
+
+\section{Convolution theorem}
+The Fourier transform of the product of two function in $k$-space is
+\begin{align*}
+&\ft\iinf F(k) G(k) e^{ikx} dk =\\
+&= \ft \iinf \ft \iinf f(x') e^{-ikx'} dx' \ft\iinf g(x'') e^{-ikx''} dx''
+e^{ikx} dk\\
+&=\ffft \iiiinf f(x') e^{-ikx'} g(x'') e^{-ikx''} e^{ikx} dx' dx'' dk\\
+&=\ffft \iiinf f(x') g(x'') 
+\underbrace{\iinf e^{-ik(x'+x''-x)} dk}_{2\pi \delta(x''-(x-x'))} dx' dx'' \\
+&=\ft\iinf f(x') \iinf g(x'') \delta(x''-(x-x')) dx'' dx' \\
+&=\ft \iinf f(x') g(x-x') dx' = h(x).
+\end{align*}
+The integral $h(x)$ is called convolution of the functions $f(x)$ and $g(x)$.
+So the convolution theorem says that
+\begin{align}
+h(x) = \ft \iinf f(x') g(x-x') dx' = \ft\iinf F(k) G(k) e^{ikx} dk.
+\end{align}
+
+\section{Autocorrelation and Wiener-Khinchin Theorem}
+The autocorrelation of a function is defined as\footnote{Note that
+with our definition of the Fourier transform we cannot define  
+the autocorrelation function as $h_{AC}(x) = \ft \iinf f(x') f^*(x+x') dx'$,
+because we could then not derive the Wiener-Khinchin theorem.}
+\begin{align}
+h_{AC}(x) = \ft \iinf f^*(x') f(x+x') dx'.
+\end{align}
+The Wiener-Khinchin Theorem states that 
+\begin{align}
+\ft \iinf f^*(x') f(x+x') dx' = \ft \iinf \abs{F(k)}^2 e^{ikx} dk,
+\end{align}
+which can be proved in analogy to the convolution theorem
+\begin{align*}
+&\ft \iinf f^*(x') f(x+x') dx' =\\
+&=\ft \iinf f^*(x') \iinf f(x'') \delta(x''-(x+x')) dx'' dx'\\
+&=\ft \iinf f^*(x') \iinf f(x'') \fft \iinf e^{-ik(x'+x''-x)} dk dx'' dx'\\
+&=\ft \iinf \ft \iinf f^*(x') e^{ikx'} dx' \ft \iinf f(x'') e^{-ikx''} dx''
+e^{ikx} dk\\
+&=\ft \iinf F^*(k) F(k) e^{ikx} dk = \ft \iinf \abs{F(k)}^2 e^{ikx} dk.
+\end{align*}
+A special case of the Wiener-Khinchin theorem is Parseval's theorem
+\begin{align}
+\iinf \abs{f(x)}^2 dx = \iinf \abs{F(k)}^2 dk, 
+\end{align}
+which can be obtained from the Wiener-Khinchin theorem for $x=0$
+\begin{align*}
+h_{AC}(0)&= \ft \iinf f^*(x') f(x') dx' = \ft \iinf \abs{f(x)}^2 dx \\
+&= \ft \iinf \abs{F(k)}^2 e^{ik0} dk = \ft \iinf \abs{F(k)}^2 dk.
+\end{align*}
+
+\section{Structure functions} \label{structfunc}
+A structure function of order $p$ is defined as\footnote{See
+\citet{Pope2000}.}
+\begin{align}
+S_p(f(x))=\fil{\lrb{f(x+x')-f(x')}^p} = \ft \iinf \lrb{f(x+x')-f(x')}^p
+dx'.
+\end{align}
+The second order structure function is related to the spectrum
+$\abs{F(k)}$ of the function $f$ like
+\begin{align}
+\ft \iinf \lrb{f(x+x')-f(x')}^2 dx' = \frac{2}{\sqrt{2\pi}}\iinf (1-e^{ikx})
+\abs{F(k)}^2 dk, \label{eq:structspec}
+\end{align}
+which can be proved\footnote{A sketch of this prove can also be found in
+\citet[Appendix G]{Pope2000}.} by expanding the second order structure function 
+\begin{align*}
+&S_2(f(x))=\ft \iinf \lrb{f(x+x')-f(x')}^2 dx'\\
+&= \ft \lrb{\iinf \abs{f(x+x')}^2 dx' 
+- 2 \iinf f^*(x')f(x+x')dx'
++ \iinf \abs{f(x')}^2 dx'}.
+\end{align*}
+Substituting $x''=x+x'$ in the first term we get
+\begin{align*}
+S_2(f(x)) &= \ft \lrb{\iinf \abs{f(x'')}^2 dx'' 
+- 2\iinf f^*(x')f(x+x')dx'
++\iinf \abs{f(x')}^2 dx'}\\
+&= \frac{2}{\sqrt{2\pi}} \lrb{\iinf \abs{f(x')}^2 dx'-\iinf f^*(x')f(x+x')dx'}.
+\end{align*}
+Using Parseval's and the Wiener-Khinchin theorem we obtain the final result
+\begin{align*}
+&S_2(f(x))=\frac{2}{\sqrt{2\pi}} \lrb{\iinf \abs{F(k)}^2 dk
+-\iinf \abs{F(k)}^2 e^{ikx} dk} \\
+&= \frac{2}{\sqrt{2\pi}}\iinf (1-e^{ikx})\abs{F(k)}^2 dk. 
+\end{align*}
+
+The structure functions used in the theory of Kolmogorov
+are the so called longitudinal structure functions of the velocity, which are
+defined as
+\begin{align}
+S_2(v_{\parallel}(l)) =  
+\fil{\lra{\lrb{\vec{v}(\vec{x}+\vec{l})-\vec{v}(\vec{x})}\cdot
+\frac{\vec{l}}{l}}^p} =
+\fil{\lra{v_{\parallel}(\vec{x}+\vec{l})-v_{\parallel}(\vec{x})}^p}.
+\end{align}
+They are related to the longitudinal velocity
+spectrum\footnote{In the literature this is often called
+kinetic energy spectrum, but this is only true for
+incompressible flows.} $\abs{V_{\parallel}(k)}^2$ via equation
+\eqref{eq:structspec}.
+Sometimes also second order transverse structure functions are measured.
+These are defined as
+\begin{align}
+S_2(v_{\perp}(l)) =  
+\fil{\lra{\frac{\abs{\lrb{\vec{v}(\vec{x}+\vec{l})-\vec{v}(\vec{x})}\times
+\vec{l}}}{l}}^p}.
+\end{align}
+The behavior of the second order transverse structure functions for
+homogeneous turbulence is uniquely determined by the longitudinal structure
+function \citep[p. 192, Eqs. (6.28)]{Pope2000}. They also show the
+characteristic $2/3$-slope as predicted for the longitudinal structure functions
+\citep[p.60]{Frisch1995}.
+
+In general structure functions of vectorial quantities like the velocity are
+tensors, e.g. the general second order structure function of the velocity can
+be defined as
+\begin{align}
+S_{ij}(\vec{x},\vec{l}) =  
+\fil{\lrb{v_i(\vec{x}+\vec{l})-v_i(\vec{x})}
+\lrb{v_j(\vec{x}+\vec{l})-v_j(\vec{x})}}.
+\end{align}
+But it can be shown that for local isotropy only the longitudinal
+structure function $S_2(v_{\parallel}(l))=S_{11}$ and the transversal structure
+$S_2(v_{\perp}(l))=S_{22}=S_{33}$ are unequal zero \citep{Pope2000}. Since 
+the transverse structure function is determined by the longitudinal structure
+function in case of local homogeneity, for homogeneous and isotropic 
+turbulence $S_{ij}$ is determined by the single scalar
+function $S_{11} = S_2(v_{\parallel}(l))$ \citep{Pope2000}.
+
+The third order structure function used in Kolmogorov theory is
+defined as 
+\begin{align}
+S_{111}(\vec{x},\vec{l}) = \fil{\lrb{v_1(\vec{x}+\vec{l})-v_1(\vec{x})}^3},
+\end{align}
+which is often simply called $S_3(v(l))$. So the famous four-fifths law of
+Kolmogorov is actually true only for one component of the third order
+structure function tensor, but again for homogeneous and isotropic turbulence
+the third order structure function tensor $S_{ijk}$ is uniquely determined by
+the single scalar function $S_{111}=S_3(v(l))$.
+
+\chapter{The divergence equation}\label{diveq}
+We start with the momentum equation \eqref{eq:mom}
+\begin{align*}
+\pd{t}(\rho v_i) + \pd{r_j}(v_j \rho v_i) &= -\pd{r_i}p + \pd{r_j}\sigma'_{ij}
+-\rho \pd{r_i} \phi,
+\end{align*}
+where we assumed $g_i=-\pd{r_i} \phi$. If we make the substitutions 
+$\pd{r_i} p \rightarrow \pd{r_j} p \delta_{ij}$ and 
+$\pd{r_i} \phi \rightarrow \pd{r_j} \phi \delta_{ij}$ we can write it in the 
+form
+\begin{align*}
+\pd{t}(\rho v_i) + \pd{r_j}(v_j \rho v_i + p \delta_{ij} - \sigma'_{ij}) 
+= -\rho \pd{r_j} \phi \delta_{ij}.
+\end{align*}
+Taking the divergence of this equation we get
+\begin{align*}
+\pd{t}\lrb{\pd{r_i} (\rho v_i)} 
++ \frac{\partial^2}{\partial r_i \partial r_j}(v_j \rho v_i + p \delta_{ij} -
+\sigma'_{ij}) 
+= -\pd{r_i}\lra{\rho \pd{r_j} \phi \delta_{ij}},
+\end{align*}
+where we assumed that $\pd{t}$ and $\pd{r_i}$ commute. Using the continuity 
+equation \eqref{eq:mass} we get a interesting form of the fluiddynamic 
+equations
+\begin{align}
+\pdd{t}\rho 
+- \frac{\partial^2}{\partial r_i \partial r_j}(v_j \rho v_i + p \delta_{ij} -
+\sigma'_{ij}) 
+= +\pd{r_i}\lra{\rho \pd{r_j} \phi \delta_{ij}}.\label{eq:divbeauty}
+\end{align}
+In case of no gravitation, the fluiddynamic equation can be written in a form
+showing some similarity to a wave equation
+\begin{align*}
+\pdd{t}\rho 
+- \frac{\partial^2}{\partial r_i \partial r_j}(v_j \rho v_i + p \delta_{ij} -
+\sigma'_{ij}) 
+= 0.
+\end{align*}
+But despite its simple form, this equation hides an extreme complexity.
+
+Solving for pressure this equation is written like
+\begin{align}
+\pdd{r_i} p = \pdd{t}\rho- 
+\frac{\partial^2}{\partial r_i \partial r_j}(\rho v_i
+v_j-\sigma'_{ij})
+\end{align}
+and sometimes called the equation for the instantaneous pressure.
+
+\chapter{Vlasov-Poisson Equations}\label{vlaspois}
+The number of particles in the six-dimensional phase space element $dV dP$
+at time $t$ can be expressed as
+\begin{align}
+N(t) = \int f(r_i,p_i,t) dV dP,
+\end{align}
+where $f(r_i,p_i,t)$ is the so called distribution function of particles in
+phase space. The particle density can be expressed in terms of the distribution
+function as
+\begin{align}
+\rho(r_i,t)=m n(r_i,t) = m \int f(r_i,p_i,t) dP,
+\end{align}
+where $n(r_i,t)$ is the number density of all particles and $m$ is the
+particle mass. 
+
+Without collisions, the distribution function satisfies the
+equation
+\begin{align}
+\td{t} f(r_i,p_i,t) = 0.
+\end{align}
+Writing the time derivative explicitely we get the collisionless Boltzmann
+equation
+\begin{align}
+\pd{t}f + \ppd{t}{r_i}\ppd{r_i}{f}+\ppd{t}{p_i}\ppd{f}{p_i} = 0.
+\end{align}
+With the velocity $v_i=\ppd{t}{r_i}$ and the gravitational force
+$F_i=\ppd{t}{p_i}=m g_i$, this equation can be expressed as
+\begin{align}
+\pd{t}f + v_i \ppd{x_i}{f}+m g_i \ppd{f}{p_i} = 0. \label{eq:vlasov}
+\end{align}
+Together with the Poisson equation of gravity
+\begin{align}
+\pd{r_i} g_i = 4 \pi G m \int f(r_i,p_i,t) dP \label{eq:poisson}
+\end{align}
+equations \ref{eq:vlasov} and \ref{eq:poisson} are often called the
+Vlasov-Poisson system of equations \citep{Peebles1980}. This system is used in
+astrophysics to describe the evolution of collisionless matter interacting only
+by gravity.
+
+However in cosmological N-Body simulations it is not the Vlasov-Poisson system
+of equations that is solved. In fact, one assumes that the solution of the
+trajectories of $N$ particles determined by Newtons laws
+\begin{align}
+\ppd{t}{p_{i,j}} &= m_j g_{i,j},\\
+g_{i,j} &= G \sum_{l=1}^N m_l \frac{r_{i,j}-r_{i,l}}{(r_{i,j}-r_{i,l})^3},
+\end{align}
+where $m_j,m_l$ and $r_{i,j},r_{i,l}$ are the position of the $j$th and
+ $l$th particle respectively, can be 
+interpreted as Monte-Carlo-Approximation of the Vlasov-Poisson system
+\citep{Steinmetz1999}. So every particle in a cosmological N-Body simulation
+can in fact represent a huge number of particles, which is a major
+conceptual
+difference to N-body simulations used to model planetary systems or stars in
+star clusters, where each particle intends to mimic an actual physical body.
+
+\chapter{Hydrostatic equilibrium}\label{stat}
+\section{Standard derivation}
+The equations of hydrostatic equilibrium can be obtained from the equations of
+fluid dynamics \eqref{eq:mass}-\eqref{eq:etot} assuming $v_i =
+0$\footnote{Actually this assumption is a little bit to stringent. For a
+spherical symmetric system it is enough, that the average radial component of
+velocity $\fil{v_r}=0$.}. This yields
+\begin{align}
+\pd{t}\rho &= 0,\\
+\ppd{r_i}{p} &= \rho g_i. 
+\end{align}
+The gravitational force for a sphere with a mass profile $M(r)$ is 
+\begin{align}
+g_i=-\ppd{r_i}{\Phi} = -G \frac{M(r)}{r^2}, 
+\end{align}
+so the equation of hydrostatic equilibrium for such a configuration is
+\begin{align}
+\frac{1}{\rho}\ppd{r}{p} &=-G \frac{M(r)}{r^2}.\label{eq:static}
+\end{align}
+Substituting the ideal gas equation $p= \rho R_s T$ on the left hand side leads
+to
+\begin{align}
+\frac{1}{\rho}\ppd{r}{p} = 
+\frac{R_s}{\rho}\lra{\rho\ppd{r}{T}+T\ppd{r}{\rho}}=
+R_s T \lra{\frac{1}{T}\ppd{r}{T}+\frac{1}{\rho}\ppd{r}{\rho}}=
+R_s T \lra{\ppd{r}{\ln T}+\ppd{r}{\ln \rho}}.
+\end{align}
+Plugging the last result into the equation for hydrostatic equilibrium
+\eqref{eq:static}, and solving for $M(r)$ gives an useful form of the
+hydrostatic equilibrium equation
+\begin{align}
+M(r) &= - \frac{R_s T r}{G} \lra{r \ppd{r}{\ln T}+r \ppd{r}{\ln \rho}}
+= - \frac{R_s T r}{G} \lra{\ppd{\ln r}{\ln T}+\ppd{\ln r}{\ln \rho}}.
+\end{align}
+\section{Derivation including turbulent pressure}
+If we add a turbulent pressure $p_t$ to the ideal gas equation we get for the
+total pressure
+\begin{align}
+p =p_{th}+p_t(l)=\rho R_s T+\frac{1}{3}\rho q^2(l).
+\end{align}
+If we substitute this into the equation for hydrostatic equilibrium
+\eqref{eq:static}, we get an additional term due to the turbulent pressure
+\begin{align}
+\ppd{r}{p_t(l)} = \frac{1}{3}\rho q^2(l) 
+\lra{\ppd{r}{\ln q^2(l)}+\ppd{r}{\ln \rho}}.
+\end{align}
+Therefore the total gravitational mass within the radius
+$r$ assuming hydrostatic equilibrium including a turbulent pressure associated
+with a length scale $l$ is
+\begin{align}
+M(r,l) &= - \frac{r}{G} 
+\lrb{R_s T_g \lra{\ppd{\ln r}{\ln T_g}+\ppd{\ln r}{\ln \rho_g}}
++\frac{q^2(l)}{3}\lra{\ppd{\ln r}{\ln q^2(l)}+\ppd{\ln r}{\ln \rho}}}.
+\end{align}
+
+\chapter{Fluid dynamics in comoving coordinates}
+\section{Introduction}
+On large scales ($>$ 100Mpc) the distribution of matter 
+in the universe is isotropic (it looks the same in all directions) 
+and homogeneous (it is isotropic at each point). But only the space 
+is assumed to be isotropic and homogenous. The observed expansion of 
+the universe singles out a special direction in time.\footnote{In other
+words: The universe is not a maximally symmetric 4-dimensional manifold, but can
+be depicted as maximally symmetric 3-dimensional spacelike sheets 
+in a 4-dimensional spacetime. The metric on such a manifold is the 
+Robertson-Walker-metric.}
+
+The physical distance on large scales\footnote{This is a very important 
+point. If the space would also
+expand on small scales we couldn't measure the expansion, because everything 
+including our distance measurement device would expand. But on small scales
+the universe is not homogenous. On small scales the metric of the universe is 
+not a Robertson-Walker metric, but more like a Schwarzschild metric, which
+is isotropic, but not homogenous.} 
+between two points in such an expanding universe varies with time like
+\begin{align}
+r_i=a(t) x_i.
+\end{align}
+The factor $a$ is a dimensionless scale factor greater than zero, which must 
+be the same for each component of the distance vector because of the assumed
+isotropy.
+The scale factor can only depend on the time $t$ and not on the position
+$x_i$ because of the assumed homogeneity of space. 
+
+The change of the distance with time in an expanding universe is then
+\begin{align}
+\dot{r}_i = \dot{a} x_i + a \dot{x}_i.  
+\end{align}
+The global velocity of a particle $v_i = \dot{r}_i$ which does not move 
+relative to the expanding space ($\dot{x}_i = 0$) is
+\begin{align}
+\dot{v}_i = \dot{a} x_i = \fh r_i = H(t) r_i 
+\end{align}
+where $H$ is the so called Hubble parameter. Is a particle moving relative to
+the expanding space ($\dot{x}_i \neq 0$) then we measure the additional 
+local (also called proper) velocity $u_i = a \dot{x}_i$ of the particle. This
+local
+velocity can, according to special relativity, be never greater than the speed
+of light
+$c$. Nevertheless, the global velocity (e.g. the measured escape velocities of
+galaxies at 
+great distances) can be greater than $c$ \citep{Davis2004}. Generally the
+physical velocity 
+of a particle is the sum of global and local velocity
+\begin{align}
+v_i = \dot{a} x_i + u_i (x_i,t).
+\end{align}
+
+\section{Useful transformations}
+From the definition of the distance $r_i$ and the velocity $v_i$ in comoving
+coordinates we get 
+\begin{align}
+\pd{r_i}&=\fa\pd{x_i},\\
+\pd{r_i}v_i&=\fa\pd{x_i}u_i+3\fh,\label{eq:cotrans4}\\
+\pd{r_i}v_j&=\fa\pd{x_i}u_j + \fh\delta_{ij}, \label{eq:cotrans5}\\
+\lra{\frac{\partial A}{\partial t}}_r+v_j \frac{\partial A}{\partial r_j} &= 
+\lra{\frac{\partial A}{\partial t}}_x+\fa u_j \frac{\partial A}{\partial
+x_j},\\
+A(r_i,v_i,t) &\neq A(x_i,u_i,t).
+\end{align}
+
+With the help of transformation (\ref{eq:cotrans4}) and (\ref{eq:cotrans5}) we
+can transform the stress tensor for a newtonian fluid in cartesian coordinates
+\begin{align}
+\sigma'_{ij}= 2\eta\lrb{\frac{1}{2}\lra{\pd{r_j}v_i+\pd{r_i}v_j}
+-\frac{1}{n}\delta_{ij}\pd{r_k}v_k}+\zeta\delta_{ij}\pd{r_k}v_k
+\end{align}
+into the stress tensor for a newtonian fluid in comoving coordinates
+\begin{align}
+\sigma'_{ij}=& 
+2\eta\lrb{\frac{1}{2} 
+\lra{\fa\pd{x_j}u_i+\fh\delta_{ij}+\fa\pd{x_i}u_j+\fh\delta_{ji}} 
+-\frac{1}{n}\delta_{ij}\lra{\fa\pd{x_k}u_k+n\fh}}\\
+&+\zeta\delta_{ij}\lra{\fa\pd{x_k}u_k+n\fh}\\
+=&2\eta\lrb{\frac{1}{2 a} 
+\lra{\pd{x_j}u_i+\pd{x_i}u_j}+\fh\delta_{ij}-\frac{n}{n}\fh\delta_{ij}
+-\frac{1}{n a}\delta_{ij}\pd{x_k}u_k}\\
+&+\zeta\delta_{ij}\lra{\fa\pd{x_k}u_k+n\fh}\\
+=&\fa\lrc{2\eta\lrb{\frac{1}{2} 
+\lra{\pd{x_j}u_i+\pd{x_i}u_j}-\frac{1}{n}\delta_{ij}\pd{x_k}u_k}
++\zeta\delta_{ij}\lra{\pd{x_k}u_k+n\dot{a}}}.
+\end{align}
+
+\section{Equations in comoving coordinates}\label{UEcomoving}
+With the help of the relations described in the last section, we can write
+down the fluid dynamic equations in explicit comoving form
+\begin{align}
+\pd{t}\rho + \fa\pd{x_j}(u_j \rho) =& -3\fh\rho , \label{eq:commass}\\
+\pd{t}(\rho u_i) + \fa\pd{x_j}(u_j \rho u_i) =& 
+-\fa\pd{x_i}p + \fa\pd{x_j}\sigma'_{ij} +\rho g^*_i -4\fh \rho u_i,
+\label{eq:commom}
+\\
+\begin{split}
+\pd{t}(\rho e) + \fa\pd{x_j}(u_j \rho e) =& 
+-\fa\pd{x_j}(u_j p) + \fa\pd{x_j}(u_i \sigma'_{ij}) + \fa u_i \rho g^*_i \\ 
+&- 3 \fh(\rho e +\frac{1}{3}\rho u^2_i+p),\label{eq:cometot}
+\end{split}
+\end{align}
+with Newtonian Gravity in comoving coordinates (Poisson Equation)
+\begin{align}
+\fa\pd{x_i}g^*_i=4\pi G,
+\end{align}
+where 
+$g_i^*=-\fa\frac{\partial \varphi}{\partial x_i}$ and the gauge transformed
+newtonian potential $\varphi=\phi+\frac{1}{2}a\ddot{a}x_i^2$.
+
+The energy equation is the sum of the equation for the kinetic energy and the
+internal energy
+\begin{align}
+\pd{t}(\rho e_k)+\fa\pd{x_j}(u_j \rho e_k) &= -\fa u_i \pd{x_i}p
++\fa u_i \pd{x_j}\sigma'_{ij}+\fa\rho u_i g^*_i-5\fh\rho e_k,\\
+\pd{t}(\rho e_{int})+\fa\pd{x_j}(u_j \rho e_{int})&=
+-\fa p \pd{x_j}u_j -\fa \sigma'_{ij}\pd{x_j}u_i- 3\fh(\rho e_{int} +p).
+\end{align}
+
+A even simpler form of the equations of fluid dynamics in comoving coordinates
+can be found by expressing density and pressure in comoving coordinates.
+The connection between the density in physical coordinates
+$r_i=a(t) \cdot x_i$ and the comoving coordinates $x_i$ is given by
+\begin{align}
+\rho(r_i)=\frac{dM}{dV}=\frac{dM}{dr_1 dr_2 dr_3}
+=\frac{1}{a(t)^3}\frac{dM}{dx_1 dx_2 dx_3}=\frac{1}{a(t)^3}
+\rho(x_i)=\frac{1}{a(t)^3}\tilde{\rho}
+\end{align}
+and in analogy for the pressure
+\begin{align}
+p(r_i)=\frac{1}{a(t)^3} p(x_i)= \frac{1}{a(t)^3}\tilde{p}.
+\end{align}
+Because
+\begin{align}
+\pd{t}\rho = \pd{t}\frac{1}{a(t)^3}\tilde{\rho} =
+\frac{1}{a(t)^3}\pd{t}\tilde{\rho} - 3 \fh\rho 
+\end{align}
+the source term on the right hand side of the momentum equation
+\eqref{eq:commom} and energy conservation equation \eqref{eq:cometot} is reduced
+and even vanishes in the mass conservation equation \eqref{eq:commass}, so that
+we can write the system of equations for fluid dynamic in comoving coordinates
+like
+\begin{align}
+\pd{t}\tilde{\rho} + \fa\pd{x_j}(u_j \tilde{\rho}) =& 0, \label{eq:commass2}\\
+\pd{t}(\tilde{\rho} u_i) + \fa\pd{x_j}(u_j \tilde{\rho} u_i) =& 
+-\fa\pd{x_i}\tilde{p}+ \fa\pd{x_j}\sigma'_{ij} 
++\tilde{\rho} g^*_i - \fh \tilde{\rho} u_i,
+\label{eq:commom2}
+\\
+\begin{split}
+\pd{t}(\tilde{\rho} e) + \fa\pd{x_j}(u_j \tilde{\rho} e) =& 
+-\fa\pd{x_j}(u_j \tilde{p}) + \fa\pd{x_j}(u_i \sigma'_{ij}) 
++ \fa u_i \tilde{\rho} g^*_i \\ 
+&- \fh(\tilde{\rho} e 
++\frac{1}{3}\tilde{\rho}u^2_i+\tilde{p}).\label{eq:cometot2}
+\end{split}
+\end{align}
+
+\chapter{Color fields}\label{color}
+There are two possibilities to implement a color field $c$ in a fluid code. One
+can treat color like the density, i.e. the color variable obeys a conservation
+law like the density
+\begin{align}
+\pd{t} c + \pd{r_j}(v_j c) &= 0.
+\end{align}
+In this case $c$ will exactly behave like density, if density and color have
+the same initial value.
+
+On the other hand one can treat it like a specific quantity obeying a
+conservation law like
+\begin{align}
+\pd{t} \rho c + \pd{r_j}(v_j \rho c) &= 0.
+\end{align}
+In this case we see that if $c$ is spatially constant at a time $t_0$, i.e. 
+$c(t_0)=c_0$, $\ppd{r_j}{c(t_0)}=0$, it will stay constant forever
+\begin{align*}
+\pd{t} \rho c + \pd{r_j}(v_j \rho c) &= 0 \\
+\Leftrightarrow \ppd{t}{c} + v_j \ppd{r_j}{c} &= 0 \\
+\Leftrightarrow \td{t} c &=0\\
+\Rightarrow c &= const. = c_0
+\end{align*}
+

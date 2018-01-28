@@ -1,0 +1,23 @@
+\begin{picture}(0,0)%
+\includegraphics{chapter5/energyscheme1.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(10824,7224)(1114,-7273)
+\put(1576,-736){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}potential energy}%
+}}}}
+\put(10576,-2311){\rotatebox{270.0}{\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}adiabatic pressure effects}%
+}}}}}
+\put(11701,-2311){\rotatebox{270.0}{\makebox(0,0)[lb]{\smash{{\SetFigFont{17}{20.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}irreversible viscous effects}%
+}}}}}
+\put(9001,-6586){\makebox(0,0)[b]{\smash{{\SetFigFont{20}{24.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}internal energy}%
+}}}}
+\put(8776,-736){\makebox(0,0)[b]{\smash{{\SetFigFont{20}{24.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}kinetic energy}%
+}}}}
+\end{picture}%

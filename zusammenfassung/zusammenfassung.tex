@@ -1,0 +1,124 @@
+\chapter*{Zusammenfassung}
+Galaxienhaufen sind die größten, gravitativ gebundenen Strukturen im Universum.
+Nach dem hierarchischen Modell der Strukturentstehung, wonach größere,
+gravitativ gebundene Systeme aus kleineren Systemen entstehen, sind sie damit
+auch die jüngsten Strukturen im Universum. Daher kann die genaue Verfolgung
+ihrer Entwicklung, z.B. anhand ihrer Anzahldichte abhängig von der Zeit, zur
+Messung wichtiger kosmologischer Parameter verwendet werden. 
+
+Viele Eigenschaften von Galaxienhaufen können mit optischen Beobachtungen
+bestimmt werden, die derzeit verlässlichsten Daten erhält man jedoch durch
+Beobachtungen mit Röntgensatelliten wie z.B. CHANDRA und XMM-Newton. Aus diesen
+Daten ergeben sich Korrelationen z.B. zwischen Leuchtkraft und Temperatur oder 
+zwischen Masse und Temperatur für Galaxienhaufen. Nimmt man an, dass alleine 
+Gravitation eine Rolle bei der Entstehung von Galaxienhaufen spielt, sollten
+diese selbstähnlich sein, jedoch stimmen die experimentell gefundenen
+Relationen nicht mit dieser Annahme überein. Eine physikalische Erklärung,
+warum die Selbstähnlichkeit verletzt ist, kann die Existenz von turbulenten
+Strömungen in Galaxienhaufen sein.
+
+Die bisherigen Untersuchungen von Turbulenz in Galaxienhaufen waren jedoch
+darauf beschränkt, alleine passiv nach Eigenschaften der Strömung in
+Galaxienhaufen zu suchen, die auf Turbulenz hinweisen. Die aktive Rolle der
+Turbulenz, d.h. den möglichen Einfluss von klein und kleinstskaligen
+Geschwindigkeitsfluktuationen auf die Strukturentstehung, zu modellieren war
+bisher nicht möglich. Ein Grund dafür ist, das die akzeptierte
+Kolmogorov-Theorie der Turbulenz nur für inkompressible, homogene und isotrope
+Strömungen angewendet werden kann, Strömungen in der Astrophysik jedoch meist
+kompressibel, selbstgravitierend und anisotrop sind. Ein zweiter Grund ist,
+dass die derzeitigen Modelle zur numerischen
+Beschreibung von Turbulenz (sog. Grobstruktursimulationen) auf der Filterung der
+fluiddynamischen Gleichungen bei einer bestimmten charakteristischen Längenskala
+beruhen, was im offenen Widerspruch zu numerischen Methoden der
+Astrophysik steht, welche mit adaptiven Gittern arbeiten, um die vielen
+Phänomene auf unterschiedlichsten Längenskalen in astrophysikalischen
+Umgebungen darzustellen.
+
+Ziel dieser Arbeit war es daher, ein neues numerisches Modell zu
+entwickeln, welches es ermöglicht Grobstruktursimulationen auch mit adaptiven
+Gittercodes auszuführen, um Turbulenz über große Längenskalenbereiche konsistent
+zu simulieren. Da das frei verfügbare Programm Enzo zur Simulation
+kosmologischer Strömungen adaptive, in Blöcken organisierte Gitter und den
+wenig-dissipativen PPM-Lösungsalgorithmus benutzt, sollte unser neues Modell in
+diesen Code implementiert werden. 
+
+Um Grobstruktursimulationen mit Enzo zu ermöglichen, implementierten wir eine
+neue Erhaltungsgleichung für die turbulente Energie in das Programm und
+koppelten sie an die bereits vorhandenen Erhaltungsgleichungen von Impuls,
+kinetischer und interner Energie. Wichtigster Punkt und zentrale Idee um
+Grobstruktursimulationen mit adaptiven Gittern zu ermöglichen, war jedoch   
+die Modifikation der Algorithmen zur Interpolation von turbulenter und
+kinetischer Energie bei der Erzeugung von Gittern, damit die turbulente
+Dissipation lokal auf verschiedenen Längenskalen erhalten bleibt. 
+ 
+Nach der Lösung sehr vieler numerischer und technischer Probleme, die uns der
+schlecht gewartete Enzo-Code leider aufzwang, ist es uns im Rahmen dieser
+Arbeit gelungen zu zeigen, dass die Annahme lokaler Erhaltung der turbulenten 
+Dissipation zu einem konsistenten Skalierungsverhalten der turbulenten Energie
+in adaptiven Gittercodes führen kann. Wir konnten auch zeigen, dass unsere
+Modifikation nicht zu einer Verletzung der Energieerhaltung führt.
+
+Motiviert von diesen Ergebnissen verwendeten wir unser neues numerisches
+Modell zur Simulation von Galaxienhaufen. Im Rahmen dieser Arbeit wurden dazu
+eine hochaufgelöste Simulation mit und eine ohne Turbulenzmodell
+durchgeführt, um den Einfluss unseres Turbulenzmodells auf die Entstehung eines
+Galaxienhaufens zu untersuchen. Die Auswertung der Simulationen ergab folgendes
+Bild:
+\begin{itemize}
+\item Unser Turbulenzmodell hat keinen signifikanten Einfluss auf Massenanteile
+der unterschiedlichen Gasphasen im interstellaren Medium.
+\item Die zeitlichen Entwicklung der turbulenten Energie lässt darauf 
+schließen, dass alle Gasphasen  auf der Längenskala einer Galaxie genug Zeit
+hatten, um im heutigen Universum eine turbulente Kaskade auszubilden. Wir
+konnten auch zeigen, dass die Produktion und Dissipation turbulenter Energie 
+im heutigen Universum praktisch im Gleichgewicht zu sein scheint.
+\item Die Turbulenz auf der Längenskala einer Galaxie ist Unterschallturbulenz,
+die mittlere turbulente Machzahl bei einer Rotverschiebung $z=0$ beträgt etwa
+$0.2$.
+\item Große Fluktuationen der turbulenten Energie bei beginnender
+Galaxienhaufenbildung deuten darauf hin, dass \glqq gewaltsames\grqq
+Verschmelzen
+kleinerer zu großen Strukturen zu turbulenten Strömungen führt.
+\item Turbulenz in Galaxienhaufen wird durch die Akkretion kleinerer
+Strukturen nur am äußeren Rand ($r>R_{vir}$) getrieben. Dabei
+lässt sich aus der räumlichen Verteilung der turbulenten Energie auf die
+Akkretionsgeschichte des Galaxienhaufens zurückschließen, zumindest solange,
+bis die turbulenten Geschwindigkeitsfluktuationen in thermische Energie
+umgewandelt sind.
+\item Aus dem Skalierungsverhalten der turbulenten Energie lässt sich ableiten,
+dass Kräfte auf einer Längenskala von  $\approx \unit[100]{kpc\ h^{-1}}$
+Energie in das System einkoppeln und sich zu kleineren Längenskalen hin eine
+turbulente Kaskade ausbildet. In den Radialprofilen des Galaxienhaufens findet
+man den Maximalwert der turbulenten Energie bei $r=0.5\ R_{vir}$,
+wahrscheinlich verursacht durch die starke Abbremsung und damit verbundenen
+Verwirbelung von Material, wenn es auf den Rand des Galaxienhaufen 
+$r=R_{vir}$ trifft.  
+\item Aus den Radialprofilen folgt auch, dass nur im Zentrum ein
+signifikanter Einfluss unseres Turbulenzmodells auf die thermodynamischen
+Eigenschaften des Galaxienhaufens besteht. Aus dem effektiven adiabatischen
+Index ergibt sich, dass mit unserem Turbulenzmodell das interstellare Medium im
+Zentrum des Galaxienhaufens kühlt, d.h. die Entropie und die Temperatur sind
+niedriger, die Dichte und Geschwindigkeitsdispersion höher als ohne
+Turbulenzmodell.
+\end{itemize}
+
+Ausgehend vom letztgenannten Punkt kann man auch vermuten, dass Turbulenz als
+Mechanismus zur Lösung des \glqq Überkühlungsproblems\grqq\ nicht in Frage
+kommt. Desweiteren führten vorläufige, niedrigaufgelöste Simulationen von
+Galaxienhaufen zu dem interessanten Resultat, dass die Kolmogorovkonstante im
+Skalierungsgesetz der turbulenten Geschwindigkeitsfluktuationen im
+Galaxienhaufenzentrum eine
+Größenordnung höher als in inkompressibler Turbulenz zu sein scheint.
+
+Ein wichtiger Punkt bei der Quantifizierung von Turbulenz, der speziell in
+unserer Arbeit offensichtlich wurde, ist die Skalenabhängigkeit der turbulenten
+Energie und damit auch des turbulenten Druckes. Oft wird dies in der
+astrophysikalische Literatur nicht berücksichtigt, was viele Aussagen
+hinsichtlich der Stärke von Turbulenz unvollständig macht.
+Die Frage jedoch, ob mit einer skalenabhängigen turbulenten Energie, wie sie
+sich aus der Kolmogorov-Theorie und in unserem Turbulenzmodell ergibt,
+wirklich Turbulenz in selbstgravitierenden Strömungen korrekt beschrieben
+werden kann, können wir nicht beantworten. Ein besseres Verständnis
+selbstgravitierender, turbulenter Strömungen scheint daher unerlässlich und
+extrem wichtig für die weitere Erforschung von Turbulenz in der Astrophysik.
+

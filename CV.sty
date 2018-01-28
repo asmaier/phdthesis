@@ -1,0 +1,17 @@
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{12}
+{0mm} % Einzug
+{1.5\baselineskip} % Vorabstand
+{0.7\baselineskip} % Nachabstand
+{\large\scshape\hrule\vspace{0.8\baselineskip}}}
+\makeatother
+
+\newcommand{\entrylabel}[1]{\mbox{#1}\hfil}
+\newenvironment{CV}
+  {\begin{list}{}
+    {\renewcommand{\makelabel}{\entrylabel}
+    \settowidth{\labelwidth}{September 1997 -- November 1997\ } %war 77pt für 10pt, 98pt für 12pt
+    \settowidth{\leftmargin}{\ \ \,September 1997 -- November 1997}%war 84, 105pt für 12pt
+  }}
+  {\end{list}
+}

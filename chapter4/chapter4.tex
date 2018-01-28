@@ -1,0 +1,221 @@
+\chapter{Favre-filtered equations of fluid dynamics}\label{FE}
+\section{Basic equations}
+Using the Favre-Germano formalism developed in \ref{FGform} to filter the
+equations of compressible selfgravitating fluid dynamics
+\eqref{eq:mass}-\eqref{eq:etot} leads to
+
+\begin{align}
+\pd{t}\fil{\rho} + \pd{r_j}\hat{v}_j\fil{\rho} =&\ 0 \label{eq:film}\\
+\pd{t}\fil{\rho}\hat{v}_i + \pd{r_j}\hat{v}_j\fil{\rho}\hat{v}_i =&
+-\pd{r_i}\fil{p}+\pd{r_j}\fil{\sigma'_{ij}}+\fil{\rho}\hat{g}_i
+-\pd{r_j}\hat{\tau}(v_i,v_j) \label{eq:filmom}
+\\
+\begin{split}
+\pd{t}\fil{\rho}\hat{e}+\pd{r_j}\fil{\rho}\hat{v}_j\hat{e} =&
+-\pd{r_j}\fil{v_j p}+\pd{r_j}\fil{v_i \sigma_{ij}}
++\fil{\rho}\hat{v}_i\hat{g}_i\\
+&+\hat{\tau}(v_i,g_i)-\pd{r_j}\hat{\tau}(v_j,e)
+\end{split}
+\end{align}
+with
+\begin{align}
+\hat{e}=\hat{e}_{int}+\frac{1}{2}\hat{v}_i\hat{v}_i
++\frac{1}{2}\frac{\hat{\tau}(v_i,v_i)}{\fil{\rho}}
+\end{align}
+and
+\begin{align}
+\hat{\tau}(v_j,e)=\hat{\tau}(v_j,e_{int})+\frac{1}{2}\hat{\tau}(v_j,v_i,v_i)
++\hat{v}_i\hat{\tau}(v_j,v_i)
+\end{align}
+Filtering the equation for the kinetic energy and the internal energy alone we
+get:
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho} \hat{e}_k+\pd{r_j}\hat{v}_j \fil{\rho} \hat{e}_k) =& 
+-\fil{v_i \pd{r_i}p}+\fil{v_i \pd{r_j}\sigma'_{ij}}
++\fil{\rho} \hat{v}_i \hat{g}_i\\
+&+\hat{\tau}(v_i,g_i)-\pd{r_j}\hat{\tau}(v_j,e_k) \label{eq:filkin}
+\end{split}
+\\
+\begin{split}
+\pd{t}\fil{\rho} \hat{e}_{int}+\pd{r_j}\hat{v}_j \fil{\rho} \hat{e}_{int} =&
+-\fil{p \pd{r_j}v_j} + \fil{\sigma'_{ij}\pd{r_j}v_i}
+-\pd{r_j}\hat{\tau}(v_j,e_{int})\label{eq:filint}
+\end{split}
+\end{align}
+with
+\begin{align}
+\hat{e}_k=\frac{1}{2}\hat{v}_i\hat{v}_i
++\frac{1}{2}\frac{\hat{\tau}(v_i,v_i)}{\fil{\rho}}
+\end{align}
+and
+\begin{align}
+\hat{\tau}(v_j,e_k)=\frac{1}{2}\hat{\tau}(v_j,v_i,v_i)+\hat{v}_i\hat{\tau}(v_j,
+v_i)
+\end{align}
+\section{Resolved energy and turbulent energy equations}
+Multiplying the filtered equation for the momentum (\ref{eq:filmom}) with the
+Favre-filtered velocity
+$\hat{v}_i$ yields the balance equation for the resolved kinetic energy:
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho}\frac{1}{2}\hat{v}_i\hat{v}_i 
++ \pd{r_j}\hat{v}_j\fil{\rho}\frac{1}{2}\hat{v}_i\hat{v}_i =&
+-\hat{v}_i\pd{r_i}\fil{p}+\hat{v_i}\pd{r_j}\fil{\sigma'_{ij}}
++\fil{\rho}\hat{v}_i\hat{g}_i\\
+&-\hat{v}_i\pd{r_j}\hat{\tau}(v_i,v_j) \label{eq:reskin}
+\end{split}
+\end{align}
+Adding the equation for the resolved kinetic energy (\ref{eq:reskin}) to the
+equation for the filtered internal energy (\ref{eq:filint}) one gets the
+equation for the total resolved
+energy $e_{res}=\hat{e}_{int}+\frac{1}{2}\hat{v_i}\hat{v_i}$:
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho}e_{res}+\pd{r_j}\hat{v}_j\fil{\rho}e_{res}=&
+-\hat{v}_i\pd{r_i}\fil{p}+\hat{v}_i\pd{r_j}\fil{\sigma'_{ij}}+\fil{\rho}\hat{v}
+_i\hat{g}_i\\
+&-\fil{p\pd{r_i}v_i}+\fil{\sigma'_{ij}\pd{r_j}v_i}
+-\hat{v}_i\pd{r_j}\hat{\tau}(v_i,v_j)\\
+&-\pd{r_j}\hat{\tau}(v_j,e_{int})\label{eq:resetot}
+\end{split}
+\end{align}
+The arising four terms
+$\fil{p\pd{r_i}v_i},\fil{\sigma'_{ij}\pd{r_j}v_i},
+\hat{\tau}(v_i,v_j),\hat{\tau}(v_j,e_{int})$ in the total resolved energy
+represent the coupling of the unresolved fluctuations to the filtered resolved
+flow. We could now try to find equations based on quantities of the resolved
+flow, to model each of these terms independent of each other.
+Nevertheless we will see that the first three of these four terms can be
+connected by an equation for another quantity, called the turbulent energy 
+$\varepsilon_t$. From solving the equation for this quantity we get the three
+terms $\fil{p\pd{r_i}v_i},\fil{\sigma'_{ij}\pd{r_j}v_i},\hat{\tau}(v_i,v_j)$.
+Only the fourth term $\hat{\tau}(v_j,e_{int})$ is not connected with the
+turbulent energy and has to be modeled separately. 
+
+We get the balance equation for the turbulent energy\footnote{Interpreting the
+quantity $\hat{\tau}(v_i,v_i) = \hat{\tau}_{ii}$ as an energy is only possible,
+if $\hat{\tau}_{ii} \geq 0$. This is only guaranteed, if the filter 
+convolution kernel is a semi-positive function in position
+space \citep{Vreman1994,Sagaut2006}.} 
+$\varepsilon_t=\fil{\rho} e_t =\frac{1}{2}\hat{\tau}(v_i,v_i)$ by
+subtracting the balance equation for the resolved kinetic energy
+(\ref{eq:reskin}) from the balance equation of the filtered kinetic energy
+(\ref{eq:filkin}) :
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho}e_t+\pd{r_j}\hat{v}_j \fil{\rho}e_t=&
+-\lrb{\fil{v_i \pd{r_i}p}-\hat{v}_i\pd{r_i}\fil{p}} \\
+&+\lrb{\fil{v_i \pd{r_j}\sigma'_{ij}}-\hat{v}_i\pd{r_j}\fil{\sigma'_{ij}}} \\
+&+\hat{\tau}(v_i,g_i) 
+-\frac{1}{2}\pd{r_j}\hat{\tau}(v_j,v_i,v_i) 
+-\hat{\tau}(v_j,v_i)\pd{r_j}\hat{v_i}
+\end{split}
+\end{align}
+For a better comparison with \citet{Schmidt2006} we will transform the following
+terms like
+\begin{align}
+\fil{v_i \pd{r_i}p}&=\pd{r_i}\fil{v_i p}-\fil{p \pd{r_i} v_i}
+\label{eq:trans1}\\
+\hat{v}_i\pd{r_i}\fil{p}&=\pd{r_i}\hat{v}_i\fil{p}-\fil{p}\pd{r_i}\hat{v}_i\\
+\fil{v_i \pd{r_j}\sigma'_{ij}}&=\pd{r_j}\fil{v_i \sigma'_{ij}}-\fil{\sigma'_{ij}
+\pd{r_j}v_i}\\
+\hat{v}_i\pd{r_j}\fil{\sigma'_{ij}}&=\pd{r_j}\hat{v}_i\fil{\sigma'_{ij}}-\fil{
+\sigma'_{ij}}\pd{r_j}\hat{v}_i\label{eq:trans4}
+\end{align}
+and rewrite the balance equation for the turbulent energy:
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho}e_t+\pd{r_j}\hat{v}_j \fil{\rho}e_t=&
+-\pd{r_j}\lrb{\frac{1}{2}\hat{\tau}(v_j,v_i,v_i)+\fil{v_i p}-\hat{v}_i\fil{p}
+-\fil{v_i \sigma'_{ij}}+\hat{v}_i\fil{\sigma'_{ij}}}\\
+&-\lrb{\fil{p}\pd{r_i}\hat{v}_i-\fil{p \pd{x_i} v_i}} 
++\lrb{\fil{\sigma'_{ij}}\pd{r_j}\hat{v}_i-\fil{\sigma'_{ij} \pd{r_j}v_i}} \\
+&+\hat{\tau}(v_i,g_i)-\hat{\tau}(v_j,v_i)\pd{x_j}\hat{v_i}
+\end{split}
+\end{align}
+If we introduce now in analogy to \citet{Schmidt2006} the following
+definitions
+\begin{align}
+-\mu &=\fil{v_i p}-\hat{v}_i\fil{p}\\
+-\kappa &=\fil{v_i \sigma'_{ij}}-\hat{v}_i\fil{\sigma'_{ij}}\\
+\mathbb{D} &= -\pd{r_j}\lrb{\frac{1}{2}\hat{\tau}(v_j,v_i,v_i) -\mu
++\kappa}\\
+\fil{\rho} \lambda &=\lrb{\fil{p}\pd{r_i}\hat{v}_i-\fil{p \pd{r_i}
+v_i}}\label{eq:def4}\\
+\fil{\rho} \epsilon
+&=-\lrb{\fil{\sigma'_{ij}}\pd{r_j}\hat{v}_i-\fil{\sigma'_{ij} \pd{r_j} v_i}}
+\label{eq:def5}\\
+\Gamma&=\hat{\tau}(v_i,g_i)
+\end{align}
+we can write the balance equation for the turbulence energy like
+\begin{align}
+\pd{t}\fil{\rho}e_t+\pd{r_j}\hat{v}_j
+\fil{\rho}e_t=\mathbb{D}+\Gamma-\fil{\rho}(\lambda+\epsilon)
+-\hat{\tau}(v_j,v_i)\pd{r_j}\hat{v_i}.\label{eq:et2}
+\end{align}
+With the help of equations (\ref{eq:trans1}) to (\ref{eq:trans4}) and the
+definitions 
+(\ref{eq:def4}) and (\ref{eq:def5}) we can also rewrite the equation
+(\ref{eq:resetot}) for the total resolved energy:
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho}e_{res}+\pd{r_j}\hat{v}_j\fil{\rho}e_{res}=&
+-\pd{r_i}\hat{v}_i\fil{p}
++\pd{r_j}\hat{v}_i\fil{\sigma'_{ij}}+\fil{\rho}\hat{v}_i\hat{g}_i\\
+&+\fil{\rho}(\lambda+\epsilon)
+-\hat{v}_i\pd{r_j}\hat{\tau}(v_i,v_j)
+-\pd{r_j}\hat{\tau}(v_j,e_{int}).\label{eq:resetot2}
+\end{split}
+\end{align}
+
+\section{Summary}
+The last two equations (\ref{eq:et2}) and (\ref{eq:resetot2}) together with
+equation 
+(\ref{eq:film}) and (\ref{eq:filmom}) (and additionally the Poisson equation for
+the gravity term and the equation of state) form a complete system of partial
+differential equations for fluid dynamics
+\begin{align}
+\pd{t}\fil{\rho} + \pd{r_j}\hat{v}_j\fil{\rho} =&\ 0, \label{eq:filmsum}\\
+\pd{t}\fil{\rho}\hat{v}_i + \pd{r_j}\hat{v}_j\fil{\rho}\hat{v}_i =&
+-\pd{r_i}\fil{p}+\pd{r_j}\fil{\sigma'_{ij}}+\fil{\rho}\hat{g}_i
+-\pd{r_j}\hat{\tau}(v_i,v_j),\label{eq:filmomsum}\\
+\begin{split}
+\pd{t}\fil{\rho}e_{res}+\pd{r_j}\hat{v}_j\fil{\rho}e_{res}=&
+-\pd{r_i}\hat{v}_i\fil{p}
++\pd{r_j}\hat{v}_i\fil{\sigma'_{ij}}+\fil{\rho}\hat{v}_i\hat{g}_i\\
+&+\fil{\rho}(\lambda+\epsilon)
+-\hat{v}_i\pd{r_j}\hat{\tau}(v_i,v_j)
+-\pd{r_j}\hat{\tau}(v_j,e_{int}),
+\end{split}\label{eq:filresetotsum}
+\\
+\pd{t}\fil{\rho}e_t+\pd{r_j}\hat{v}_j
+\fil{\rho}e_t=&\ \mathbb{D}+\Gamma-\fil{\rho}(\lambda+\epsilon)
+-\hat{\tau}(v_j,v_i)\pd{r_j}\hat{v_i}\label{eq:etsum},
+\end{align}
+where it is often useful to split the equation for resolved energy into an
+equation for the resolved kinetic energy and internal energy respectively
+\begin{align}
+\begin{split}
+\pd{t}\fil{\rho} \hat{e}_k+\pd{r_j}\hat{v}_j \fil{\rho} \hat{e}_k) =& 
+-\hat{v}_i \pd{r_i}\fil{p}
++\hat{v}_i \pd{r_j}\fil{\sigma'_{ij}}
++\fil{\rho} \hat{v}_i \hat{g}_i\\
+&-\hat{v}_i\pd{r_j}\hat{\tau}(v_i,v_j), \label{eq:filkinsum}
+\end{split}
+\\
+\begin{split}
+\pd{t}\fil{\rho} \hat{e}_{int}+\pd{r_j}\hat{v}_j \fil{\rho} \hat{e}_{int} =&
+-\fil{p} \pd{r_j}\hat{v}_j 
++\fil{\sigma'_{ij}}\pd{r_j}\hat{v}_i
++\fil{\rho}(\lambda+\epsilon)\\
+&-\pd{r_j}\hat{\tau}(v_j,e_{int}).\label{eq:filintsum}
+\end{split}
+\end{align}
+
+The explicit forms of the quantities $\mathbb{D},\lambda,\epsilon,\Gamma$ and
+$\hat{\tau}(v_i,v_j)$ are unknown and have to be modeled in terms of the
+turbulence energy $e_t$.
+The term $\hat{\tau}(v_j,e_{int})$ has to be modeled independently of $e_t$. The
+models for all these terms represent our turbulence or subgrid model.
+

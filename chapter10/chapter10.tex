@@ -1,0 +1,131 @@
+\chapter{Summary and Conclusions}\label{summ}
+Turbulence is often invoked in astrophysics to explain phenomena, which are
+not understood. However, studies that quantify the real impact of 
+turbulence in astrophysical environments in general, or especially for the
+formation of galaxy clusters, are not available. One reason for this is
+obviously the lack of an accepted theory of compressible and/or supersonic
+and/or
+selfgravitating turbulence. A second reason is that the models used to
+describe numerically the influence of turbulence (so-called 
+large-eddy-simulations) are based on the notion of
+filtering the fluid dynamic equations at a specific length scale, which is
+incompatible with adaptive grid codes used to study astrophysical phenomena.
+
+The aim of this work was to address the second problem, thereby developing,
+implementing, and applying a new numerical scheme for modeling turbulent flows
+over a great range of length scales suitable to treat astrophysical flows in
+galaxy cluster cores or star forming regions. Because the cosmological fluid
+code Enzo uses blockstructured adaptive mesh refinement in combination with
+a low dissipative PPM-Solver, it was a natural choice to implement our ideas
+into this code.
+
+Still, great technical and numerical difficulties had to be circumvented.
+Nevertheless, we could finally show that the
+idea of our $\epsilon$-based approach to correct the velocity and energy fields
+at grid refinement/derefinement according to local Kolmogorov scaling can
+produce consistent results in simulations of driven turbulence. We demonstrated
+that energy conservation and the scaling of turbulent energy in our adaptive
+simulations is consistent with static grid simulations. 
+
+Motivated by these results, we then attempted to use our new numerical scheme in
+ simulations of galaxy cluster formation. Two high resolution runs of galaxy
+cluster formation, one with and one without a turbulence model, have been
+conducted to explore the influence of
+turbulence modeled with our scheme on the formation of galaxy clusters. From
+the analysis of these simulations, we conclude the following:
+\begin{itemize}
+\item Our turbulence model seems to have no significant influence on the mass
+fractions of different gas phases of the ICM. 
+\item The time development of turbulent energy in the simulation suggests that
+basically all gas phases of the intracluster medium had enough time to develop
+a turbulent cascade. In fact, we could show that our model seems to be near an
+equilibrium of production and dissipation of turbulence, especially in the
+cluster core. 
+\item The turbulence at a length scale of galaxies 
+($\approx \unit[10]{kpc\ h^{-1}}$) is subsonic, and the average
+turbulent Mach number at these scale is found to be $0.2$ at redshift $z=0$. 
+\item In the beginning of galaxy cluster formation great fluctuations of
+turbulent energy can be seen, suggesting that violent merging can produce a
+substantial amount of turbulence. 
+\item Minor mergers can drive turbulence only at the outer rim 
+($r>R_{vir}$) of the galaxy cluster. The spatial distribution of turbulent
+energy traces the local merging history of a galaxy cluster until the turbulent
+motions are dissipated into heat completely. 
+\item From the scaling properties of turbulent energy it seems that energy
+is injected at a scale of $\approx \unit[100]{kpc\ h^{-1}}$ cascading down to
+smaller scales. From the radial profile of our cluster we found a peak of
+turbulent energy at $r=0.5\ R_{vir}$, probably produced by the infall and 
+strong deceleration of material, when it hits the virial boundary of the
+cluster.
+\item From the radial profiles of several thermodynamical quantities of the
+galaxy cluster it is evident, that only inside the core ($r<0.1\ R_{vir}$)
+can one find a significant influence of our turbulence model. The radial profile
+of
+the effective adiabatic index shows that the influence of the turbulent model
+can be described as a kind of cooling, leading to lower entropy, lower
+temperature, and therefore higher gas density and higher velocity dispersion in
+the core. "Cooling" due to turbulence does not lead to an overcooling
+problem, but it is not strong enough to explain the cool cores of galaxy
+clusters.
+\end{itemize}
+
+The last result begs the question of how turbulence would influence a
+simulation of cluster formation including cooling. If there is no nontrivial
+interaction between cooling and the turbulence model, our results indicate that
+turbulence would even enhance the overcooling problem in the core. So
+suggesting turbulence as a heating mechanism that prevents galaxy cluster
+cores from overcooling seems to be problematic. Nevertheless more
+simulations of galaxy clusters, including different physics have to
+be carried out to confirm our results. 
+
+Interestingly preliminary results from low resolution simulations suggest, that
+turbulent velocity in the cluster core obeys a Kolmogorov scaling law with
+a Kolmogorov constant more than 10 times higher than in incompressible
+simulations. Whether this finding is only a feature of our SGS model
+or a universal feature of turbulence in the cluster core should be
+investigated in the future.
+
+More attention should also be given to the fact that turbulent energy and
+thus unresolved turbulent velocity fluctuations are scale dependent. It is
+often claimed in the astrophysical literature that the amount of
+turbulence is a certain fraction of thermal energy or kinetic energy, without
+specifying the length scale for which this statement was made. In the spirit of
+Kolmogorov theory of turbulence, such statements are incomplete. This is
+especially apparent in our adaptive grid simulations, where different grid
+length scales at the same time are used to describe a flow. However, we have to
+note that the idea of scale dependent velocity fluctuations poses
+difficult conceptual problems. For example, the mass inside a certain radius $r$
+from the equation of hydrostatic equilibrium is, including turbulent pressure,
+also scale dependent\footnote{For a derivation see appendix \ref{stat}.}
+\begin{align}
+M(r,l) &= - \frac{r}{G} 
+\lrb{R_s T_g \lra{\ppd{\ln r}{\ln T_g}+\ppd{\ln r}{\ln \rho_g}}
++\frac{q^2(l)}{3}\lra{\ppd{\ln r}{\ln q^2(l)}+\ppd{\ln r}{\ln \rho}}},
+\end{align}
+a fact, which is often overlooked. Arguing that turbulent pressure might
+explain deviation from the mass found by estimates based on the hydrostatic
+equilibrium, is therefore not advisable.
+
+Nevertheless, it might also come out, that the ideas of Kolmogorov and scale
+dependent velocity fluctuations are not useful in an astrophysical context.
+Within
+our work, we only showed how the influence of turbulence obeying basically
+Kolmogorov scaling can be numerically treated and what kind of results can be
+expected. We could not prove that turbulence in an astrophysical environment
+really can be described in this way. Theoretically, Kolmogorov derived
+his celebrated result assuming a forcing of turbulence restricted to the largest
+length scales, so that in the limit of infinite Reynolds numbers an undisturbed
+cascade down to smaller scales can develop. However, gravity is a force acting
+on
+all length scales, in contradiction to the ideas of Kolmogorov and our
+turbulence model. A better understanding of selfgravitating turbulence is
+therefore extremely important for the future of turbulence research in
+general. 
+That's why in the future comparisons between direct numerical simulations of
+selfgravitating gas and simulations with our subgrid model should be conducted.
+If these simulations support our SGS model (which would also show, that
+Kolmogorov scaling is more universal than theory suggests), we can be
+confident in saying, that with our FEARLESS ansatz we developed a unique tool
+for describing turbulence which aside from cluster physics will lead to many
+other applications in astrophysics.  
+

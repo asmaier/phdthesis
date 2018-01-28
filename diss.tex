@@ -1,0 +1,166 @@
+% Koma-Script options
+\documentclass[paper=a4,
+					fontsize=12pt,
+				headsepline,
+				cleardoublepage=plain,
+				numbers=noenddot,
+				bibliography=totoc,
+				enabledeprecatedfontcommands]{scrbook}
+
+% from l2tabu.tex
+\usepackage[OT2,OT1]{fontenc}                    % needs package cyrillic and lh
+\usepackage[russian,ngerman,english]{babel}		% English language settings
+\usepackage[utf8]{inputenc}     						% use utf-8, so we have no problems with "umlauts"
+
+%\usepackage[T1]{fontenc}								% T1-fonts
+
+%\usepackage{mathptmx}									% Times/Mathe \rmdefault
+%\usepackage[scaled=.90]{helvet}						% scaled Helvetica \sfdefault
+\usepackage{helvet} 										% Helvetica \sfdefault
+\usepackage{courier}       							% Courier \ttdefault
+
+%\setkomafont{sectioning}{\rmfamily\bfseries}
+%\setkomafont{pagehead}{\scshape}
+
+% Additional packages 
+\usepackage{natbib}	            % better bibliography and more
+                                 % flexible \cite-command
+\usepackage[intlimits]{amsmath}	% more mathematical symbols
+\usepackage{amsthm,amsfonts}		% more mathematical environments and fonts
+\usepackage{graphicx}				% for including of images
+\usepackage{color}     				% necessary to include .pstex_t files from xfig!!!
+\usepackage[font=small, format=plain, labelfont=bf]{caption}		% more flexible captions
+\usepackage[tight]{subfigure}		% support for subfigures (should be replaced
+											% by the newer "subfig" package
+\usepackage{units}					% support for physical units
+%\usepackage{isotope}				% support for writing isotopes
+%\usepackage{esint}   				% must be loaded after amsmath
+
+% not includes in standard latex environment
+\usepackage{aas_macros}				% support for abbreviations from AAS-Journal 
+%\usepackage{ziffer}					% only possible with MikTex
+
+% the hyperref package for hyperlinks should be included as last package
+\usepackage[pdftex,
+				breaklinks=true,  	% some links do not work, if this option is set
+				colorlinks=true,  	% before printout, set to false!!!
+				linkcolor=blue,
+				citecolor=blue,
+				urlcolor=blue,
+				pagebackref=true]{hyperref}
+
+% use normal fontstyle for urls; if not set, a tt-font is used
+\urlstyle{same}
+
+%\usepackage{ae,aecompl}
+
+\pagestyle{headings}
+
+% distance of line from head:
+\headsep4mm
+
+% recompute type area
+\typearea[10mm]{current}		
+
+% no indentation at the beginning of a new paragraph
+%\setlength{\parindent}{0pt}
+
+% change caption with package caption2
+%\renewcommand{\figurename}{Abb.}
+\addto\captionsngerman % see http://www.faqs.org/faqs/de-tex-faq/part8/
+{
+    \renewcommand{\figurename}{Fig.}%
+    \renewcommand{\tablename}{Tab.}%
+}
+%\renewcommand{\captionlabelfont}{\bf}
+%\renewcommand{\captionlabeldelim}{.}
+
+% new commands for math mode
+
+% vector and absolute value
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+% vector operators
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Div}{div}    %\div is used by amsmath
+\DeclareMathOperator{\rot}{rot}
+
+% brackets
+\newcommand{\lra}[1]{{ \left( #1 \right) }}
+\newcommand{\lrb}[1]{{ \left[ #1 \right] }}
+\newcommand{\lrc}[1]{{ \left\{ #1 \right\} }}
+
+% filtered quantities
+%\newcommand{\fil}[1]{{<} #1 {>}}
+\newcommand{\fil}[1]{\langle #1 \rangle}
+\newcommand{\ffil}[1]{{\ll} #1 {\gg}}
+\newcommand{\cfil}[1]{{\prec}#1{\succ}}
+\newcommand{\chat}[1]{\accentset{\curlywedge}{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+% fractions
+\newcommand{\td}[1]{\frac{d}{d #1}}
+\newcommand{\ttd}[2]{\frac{d #2}{d #1}}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\ppd}[2]{\frac{\partial #2}{\partial #1}}
+\newcommand{\pdd}[1]{\frac{\partial^2}{\partial #1^2}}
+\newcommand{\fa}{\frac{1}{a}}
+\newcommand{\fh}{\frac{\dot{a}}{a}}
+\newcommand{\ft}{\frac{1}{\sqrt{2\pi}}}
+\newcommand{\fft}{\frac{1}{2\pi}}
+\newcommand{\ffft}{\frac{1}{(2\pi)^{3/2}}}
+
+% integrals
+\newcommand{\iinf}{\int_{-\infty}^{\infty}}
+\newcommand{\iiinf}{\iint_{-\infty}^{\infty}}
+\newcommand{\iiiinf}{\iiint^{\infty}_{-\infty}}
+
+
+\input{title/title}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{chapter1/chapter1}
+\input{chapter2/chapter2}
+\input{chapter3/chapter3}
+\input{chapter4/chapter4}
+\input{chapter5/chapter5}
+\input{chapter6/chapter6}
+\input{chapter7/chapter7}
+\input{chapter8/chapter8}
+\input{chapter9/chapter9}
+\input{chapter10/chapter10}
+
+\appendix
+\input{appendix/appendix}
+
+% try plainnat, abbrvnat, unsrtnat, apalike, aa, astroads
+
+\bibliographystyle{apalike}
+\bibliography{promotion}
+
+\input{acknowledgment/acknowledgment}
+
+\pagestyle{plain}
+\input{zusammenfassung/zusammenfassung}
+\input{lebenslauf/lebenslauf}
+
+
+\chapter*{Erklärung}
+Ich erkläre, dass das Thema dieser Arbeit nicht identisch ist mit dem Thema
+einer von mir bereits für ein anderes Examen eingereichten Arbeit. Ich erkläre
+weiterhin, dass ich die Arbeit nicht bereits an einer anderen Hochschule zur
+Erlangung eines akademischen Grades eingereicht habe.
+
+Ich versichere, dass ich diese Arbeit selbstständig verfasst und keine
+anderen Hilfsmittel als die angegebenen Quellen benutzt habe.
+
+\vspace{3cm}
+\setlength{\parindent}{0pt}
+\selectlanguage{ngerman}
+Würzburg, \today
+
+\end{document}
+
