@@ -1,5 +1,6 @@
+\newcommand{\ppd}[2]{\frac{\partial #2}{\partial #1}}
 \begin{picture}(0,0)%
-\includegraphics{chapter5/energyscheme3b.pstex}%
+\includegraphics{energyscheme3b.pstex}%
 \end{picture}%
 \setlength{\unitlength}{4144sp}%
 %

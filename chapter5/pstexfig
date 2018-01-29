@@ -1,0 +1,29 @@
+#! /bin/bash
+
+# updated 06-10-10
+
+set -e 
+
+if [ -z $1 ] || [ ! -f $1.pstex_t ] 
+then 
+    echo Arg1 needs to be existing filename without .pstex_t suffix
+    exit 1
+fi
+
+# let script be run from anywhere and keep output in file directory.
+filen=$(basename $1)
+cd $(dirname $1)
+
+latex <<-EOF
+        \\documentclass[12pt]{article}
+        \\usepackage[dvips]{graphicx,color}
+        \\usepackage{amsmath,amssymb}
+        \\pagestyle{empty}
+        \\begin{document}
+        \\input{$filen.pstex_t}    
+        \\end{document}
+EOF
+
+dvips -E -o $filen.eps texput
+rm filenamedef.tex texput.*
+
