@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
 <title>5 LES and SGS model‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters</title>
-<!--Generated on Mon Jan 29 23:11:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on January 29, 2018.-->
+<!--Generated on Fri Feb 16 23:21:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on February 16, 2018.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -95,10 +95,10 @@ and no agreement on a standard model. An extensive overview of SGS models for
 incompressible flows can be found for example in the book by <cite class="ltx_cite ltx_citemacro_citet">Sagaut (<a href="bib.html#bib127" title="Large eddy simulation for incompressible flows an introduction" class="ltx_ref">2006</a>)</cite>.
 There are fewer models explicitly for compressible flows. A simple one,
 that was first introduced by <cite class="ltx_cite ltx_citemacro_citet">Schmidt (<a href="bib.html#bib136" title="Turbulent Thermonuclear Combustion in Degenerate Stars" class="ltx_ref">2004</a>); Schmidt<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib135" title="A localised subgrid scale model for fluid dynamical simulations in astrophysics. II. Application to type Ia supernovae" class="ltx_ref">2006a</a>)</cite>, will
-be described in the next sections. This <em class="ltx_emph">Schmidt model</em><span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">21</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">21</sup>Actually
+be described in the next sections. This <em class="ltx_emph ltx_font_italic">Schmidt model</em><span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">21</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">21</sup>Actually
 the original implementation of the SGS model proposed by <cite class="ltx_cite ltx_citemacro_citet">Schmidt<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="bib.html#bib135" title="A localised subgrid scale model for fluid dynamical simulations in astrophysics. II. Application to type Ia supernovae" class="ltx_ref">2006a</a>)</cite>
 had severe problems with energy conservation and was notoriously difficult to
-implement in an AMR code. The version of the <em class="ltx_emph">Schmidt model</em> described in
+implement in an AMR code. The version of the <em class="ltx_emph ltx_font_italic">Schmidt model</em> described in
 this work is a simplified version, but it conserves energy and proved to be
 sufficient for our work.</span></span></span>, together with some
 corrections due to <cite class="ltx_cite ltx_citemacro_citet">Sarkar (<a href="bib.html#bib130" title="The pressure-dilatation correlation in compressible flows" class="ltx_ref">1992</a>)</cite>, which will be outlined later, is the
@@ -140,13 +140,13 @@ that the non-linear term is proportional to the turbulent velocity <math id="S2.
 gradient (Kolmogorov-Prandl relation, see <cite class="ltx_cite ltx_citemacro_citet">Sagaut (<a href="bib.html#bib127" title="Large eddy simulation for incompressible flows an introduction" class="ltx_ref">2006</a>, p.97)</cite>)</p>
 <table id="Ax2.S3.EGx52" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E1.m1" class="ltx_Math" alttext="\displaystyle\mathbb{D}=\frac{\partial}{\partial r_{i}}C_{\mathbb{D}}\langle%
 \rho\rangle l_{\Delta}q^{2}\frac{\partial}{\partial r_{i}}q." display="inline"><mrow><mrow><mi>𝔻</mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>C</mi><mi>𝔻</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mi>q</mi></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.1)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">The constant <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="C_{\mathbb{D}}" display="inline"><msub><mi>C</mi><mi>𝔻</mi></msub></math> is
 calibrated to <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="C_{\mathbb{D}}\approx 0.4=\frac{2}{5}" display="inline"><mrow><msub><mi>C</mi><mi>𝔻</mi></msub><mo>≈</mo><mn>0.4</mn><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math> by
@@ -163,12 +163,12 @@ numerical experiments <cite class="ltx_cite ltx_citemacro_citep">(Schmidt<span c
 subsonic (nearly incompressible) regime:</p>
 <table id="Ax2.S3.EGx53" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E2.m1" class="ltx_Math" alttext="\displaystyle\lambda=C_{\lambda}q^{2}\frac{\partial}{\partial r_{i}}\hat{v}_{i}." display="inline"><mrow><mrow><mi>λ</mi><mo>=</mo><mrow><msub><mi>C</mi><mi>λ</mi></msub><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.2)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">The constant <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="C_{\lambda}=-\frac{1}{5}" display="inline"><mrow><msub><mi>C</mi><mi>λ</mi></msub><mo>=</mo><mrow><mo>-</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mrow></math> as found by numerical experiments
 <cite class="ltx_cite ltx_citemacro_citep">(Schmidt<span class="ltx_text ltx_bib_etal"> et al.</span>, <a href="bib.html#bib134" title="A localised subgrid scale model for fluid dynamical simulations in astrophysics. I. Theory and numerical tests" class="ltx_ref">2006b</a>)</cite>.</p>
@@ -188,12 +188,12 @@ expression which can be built from the characteristic turbulent velocity and
 length scale for the dissipation is</p>
 <table id="Ax2.S3.EGx54" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E3.m1" class="ltx_Math" alttext="\displaystyle\epsilon=C_{\epsilon}\frac{q^{3}}{l_{\Delta}}." display="inline"><mrow><mrow><mi>ϵ</mi><mo>=</mo><mrow><msub><mi>C</mi><mi>ϵ</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>q</mi><mn>3</mn></msup><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.3)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">For our simulations we will set <math id="S2.SS3.p1.m1" class="ltx_Math" alttext="C_{\epsilon}=0.5" display="inline"><mrow><msub><mi>C</mi><mi>ϵ</mi></msub><mo>=</mo><mn>0.5</mn></mrow></math>.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">24</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">24</sup>Suggested by
 W. Schmidt, personal communication.</span></span></span></p>
@@ -210,24 +210,24 @@ W. Schmidt, personal communication.</span></span></span></p>
 therefore be written as follows</p>
 <table id="Ax2.S3.EGx55" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E4.m1" class="ltx_Math" alttext="\displaystyle\hat{\tau}(v_{i},v_{j})=\hat{\tau}_{ij}=\frac{1}{2}(\hat{\tau}_{%
 ij}+\hat{\tau}_{ij})=\frac{1}{2}(\hat{\tau}_{ij}+\hat{\tau}_{ji})." display="inline"><mrow><mrow><mrow><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.4)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">By subtracting the trace of this tensor</p>
 <table id="Ax2.S3.EGx56" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E5.m1" class="ltx_Math" alttext="\displaystyle\hat{\tau}_{ij}=\frac{1}{2}(\hat{\tau}_{ij}+\hat{\tau}_{ji})-%
 \frac{1}{n}\delta_{ij}\hat{\tau}_{kk}+\frac{1}{3}\delta_{ij}\hat{\tau}_{kk}" display="inline"><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.5)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">and recognizing that <math id="S2.SS4.p1.m1" class="ltx_Math" alttext="\hat{\tau}_{kk}=\langle\rho\rangle q^{2}" display="inline"><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>=</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></math> we can split the tensor
 in a symmetric, tracefree part
@@ -235,13 +235,13 @@ in a symmetric, tracefree part
 \delta_{ij}\hat{\tau}_{kk}" display="inline"><mrow><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow></mrow></mrow></math> and the trace</p>
 <table id="Ax2.S3.EGx57" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E6.m1" class="ltx_Math" alttext="\displaystyle\hat{\tau}_{ij}=\hat{\tau}^{*}_{ij}+\frac{1}{3}\delta_{ij}\langle%
 \rho\rangle q^{2}=\hat{\tau}^{*}_{ij}+p_{t}," display="inline"><mrow><mrow><msub><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>+</mo><msub><mi>p</mi><mi>t</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.6)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">where the trace is commonly called turbulent pressure <math id="S2.SS4.p1.m3" class="ltx_Math" alttext="p_{t}" display="inline"><msub><mi>p</mi><mi>t</mi></msub></math>.</p>
 </div>
@@ -253,36 +253,36 @@ There it is assumed, that <math id="S2.SS4.p2.m2" class="ltx_Math" alttext="\hat
 </p>
 <table id="Ax2.S3.EGx58" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E7.m1" class="ltx_Math" alttext="\displaystyle\hat{\tau}^{*}_{ij}=-2\eta_{t}S^{*}_{ij}" display="inline"><mrow><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>η</mi><mi>t</mi></msub><mo>⁢</mo><msubsup><mi>S</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.7)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">with a turbulent dynamic viscosity
 <math id="S2.SS4.p2.m4" class="ltx_Math" alttext="\eta_{t}=\langle\rho\rangle\nu_{t}=\langle\rho\rangle C_{\nu}l_{\Delta}q" display="inline"><mrow><msub><mi>η</mi><mi>t</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>ν</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mi>ν</mi></msub><mo>⁢</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub><mo>⁢</mo><mi>q</mi></mrow></mrow></math> and</p>
 <table id="Ax2.S3.EGx59" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E8.m1" class="ltx_Math" alttext="\displaystyle S^{*}_{ij}=\frac{1}{2}{\left(\frac{\partial}{\partial r_{j}}\hat%
 {v}_{i}+\frac{\partial}{\partial r_{i}}\hat{v}_{j}\right)}-\frac{1}{3}\delta_{%
 ij}\frac{\partial}{\partial r_{k}}\hat{v}." display="inline"><mrow><mrow><msubsup><mi>S</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.8)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">The turbulence production term is therefore modeled as</p>
 <table id="Ax2.S3.EGx60" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E9.m1" class="ltx_Math" alttext="\displaystyle\hat{\tau}(v_{i},v_{j})=-2\langle\rho\rangle C_{\nu}l_{\Delta}qS^%
 {*}_{ij}+\frac{1}{3}\delta_{ij}\langle\rho\rangle q^{2}." display="inline"><mrow><mrow><mrow><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>C</mi><mi>ν</mi></msub><mo>⁢</mo><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub><mo>⁢</mo><mi>q</mi><mo>⁢</mo><msubsup><mi>S</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.9)</span></td>
-</tr>
+</tr></tbody>
 </table>
 </div>
 <div id="S2.SS4.p3" class="ltx_para">
@@ -308,15 +308,15 @@ constant <math id="S2.SS4.p4.m1" class="ltx_Math" alttext="C_{\nu}=0.05" display
 <p class="ltx_p">Using the Schmidt model, the FE form the following system of equations</p>
 <table id="Ax2.S3.EGx61" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E10.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\langle\rho\rangle+\frac{\partial}{%
 \partial r_{j}}\hat{v}_{j}\langle\rho\rangle=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
 <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E10.m2" class="ltx_Math" alttext="\displaystyle\ 0," display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo>⁢</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.10)</span></td>
-</tr>
-<tr id="E11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+</tr></tbody>
+<tbody id="E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E11.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\langle\rho\rangle\hat{v}_{i}+\frac{%
 \partial}{\partial r_{j}}\hat{v}_{j}\langle\rho\rangle\hat{v}_{i}=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
@@ -324,8 +324,8 @@ constant <math id="S2.SS4.p4.m1" class="ltx_Math" alttext="C_{\nu}=0.05" display
 \rho\rangle\hat{g}_{i}-\frac{\partial}{\partial r_{j}}\hat{\tau}^{*}_{ij}," display="inline"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><msub><mi>p</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup></mrow></mrow><mo>,</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.11)</span></td>
-</tr>
-<tr id="E12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+</tr></tbody>
+<tbody id="E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E12.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}\langle\rho%
 \rangle e_{res}+\frac{\partial}{\partial r_{j}}\hat{v}_{j}\langle\rho\rangle e%
@@ -335,8 +335,8 @@ _{res}=&amp;\displaystyle-\frac{\partial}{\partial r_{i}}\hat{v}_{i}(\langle p%
 {\partial r_{j}}\hat{\tau}^{*}(v_{i},v_{j}),)\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><msub><mi>p</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mo>+</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow><mo>-</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><msup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>*</mo></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mo stretchy="false">)</mo></mrow></mtd></mtr></mtable></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.12)</span></td>
-</tr>
-<tr id="E13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+</tr></tbody>
+<tbody id="E13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E13.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial t}\langle\rho\rangle e_{t}+\frac{%
 \partial}{\partial r_{j}}\hat{v}_{j}\langle\rho\rangle e_{t}=" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
@@ -345,14 +345,14 @@ v_{j},v_{i})\frac{\partial}{\partial r_{j}}\hat{v_{i}}-p_{t}\frac{\partial}{%
 \partial r_{i}}\hat{v_{i}}." display="inline"><mrow><mrow><mrow><mi mathvariant="normal"> </mi><mo>⁢</mo><mi>𝔻</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>j</mi></msub><mo>,</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><msub><mi>p</mi><mi>t</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">^</mo></mover></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.13)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">Again it is often useful to split the equation for resolved energy into an
 equation for the resolved kinetic energy and internal energy respectively
 </p>
 <table id="Ax2.S3.EGx62" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E14.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}\langle\rho%
 \rangle\hat{e}_{k}+\frac{\partial}{\partial r_{j}}\hat{v}_{j}\langle\rho%
@@ -361,8 +361,8 @@ equation for the resolved kinetic energy and internal energy respectively
 \frac{\partial}{\partial r_{j}}\hat{\tau}^{*}(v_{i},v_{j}),\end{split}" display="inline"><mtable columnspacing="0pt"><mtr><mtd columnalign="right"><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>k</mi></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>k</mi></msub><mo stretchy="false">)</mo><mo>=</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><msub><mi>p</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>-</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo>,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.14)</span></td>
-</tr>
-<tr id="E15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+</tr></tbody>
+<tbody id="E15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E15.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{\partial}{\partial t}\langle\rho%
 \rangle\hat{e}_{int}+\frac{\partial}{\partial r_{j}}\hat{v}_{j}\langle\rho%
@@ -370,7 +370,7 @@ equation for the resolved kinetic energy and internal energy respectively
 \partial r_{j}}\hat{v}_{j}+\langle\rho\rangle(\lambda+\epsilon).\end{split}" display="inline"><mtable columnspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>p</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><msub><mi>p</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ρ</mi><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.15)</span></td>
-</tr>
+</tr></tbody>
 </table>
 </div>
 </section>
@@ -388,7 +388,7 @@ equation for the resolved kinetic energy and internal energy respectively
 the equations of fluid dynamics. This can be done most easily in a graphical
 way.</p>
 </div>
-<figure id="F1" class="ltx_figure"><img src="x53.png" id="F1.g1" class="ltx_graphics ltx_centering" width="473" height="256" alt="">
+<figure id="F1" class="ltx_figure"><img src="x7.png" id="F1.g1" class="ltx_graphics ltx_centering" width="473" height="256" alt="">
 <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 5.1: </span>Energy transfer in the unfiltered equations of fluid dynamics.</figcaption>
 </figure>
 <div id="S3.SS1.p2" class="ltx_para">
@@ -399,7 +399,7 @@ into internal energy and vice versa via adiabatic pressure effects. On the
 other side, irreversible changes of state due to viscous effects can only lead
 to an increase of internal energy and not(!) vice versa.</p>
 </div>
-<figure id="F2" class="ltx_figure"><img src="x54.png" id="F2.g1" class="ltx_graphics ltx_centering" width="473" height="282" alt="">
+<figure id="F2" class="ltx_figure"><img src="x8.png" id="F2.g1" class="ltx_graphics ltx_centering" width="473" height="282" alt="">
 <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 5.2: </span>Energy transfer in the filtered equations of fluid dynamics with
 Schmidt SGS.</figcaption>
 </figure>
@@ -456,19 +456,19 @@ dimensionless analysis for the FE with the Schmidt model.</p>
 <p class="ltx_p">Introducing the dimensionless quantities</p>
 <table id="Ax2.S3.EGx63" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E16.m1" class="ltx_Math" alttext="\displaystyle e_{t}^{*}=\frac{e_{t}}{q^{2}_{0}},\ p_{t}^{*}=\frac{p_{t}}{\rho_%
 {0}q^{2}_{0}},\ \tau_{ij}^{**}=\frac{\tau_{ij}}{\eta v_{0}/l_{0}}=\frac{\tau_{%
 ij}}{\rho_{0}q_{0}v_{0}}" display="inline"><mrow><mrow><msubsup><mi>e</mi><mi>t</mi><mo>*</mo></msubsup><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>e</mi><mi>t</mi></msub><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup></mfrac></mstyle></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><msubsup><mi>p</mi><mi>t</mi><mo>*</mo></msubsup><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>p</mi><mi>t</mi></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mstyle></mrow><mo rspace="7.5pt">,</mo><mrow><msubsup><mi>τ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msubsup><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>τ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mrow><mrow><mi>η</mi><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow><mo>/</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>τ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>q</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.16)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">the momentum equation can be written as</p>
 <table id="Ax2.S3.EGx64" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E17.m1" class="ltx_Math" alttext="\displaystyle\frac{l_{0}}{t_{0}v_{0}}\frac{\partial}{\partial t^{*}}\langle%
 \rho^{*}\rangle\hat{v}^{*}_{i}+\frac{\partial}{\partial r_{j}^{*}}\hat{v}^{*}_%
@@ -480,8 +480,8 @@ r%
 \partial r^{*}_{i}}p_{t}" display="inline"><mrow><mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>g</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub></mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mover accent="true"><msup><mi>g</mi><mo>*</mo></msup><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>p</mi><mn>0</mn></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>p</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>p</mi><mi>t</mi></msub></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.17)</span></td>
-</tr>
-<tr id="E18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+</tr></tbody>
+<tbody id="E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
 <td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="E18.m2" class="ltx_Math" alttext="\displaystyle+\frac{\eta_{0}}{\rho_{0}l_{0}v_{0}}\frac{\partial}{\partial r_{j%
@@ -489,40 +489,40 @@ r%
 \partial}{\partial r^{*}_{j}}\hat{\tau}^{**}_{ij}" display="inline"><mrow><mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>η</mi><mn>0</mn></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mmultiscripts><mo>*</mo><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts></msubsup><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>v</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msubsup></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.18)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">From this we can estimate, that the turbulent pressure will become important,
 when</p>
 <table id="Ax2.S3.EGx65" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E19.m1" class="ltx_Math" alttext="\displaystyle\frac{q_{0}^{2}}{v_{0}^{2}}\geq\frac{p_{0}}{\rho_{0}v_{0}^{2}}%
 \Rightarrow\frac{q_{0}^{2}}{p_{0}/\rho_{0}}\geq 1" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mfrac></mstyle><mo>≥</mo><mstyle displaystyle="true"><mfrac><msub><mi>p</mi><mn>0</mn></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⇒</mo><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>/</mo><msub><mi>ρ</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>≥</mo><mn>1</mn></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.19)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">If we now introduce the turbulent Mach number</p>
 <table id="Ax2.S3.EGx66" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E20.m1" class="ltx_Math" alttext="\displaystyle M_{t}=\frac{q_{0}}{c_{s}}" display="inline"><mrow><msub><mi>M</mi><mi>t</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>c</mi><mi>s</mi></msub></mfrac></mstyle></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.20)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">and use <math id="S3.SS2.SSSx1.p1.m1" class="ltx_Math" alttext="\frac{p_{0}}{\rho_{0}}=\frac{c_{s}^{2}}{\gamma}" display="inline"><mrow><mfrac><msub><mi>p</mi><mn>0</mn></msub><msub><mi>ρ</mi><mn>0</mn></msub></mfrac><mo>=</mo><mfrac><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mi>γ</mi></mfrac></mrow></math> we see that the turbulent
 pressure will dominate over the thermal pressure, if</p>
 <table id="Ax2.S3.EGx67" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E21.m1" class="ltx_Math" alttext="\displaystyle M_{t}^{2}\geq\gamma." display="inline"><mrow><mrow><msubsup><mi>M</mi><mi>t</mi><mn>2</mn></msubsup><mo>≥</mo><mi>γ</mi></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.21)</span></td>
-</tr>
+</tr></tbody>
 </table>
 </div>
 <div id="S3.SS2.SSSx1.p2" class="ltx_para">
@@ -530,24 +530,24 @@ pressure will dominate over the thermal pressure, if</p>
 becomes important compared to the stress tensor, if</p>
 <table id="Ax2.S3.EGx68" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E22.m1" class="ltx_Math" alttext="\displaystyle\rho_{0}q_{0}l_{0}\geq\eta_{0}." display="inline"><mrow><mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>q</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub></mrow><mo>≥</mo><msub><mi>η</mi><mn>0</mn></msub></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.22)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">So we see that if the turbulent viscosity is greater than the physical
 viscosity the turbulent production tensor will dominate over the stress tensor
 in the FE. The physical viscosity is</p>
 <table id="Ax2.S3.EGx69" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E23.m1" class="ltx_Math" alttext="\displaystyle\eta_{0}\sim\rho_{0}\sqrt{u_{0}}l_{\lambda}" display="inline"><mrow><msub><mi>η</mi><mn>0</mn></msub><mo>∼</mo><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msqrt><msub><mi>u</mi><mn>0</mn></msub></msqrt><mo>⁢</mo><msub><mi>l</mi><mi>λ</mi></msub></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.23)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">where <math id="S3.SS2.SSSx1.p2.m2" class="ltx_Math" alttext="u_{0}" display="inline"><msub><mi>u</mi><mn>0</mn></msub></math> is the mean thermal energy and <math id="S3.SS2.SSSx1.p2.m3" class="ltx_Math" alttext="l_{\lambda}" display="inline"><msub><mi>l</mi><mi>λ</mi></msub></math> the mean free path of
 a particle, so we see that the turbulent viscosity is greater than the
@@ -555,13 +555,13 @@ physical viscosity, if
 </p>
 <table id="Ax2.S3.EGx70" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E24.m1" class="ltx_Math" alttext="\displaystyle\frac{q_{0}^{2}}{u_{0}}\geq{\left(\frac{l_{\lambda}}{l_{0}}\right%
 )}^{2}\Rightarrow\frac{q_{0}^{2}}{u_{0}}\geq{\left(Kn\right)}^{2}," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msub><mi>u</mi><mn>0</mn></msub></mfrac></mstyle><mo>≥</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>l</mi><mi>λ</mi></msub><msub><mi>l</mi><mn>0</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup><mo>⇒</mo><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msub><mi>u</mi><mn>0</mn></msub></mfrac></mstyle><mo>≥</mo><msup><mrow><mo>(</mo><mrow><mi>K</mi><mo>⁢</mo><mi>n</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.24)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">which means the ratio of turbulent energy to internal energy must be greater
 than the square of the Knudsen number <math id="S3.SS2.SSSx1.p2.m4" class="ltx_Math" alttext="Kn=\frac{l_{\lambda}}{l_{0}}" display="inline"><mrow><mrow><mi>K</mi><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mfrac><msub><mi>l</mi><mi>λ</mi></msub><msub><mi>l</mi><mn>0</mn></msub></mfrac></mrow></math>. Since
@@ -581,12 +581,12 @@ equation.</p>
 pressure, which yields</p>
 <table id="Ax2.S3.EGx71" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E25.m1" class="ltx_Math" alttext="\displaystyle\frac{\rho_{0}q_{0}^{2}}{\rho_{0}g_{0}l_{0}}\geq 1." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup></mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>g</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>≥</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.25)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">Turbulence will thus dominate over gravity in the momentum equation, if the
 average turbulent energy is greater than the gravitational energy.</p>
@@ -600,19 +600,19 @@ average turbulent energy is greater than the gravitational energy.</p>
 equation using the additional dimensionless quantities</p>
 <table id="Ax2.S3.EGx72" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E26.m1" class="ltx_Math" alttext="\displaystyle e_{int}^{*}=\frac{e_{int}}{u_{0}},\ \lambda^{*}=\frac{\lambda}{%
 \lambda_{0}}=\frac{\lambda}{q_{0}^{2}v_{0}/l_{0}},\ \epsilon^{*}=\frac{%
 \epsilon}{\epsilon_{0}}=\frac{\epsilon}{q_{0}^{3}/l_{0}}." display="inline"><mrow><mrow><mrow><mrow><msubsup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow><mo>*</mo></msubsup><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub><msub><mi>u</mi><mn>0</mn></msub></mfrac></mstyle></mrow><mo rspace="7.5pt">,</mo><mrow><msup><mi>λ</mi><mo>*</mo></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>λ</mi><msub><mi>λ</mi><mn>0</mn></msub></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>λ</mi><mrow><mrow><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow><mo>/</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msup><mi>ϵ</mi><mo>*</mo></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>ϵ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>ϵ</mi><mrow><msubsup><mi>q</mi><mn>0</mn><mn>3</mn></msubsup><mo>/</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.26)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">This results in</p>
 <table id="Ax2.S3.EGx73" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E27.m1" class="ltx_Math" alttext="\displaystyle\begin{split}\displaystyle\frac{l_{0}}{t_{0}u_{0}}\frac{\partial}%
 {\partial t^{*}}\langle\rho^{*}\rangle\hat{e}_{int}^{*}+\frac{\partial}{%
@@ -626,31 +626,31 @@ equation using the additional dimensionless quantities</p>
 {q_{0}^{3}}{v_{0}u_{0}}\langle\rho^{*}\rangle\epsilon^{*}.\end{split}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msub><mi>l</mi><mn>0</mn></msub><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mo>*</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msubsup><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow><mo>*</mo></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msubsup><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow><mo>*</mo></msubsup></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>p</mi><mn>0</mn></msub><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>v</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>p</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi><mo>*</mo></msubsup></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>η</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>σ</mi><mmultiscripts><mo>*</mo><mprescripts></mprescripts><none></none><mo>′</mo></mmultiscripts></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi><mo>*</mo></msubsup></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msub><mi>u</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><msub><mi>p</mi><mi>t</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>j</mi><mo>*</mo></msubsup></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>2</mn></msubsup><msub><mi>u</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>λ</mi><mo>*</mo></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msubsup><mi>q</mi><mn>0</mn><mn>3</mn></msubsup><mrow><msub><mi>v</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>ϵ</mi><mo>*</mo></msup></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.27)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">We see that the pressure dilatation <math id="S3.SS2.SSSx2.p1.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> will dominate over the
 pressure term if</p>
 <table id="Ax2.S3.EGx74" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E28" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E28.m1" class="ltx_Math" alttext="\displaystyle M_{t}^{2}\geq\gamma" display="inline"><mrow><msubsup><mi>M</mi><mi>t</mi><mn>2</mn></msubsup><mo>≥</mo><mi>γ</mi></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.28)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">and that the turbulent dissipation <math id="S3.SS2.SSSx2.p1.m2" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> will dominate over the viscous
 dissipation, if</p>
 <table id="Ax2.S3.EGx75" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E29" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E29.m1" class="ltx_Math" alttext="\displaystyle\rho_{0}l_{0}q_{0}{\left(\frac{q_{0}}{v_{0}}\right)}^{2}\geq\eta_%
 {0}\Rightarrow{\left(\frac{q_{0}}{v_{0}}\right)}^{2}\geq\frac{\eta_{0}}{\eta_{%
 t}}." display="inline"><mrow><mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>q</mi><mn>0</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>v</mi><mn>0</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>≥</mo><msub><mi>η</mi><mn>0</mn></msub><mo>⇒</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>v</mi><mn>0</mn></msub></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup><mo>≥</mo><mstyle displaystyle="true"><mfrac><msub><mi>η</mi><mn>0</mn></msub><msub><mi>η</mi><mi>t</mi></msub></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.29)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">As shown in section <a href="#S3.SS2.SSSx1" title="Momentum equation ‣ 5.3.2 Dimensional analysis ‣ 5.3 Impact of the Schmidt SGS on the fluid equations ‣ Chapter 5 LES and SGS model ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3.2</span></a> <math id="S3.SS2.SSSx2.p1.m3" class="ltx_Math" alttext="\eta_{0}\ll\eta_{t}" display="inline"><mrow><msub><mi>η</mi><mn>0</mn></msub><mo>≪</mo><msub><mi>η</mi><mi>t</mi></msub></mrow></math>, so we can always neglect
 the influence of the stress tensor in the internal energy equation. This also
@@ -667,18 +667,18 @@ internal energy is via turbulent dissipation <math id="S3.SS2.SSSx2.p1.m4" class
 additional dimensionless quantity</p>
 <table id="Ax2.S3.EGx76" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E30" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E30.m1" class="ltx_Math" alttext="\displaystyle\mathbb{D}^{*}=\frac{\mathbb{D}}{\rho_{0}q_{0}^{3}/l_{0}}." display="inline"><mrow><mrow><msup><mi>𝔻</mi><mo>*</mo></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>𝔻</mi><mrow><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi>q</mi><mn>0</mn><mn>3</mn></msubsup></mrow><mo>/</mo><msub><mi>l</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.30)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">Inserting it together with the dimensionless quantities introduced in the
 former sections yields</p>
 <table id="Ax2.S3.EGx77" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E31" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E31.m1" class="ltx_Math" alttext="\displaystyle\frac{l_{0}}{t_{0}u_{0}}\frac{\partial}{\partial t^{*}}\langle%
 \rho^{*}\rangle e_{t}^{*}+\frac{\partial}{\partial r_{j}^{*}}\hat{v}_{j}^{*}%
@@ -689,7 +689,7 @@ former sections yields</p>
 }\hat{v_{i}^{*}}-\langle\rho^{*}\rangle\lambda^{*}." display="inline"><mrow><mrow><mrow><mi mathvariant="normal"> </mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>v</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝔻</mi><mo>*</mo></msup><mo>-</mo><mrow><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>ϵ</mi><mo>*</mo></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>v</mi><mn>0</mn></msub><msub><mi>q</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msubsup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><msubsup><mi>v</mi><mi>i</mi><mo>*</mo></msubsup><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><msubsup><mi>p</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>i</mi><mo>*</mo></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><msubsup><mi>v</mi><mi>i</mi><mo>*</mo></msubsup><mo stretchy="false">^</mo></mover></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mo>*</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msup><mi>λ</mi><mo>*</mo></msup></mrow></mrow><mo>.</mo></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.31)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">This analysis shows that the behavior of turbulent energy equation can be
 completely characterized by the ratio <math id="S3.SS2.SSSx3.p1.m1" class="ltx_Math" alttext="\frac{q_{0}}{v_{0}}" display="inline"><mfrac><msub><mi>q</mi><mn>0</mn></msub><msub><mi>v</mi><mn>0</mn></msub></mfrac></math>. If
@@ -732,13 +732,13 @@ energy) increases with the turbulent Mach number <math id="S4.SS1.p1.m1" class="
 <cite class="ltx_cite ltx_citemacro_citet">Sarkar (<a href="bib.html#bib130" title="The pressure-dilatation correlation in compressible flows" class="ltx_ref">1992</a>)</cite> suggests accounting for this effect by using</p>
 <table id="Ax2.S3.EGx78" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E32" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E32.m1" class="ltx_Math" alttext="\displaystyle\epsilon=C_{\epsilon}\frac{q^{3}}{l_{\Delta}}(1+\alpha_{1}M_{t}^{%
 2})" display="inline"><mrow><mi>ϵ</mi><mo>=</mo><mrow><msub><mi>C</mi><mi>ϵ</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>q</mi><mn>3</mn></msup><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msubsup><mi>M</mi><mi>t</mi><mn>2</mn></msubsup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.32)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">with <math id="S4.SS1.p1.m2" class="ltx_Math" alttext="\alpha_{1}=0.5" display="inline"><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>=</mo><mn>0.5</mn></mrow></math> as a model for the dissipation of turbulent energy.</p>
 </div>
@@ -753,28 +753,28 @@ energy) increases with the turbulent Mach number <math id="S4.SS1.p1.m1" class="
 pressure<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">29</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">29</sup>For a derivation see appendix <a href="A5.html" title="Appendix E The divergence equation ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref"><span class="ltx_text ltx_ref_tag">E</span></a>.</span></span></span></p>
 <table id="Ax2.S3.EGx79" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E33" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E33.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial^{2}}{\partial r_{i}^{2}}p=\frac{\partial^{2}}{%
 \partial t^{2}}\rho-\frac{\partial^{2}}{\partial r_{i}\partial r_{j}}(\rho v_{%
 i}v_{j}-\sigma^{\prime}_{ij})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>j</mi></msub></mrow><mo>-</mo><msubsup><mi>σ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.33)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">into a mean and a fluctuating part and comparisons with direct numerical
 simulations of simple compressible flows <cite class="ltx_cite ltx_citemacro_citet">Sarkar (<a href="bib.html#bib130" title="The pressure-dilatation correlation in compressible flows" class="ltx_ref">1992</a>)</cite> proposed a different
 model for the pressure dilatation</p>
 <table id="Ax2.S3.EGx80" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
-<tr id="E34" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<tbody id="E34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
 <td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="E34.m1" class="ltx_Math" alttext="\displaystyle\lambda=\alpha_{2}M_{t}\hat{\tau}^{*}_{ij}\frac{\partial\hat{v}_{%
 i}}{\partial r_{j}}-\alpha_{3}M_{t}^{2}C_{\epsilon}\frac{q^{3}}{l_{\Delta}}-8%
 \alpha_{4}M_{t}^{2}p_{t}\frac{\partial\hat{v}_{k}}{\partial r_{k}}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>M</mi><mi>t</mi></msub><mo>⁢</mo><msubsup><mover accent="true"><mi>τ</mi><mo stretchy="false">^</mo></mover><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>*</mo></msubsup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mfrac></mstyle></mrow><mo>-</mo><mrow><msub><mi>α</mi><mn>3</mn></msub><mo>⁢</mo><msubsup><mi>M</mi><mi>t</mi><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>C</mi><mi>ϵ</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>q</mi><mn>3</mn></msup><msub><mi>l</mi><mi mathvariant="normal">Δ</mi></msub></mfrac></mstyle></mrow><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>α</mi><mn>4</mn></msub><mo>⁢</mo><msubsup><mi>M</mi><mi>t</mi><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>p</mi><mi>t</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>k</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>r</mi><mi>k</mi></msub></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.34)</span></td>
-</tr>
+</tr></tbody>
 </table>
 <p class="ltx_p">with <math id="S4.SS2.p1.m1" class="ltx_Math" alttext="\alpha_{2}=0.15" display="inline"><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>=</mo><mn>0.15</mn></mrow></math>,<math id="S4.SS2.p1.m2" class="ltx_Math" alttext="\alpha_{3}=0.2" display="inline"><mrow><msub><mi>α</mi><mn>3</mn></msub><mo>=</mo><mn>0.2</mn></mrow></math> obtained from a curve fit of the model with
 DNS simulation. Unfortunately <cite class="ltx_cite ltx_citemacro_citet">Sarkar (<a href="bib.html#bib130" title="The pressure-dilatation correlation in compressible flows" class="ltx_ref">1992</a>)</cite> does not specify a value for
@@ -792,7 +792,7 @@ agreement with their DNS simulation. In this work, we adopt a value of
 <div>
 <a href="Ch4.html" title="Chapter 4 Favre-filtered equations of fluid dynamics ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Favre-filtered equations of fluid dynamics</span></a><a href="bib.html" title="References ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch6.html" title="Chapter 6 AMR and LES ‣ Adaptively Refined Large-Eddy Simulations of Galaxy Clusters" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>AMR and LES</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Mon Jan 29 23:11:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Fri Feb 16 23:21:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>
